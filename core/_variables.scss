@@ -1,7 +1,7 @@
 
 //theme colors
 $primary: #0B8376;
-$secondary: #1ac888;
+$secondary: #755AE2;
 $error: #FF0F00;
 $info: #f6c31c;
 $white: #F7F8F7;
@@ -21,16 +21,13 @@ $colors: (
 "deep-green": #014345
 );
 
-@debug map-get($colors, 'deep-green');
-@debug map-has-key($colors, 'dee-green');
-
 // spacing 
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
+$base-padding: 1rem;
+$base-margin: 1rem;
 
 // borders
 $base-border-thickness: 1px;
-$base-border-radius: 8px;
+$base-border-radius: 0.8rem;
 
 //box-shadow
 $base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 10%);
