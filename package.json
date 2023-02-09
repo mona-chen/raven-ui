@@ -1,5 +1,5 @@
 {
-  "name": "raven-css",
+  "name": "raven-ui",
   "version": "1.0.0",
   "description": "A utility first css framework by Raven bank.",
   "main": "index.js",
@@ -13,6 +13,7 @@
     "tailwind",
     "tailwind-alternative",
     "design",
+    "material",
     "web",
     "design",
     "frontend",

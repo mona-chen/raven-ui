@@ -1,0 +1,41 @@
+
+//theme colors
+$primary: #0B8376;
+$secondary: #1ac888;
+$error: #FF0F00;
+$info: #f6c31c;
+$white: #F7F8F7;
+$black: #020202;
+
+//color palette
+$colors: (
+"primary": $primary,
+"secondary": $secondary,
+"error": $error,
+"info": $info,
+"white": #F7F8F7,
+"green": #0B8376,
+"purple": #755AE2,
+"orange": #EA872D,
+"black": #020202,
+"deep-green": #014345
+);
+
+@debug map-get($colors, 'deep-green');
+@debug map-has-key($colors, 'dee-green');
+
+// spacing 
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 8px;
+
+//box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 10%);
+
+//font-size 
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-xl: $base-font-size * 1.5;
