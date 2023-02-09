@@ -171,10 +171,47 @@ $utilities: (
 
 // number based sizing
 
-// @for $i from 1 through 72 {
-//     .text-#{$key}-light-#{$i}{
-//         color: mix(white, $val, $i * 10%)
-//     };}
+@for $i from 1 through 72 {
+  @if($i == 0){
+    $util :( "padding": (
+      "prefix": "p",
+      "values": (
+       "0" : 0,
+      ),
+    ),
+   );
+  } @else {
+ $util :( "padding": (
+    "prefix": "p",
+    "values": (
+      #{$i}: $base-padding * $i,
+    ),
+  ),
+ );
+
+    // .text-#{$key}-light-#{$i}{
+    //     color: mix(white, $val, $i * 10%)
+    // };
+
+    @each $property, $map in $util {
+      $prefix: map-get($map, "prefix");
+      $values: map-get($map, "values");
+  
+      @each $k, $v in $values {
+          @if($k == "default"){
+              .#{$prefix}{
+                  #{$property} : $v;
+              }
+          } @else {
+              .#{$prefix}-#{$k}{
+                  #{$property} : $v;
+              }
+          }
+      }
+    }
+  }
+  
+  }
 
 //generate utility classes
 

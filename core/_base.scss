@@ -71,3 +71,13 @@ html {
 }
 
 
+
+.test-web {
+  &::placeholder {
+    display: flex;
+    flex-direction: column;
+  }
+  &:hover{
+    color: blue;
+  }
+}

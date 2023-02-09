@@ -2,12 +2,12 @@ const {src, dest, watch, series} = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
-// const purgecss = require('gulp-purgecss')
+const purgecss = require('gulp-purgecss')
 
 function build(){
     return src('extend/**/*.scss')
     .pipe(sass())
-    // .pipe(purgecss({content: ['*.html']}))
+    .pipe(purgecss({content: ['*.html']}))
     .pipe(postcss([autoprefixer()]))
     .pipe(dest('css'))
 }
