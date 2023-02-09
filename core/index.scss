@@ -16,3 +16,23 @@
 @import 'components/button';
 
 //utilities (margin, padding, opacity)
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transform: rotate(45deg);
+
+  ::placeholder {
+    color: gray;
+  }
+  
+  .image {
+    background-image: url(image@1x.png);
+  }
+  @media (min-resolution: 2dppx) {
+    .image {
+      background-image: url(image@2x.png);
+    }
+  }
+}
