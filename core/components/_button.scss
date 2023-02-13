@@ -1,18 +1,39 @@
-@mixin btn($bg-color: #e2e2e2){
+@mixin btn($bg-color: #e2e2e2, $padding: $base-padding $base-padding * 2, $radius: $base-border-radius){
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
     border: 0;
-    padding: $base-padding $base-padding * 2;
-    border-radius: $base-border-radius;  
+    padding: $padding;
+    border-radius: $radius;  
     background-color: $bg-color;
+}
+
+// mixin for round btn
+@mixin flex-rounded (){
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex-icon (){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: max-content;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 }
 
 .btn {
     @include btn;
 }
 
-@each $key , $val in $colors {
+
+@each $key , $val in $colors {  
     .btn-#{$key} {
         @include btn($val);
         &:hover{
@@ -20,6 +41,7 @@
         }
     }
 
+    
     .btn-outlined-#{$key} {
         @include btn($white);
         border: $base-border-thickness solid $val;
@@ -27,6 +49,7 @@
             background-color: $val;
         }
     }
+
 
     .btn-complement-#{$key} {
         @include btn($val);
@@ -37,3 +60,229 @@
         }
     }
 }
+
+// small sized buttons
+@each $key , $val in $colors {  
+    .btn-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-outlined-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-complement-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+}
+
+// medium sized buttons
+@each $key , $val in $colors {  
+    .btn-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-outlined-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-complement-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+        color: light-comp($val);
+        // &:hover {
+        //     color: $val;
+        //     background-color: light-comp($val);
+        // }
+    }
+}
+
+// large sized buttons
+@each $key , $val in $colors {  
+    .btn-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-outlined-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-complement-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+        color: light-comp($val);
+        // &:hover {
+        //     color: $val;
+        //     background-color: light-comp($val);
+        // }
+    }
+}
+
+
+//rounded btn 
+// small sized buttons
+@each $key , $val in $colors {  
+    .btn-#{$key}-rounded {
+        @include btn($val, 0, 50%);
+        @include flex-rounded;
+        height: 5.6rem;
+        width: 5.6rem;
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-outlined-#{$key}-rounded {
+        @include btn($val, 1.1rem 2.4rem);
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-complement-#{$key}-rounded {
+        @include btn($val, 1.1rem 2.4rem);
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+}
+
+
+// small sized icon buttons
+@each $key , $val in $colors {  
+    .btn-icon-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+        @include flex-icon;
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-icon-outlined-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+        @include flex-icon;
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-icon-complement-#{$key}-sm {
+        @include btn($val, 1.1rem 2.4rem);
+        @include flex-icon;
+        color: light-comp($val);
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        }
+    }
+}
+
+// medium sized icon buttons
+@each $key , $val in $colors {  
+    .btn-icon-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+        @include flex-icon;
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-icon-outlined-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+        @include flex-icon;
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-icon-complement-#{$key}-md {
+        @include btn($val, 1.6rem 2.4rem);
+        @include flex-icon;
+        color: light-comp($val);
+        // &:hover {
+        //     color: $val;
+        //     background-color: light-comp($val);
+        // }
+    }
+}
+
+// large sized icon buttons
+@each $key , $val in $colors {  
+    .btn-icon-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+        @include flex-icon;
+
+        // &:hover{
+        //     background-color: lighten($val, 5)
+        // }
+    }
+
+    
+    .btn-icon-outlined-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+        @include flex-icon;
+        border: $base-border-thickness solid $val;
+        // &:hover {
+        //     background-color: $val;
+        // }
+    }
+
+
+    .btn-icon-complement-#{$key}-lg {
+        @include btn($val, 2rem 5.6rem);
+        @include flex-icon;
+        color: light-comp($val);
+        // &:hover {
+        //     color: $val;
+        //     background-color: light-comp($val);
+        // }
+    }
+}
+

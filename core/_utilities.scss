@@ -169,19 +169,12 @@ $utilities: (
   )
 );
 
-// number based sizing
+// generate utility classes with decimal values
+@for $i from 0 through 72 {
 
-@for $i from 1 through 72 {
-  @if($i == 0){
-    $util :( "padding": (
-      "prefix": "p",
-      "values": (
-       "0" : 0,
-      ),
-    ),
-   );
-  } @else {
- $util :( "padding": (
+  //create the object properties from 1 to 72
+ $util :(
+   "padding": (
     "prefix": "p",
     "values": (
       #{$i}: $base-padding * $i,
@@ -189,10 +182,7 @@ $utilities: (
   ),
  );
 
-    // .text-#{$key}-light-#{$i}{
-    //     color: mix(white, $val, $i * 10%)
-    // };
-
+// loop through and generate the classes
     @each $property, $map in $util {
       $prefix: map-get($map, "prefix");
       $values: map-get($map, "values");
@@ -205,16 +195,46 @@ $utilities: (
           } @else {
               .#{$prefix}-#{$k}{
                   #{$property} : $v;
-              }
+              
           }
       }
     }
-  }
+  };
   
   }
 
-//generate utility classes
 
+
+
+  //loop through and generate the decimal classes
+  @for $i from 0 through 72 {
+    @for $j from 0 through 9 {
+    //create the object properties from 1 to 72
+   $util :(
+     "padding": (
+      "prefix": "p",
+      "values": (
+        #{$i}: $base-padding * $i,
+      ),
+    ),
+   );
+
+
+    //generate the decimal classes
+    @each $property, $map in $util {
+      $prefix: map-get($map, "prefix");
+      $values: map-get($map, "values");
+   
+          .#{$prefix}-#{$i}-#{$j}{
+            #{$property} :  #{$base-padding * $i + math.div($j, 10)};
+          }
+  
+        }
+    
+    }}
+    
+
+//generate utility classes
 @each $property, $map in $utilities {
     $prefix: map-get($map, "prefix");
     $values: map-get($map, "values");
@@ -228,7 +248,39 @@ $utilities: (
             .#{$prefix}-#{$k}{
                 #{$property} : $v;
             }
-        }
-    }
+        }}
+    };
 
-}
+    
+
+   // box shadows
+
+    $shadow: (
+    "xs": (0px 3px 4px -5px rgba(51, 51, 51, 0.03), 0px 1px 2px rgba(51, 51, 51, 0.05)),
+    "s" : (0px 3px 4px rgba(51, 51, 51, 0.04), 0px 0px 2px rgba(51, 51, 51, 0.02)),
+    "a" : (0px 32px 41px -23px rgba(51, 51, 51, 0.07), 0px 2px 6px rgba(51, 51, 51, 0.06)),
+   );
+
+   @each $k, $v in $shadow {
+    .shadow-#{$k} {
+      box-shadow : $v
+    }
+   }
+
+
+
+
+// generate utility classes with decimal values
+
+// @each $property, $map in $utilities {
+//   $prefix: map-get($map, "prefix");
+//   $values: map-get($map, "values");
+
+//   @for $i from 1 to 72 {
+//     @for $j from 1 to 9 {
+//       .#{$prefix}-#{$i}.#{$j}{
+//         #{$property} : #{$i + $j/10};
+//       }
+//     }
+//   }
+// }

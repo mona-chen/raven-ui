@@ -3,19 +3,43 @@ const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss')
+const fs = require('fs');
+let config = require('rc')('raven');
+console.log(config);
 
+const srcPath = 'extend';
+const destPath = '../src';
+const symlinkPath = '.parent';
+
+
+async function init () {
+    if (!fs.existsSync(symlinkPath)) {
+        await fs.symlink('../src', symlinkPath, 'dir', (err) => {
+          if (err) throw err;
+        });
+      }
+}
 function build(){
     return src('extend/**/*.scss')
     .pipe(sass())
-    .pipe(purgecss({content: ['*.html']}))
+    // .pipe(purgecss({
+    //     content: [
+    //       '.parent/**/*.jsx',
+    //       '.parent/**/*.tsx',
+    //       '.parent/**/*.ts',
+    //       '.parent/**/*.js',
+    //       '.monarc'
+    //     ]
+    //   }))
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest('css'))
+    .pipe(dest(destPath))
 }
 
 async function  watcher(){
-    watch(['extend/**/*.scss', '*.html', 'core/**/*.scss'], build)
+    watch(['extend/**/*.scss', `${destPath}/**/*.js`, '.monarc', `${destPath}/**/*.jsx`, `${destPath}/**/*.ts`, `${destPath}/**/*.tsx`, `${destPath}/**/*.html`, 'extend/**/*js', '*.js', 'core/**/*.scss'], build)
     // console.log('Watcher is actively listening for changes in your css files')
 }
 
+// html body 
 
-exports.default = series(build, watcher)
+exports.default = series(init,build, watcher)
