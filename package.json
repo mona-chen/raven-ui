@@ -1,41 +1,53 @@
 {
-  "name": "raven-ui",
-  "version": "1.0.0",
-  "description": "A utility first css framework by Raven bank.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "css",
-    "css",
-    "frameworks",
-    "tailwind",
-    "tailwind-alternative",
-    "design",
-    "material",
-    "web",
-    "design",
-    "frontend",
-    "frontend",
-    "design",
-    "css",
-    "technology",
-    "futuristic",
-    "css"
-  ],
-  "author": "Raven bank",
-  "license": "ISC",
+  "name": "react-raven-css-folder",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "gulp": "^4.0.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "gulp-purgecss": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "moment": "^2.29.4",
     "postcss": "^8.4.21",
-    "rc": "^1.2.8",
-    "sass": "^1.58.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.0",
+    "sass": "^1.58.0",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "gulp-postcss": "^9.0.1"
+    "gulp": "^4.0.2",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.4"
+  },
+  "scripts": {
+    "start": "npm run gulp",
+    "gulp": "gulp",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
