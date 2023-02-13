@@ -1,0 +1,47 @@
+@mixin check-box-wrap(
+  $bg-color: #e2e2e2,
+  $padding: $base-padding $base-padding,
+  $radius: $base-btn-border-radius
+) {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+
+  .input-check {
+    display: none;
+  }
+
+  .label-check {
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: all .1s ease-in-out;
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      fill: #ffffff;
+      color: #ffffff;
+    }
+  }
+}
+
+.check-box-wrap {
+  @include check-box-wrap;
+
+  @each $key, $val in $colors {
+    .input-check {
+      &:checked ~ .label-check__#{$key}{
+        background-color: $val ;
+      }
+    }
+
+    .label-check__#{$key}{
+        border: .15rem solid $val;
+        // background-color: ;
+    }
+  }
+}

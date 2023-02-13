@@ -1,0 +1,84 @@
+// Root colors
+:root {
+  // base starts here ----
+  --base-white: #ffffff;
+  --base-black: #020202;
+  --base-background-white: #f9f9f9;
+  --base-background-black: #676767;
+
+  // border color start here ----
+  --border-green: #0b8376;
+  --border-grey-dark: #676767;
+  --border-grey-light: #cccccc;
+  --border-light: #f7f8f7;
+
+  // primary start here ------
+  --primary-green: #0b8376;
+  --primary-deep-green: #014345;
+  --primary-blue: #476885;
+  --primary-orange: #ea872d;
+  --primary-purple: #755ae2;
+  --primary-black: #020202;
+
+  // accent starts here -------
+}
+
+//theme colors
+// $error: #ff0f00;
+// $info: #f6c31c;
+// $white: var(--base-white);
+// $black: var(--primary-black);
+// $green: var(--primary-green);
+// $blue: var(--primary-blue);
+// $purple: var(--primary-purple);
+// $orange: var(--primary-orange);
+// $deep_green: var(--primary-deep-green);
+
+// primary colors -----
+$error: #ff0f00;
+$info: #f6c31c;
+$white: #ffffff;
+$black: #020202;
+$green: #0b8376;
+$blue: #476885;
+$purple: #755ae2;
+$orange: #ea872d;
+$deep_green: #014345;
+
+// base colors -----
+$base_white: #ffffff;
+$base_black: #020202;
+$base_background_white: #f9f9f9;
+$base_background_black: #676767;
+
+//color palette
+$colors: (
+  "error": $error,
+  "info": $info,
+  "white": $white,
+  "blue": $blue,
+  "green": $green,
+  "purple": $purple,
+  "orange": $orange,
+  "black": $black,
+  "deep-green": $deep_green,
+  "grey": #CCCCCC,
+  "base-bg-black": #676767,
+);
+
+// spacing
+$base-padding: 1.6rem;
+$base-margin: 1rem;
+
+// borders
+$base-border-thickness: .1rem;
+$base-border-radius: .8rem;
+$base-btn-border-radius: .8rem;
+
+//box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 10%);
+
+//font-size
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-xl: $base-font-size * 1.5;

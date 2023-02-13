@@ -1,0 +1,59 @@
+@mixin toggle-wrap(
+  $bg-color: #cccccc,
+  $padding: $base-padding $base-padding,
+  $radius: $base-btn-border-radius
+) {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+
+  .toggle-input {
+    display: none;
+  }
+
+  .toggle-label {
+    background-color: $bg-color;
+    width: 4.5rem;
+    height: 2.3rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.15rem 0.2rem;
+    transition: all .2s ease-in-out;
+
+    span {
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      display: inline-block;
+      transition: all .2s ease-in-out;
+    }
+
+    .child-one {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.toggle-wrap {
+  @include toggle-wrap;
+
+  @each $key, $val in $colors {
+    .toggle-input {
+      &:checked ~ .toggle-label__#{$key} {
+        background-color: $val;
+
+        .child-one {
+          background-color: $val;
+        }
+      }
+
+      &:checked ~ .toggle-label .child-two {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
