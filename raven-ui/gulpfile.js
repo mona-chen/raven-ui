@@ -45,6 +45,4 @@ async function  watcher(){
     // console.log('Watcher is actively listening for changes in your css files')
 }
 
-// html body 
-
 exports.default = series(init,build, watcher)

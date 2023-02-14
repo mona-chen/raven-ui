@@ -14,7 +14,7 @@ const ActionBar = () => {
           </figure>
           <p className="text">
             Oooopps there’s a mistake Password should have at least 1 capital
-            letter
+            letter 
           </p>
           <div className="action-box">
             <p className="text">Lorem, ipsum.</p>

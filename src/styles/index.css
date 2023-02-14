@@ -76573,7 +76573,7 @@ p {
   justify-content: space-between;
 }
 
-.justify-f-end {
+.justify-end {
   justify-content: flex-end;
 }
 
@@ -76587,6 +76587,14 @@ p {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-stretch {
+  justify-content: stretch;
 }
 
 .text-center {
@@ -94723,19 +94731,19 @@ p {
   border-left: 1px solid #f7f8f7;
 }
 
-.border-l-green-1 {
+.border_l-green-1 {
   border-left: 1px solid #0b8376;
 }
 
-.border-l-grey-dark-1 {
+.border_l-grey-dark-1 {
   border-left: 1px solid #676767;
 }
 
-.border-l-grey-light-1 {
+.border_l-grey-light-1 {
   border-left: 1px solid #cccccc;
 }
 
-.border-l-light-1 {
+.border_l-light-1 {
   border-left: 1px solid #f7f8f7;
 }
 
@@ -95539,19 +95547,19 @@ p {
   border-bottom: 2px solid #f7f8f7;
 }
 
-.border-l-green-2 {
+.border_l-green-2 {
   border-left: 2px solid #0b8376;
 }
 
-.border-l-grey-dark-2 {
+.border_l-grey-dark-2 {
   border-left: 2px solid #676767;
 }
 
-.border-l-grey-light-2 {
+.border_l-grey-light-2 {
   border-left: 2px solid #cccccc;
 }
 
-.border-l-light-2 {
+.border_l-light-2 {
   border-left: 2px solid #f7f8f7;
 }
 
@@ -96339,19 +96347,19 @@ p {
   border-bottom: 3px solid #f7f8f7;
 }
 
-.border-l-green-3 {
+.border_l-green-3 {
   border-left: 3px solid #0b8376;
 }
 
-.border-l-grey-dark-3 {
+.border_l-grey-dark-3 {
   border-left: 3px solid #676767;
 }
 
-.border-l-grey-light-3 {
+.border_l-grey-light-3 {
   border-left: 3px solid #cccccc;
 }
 
-.border-l-light-3 {
+.border_l-light-3 {
   border-left: 3px solid #f7f8f7;
 }
 
@@ -97139,19 +97147,19 @@ p {
   border-bottom: 4px solid #f7f8f7;
 }
 
-.border-l-green-4 {
+.border_l-green-4 {
   border-left: 4px solid #0b8376;
 }
 
-.border-l-grey-dark-4 {
+.border_l-grey-dark-4 {
   border-left: 4px solid #676767;
 }
 
-.border-l-grey-light-4 {
+.border_l-grey-light-4 {
   border-left: 4px solid #cccccc;
 }
 
-.border-l-light-4 {
+.border_l-light-4 {
   border-left: 4px solid #f7f8f7;
 }
 
@@ -97939,19 +97947,19 @@ p {
   border-bottom: 5px solid #f7f8f7;
 }
 
-.border-l-green-5 {
+.border_l-green-5 {
   border-left: 5px solid #0b8376;
 }
 
-.border-l-grey-dark-5 {
+.border_l-grey-dark-5 {
   border-left: 5px solid #676767;
 }
 
-.border-l-grey-light-5 {
+.border_l-grey-light-5 {
   border-left: 5px solid #cccccc;
 }
 
-.border-l-light-5 {
+.border_l-light-5 {
   border-left: 5px solid #f7f8f7;
 }
 
@@ -98739,19 +98747,19 @@ p {
   border-bottom: 6px solid #f7f8f7;
 }
 
-.border-l-green-6 {
+.border_l-green-6 {
   border-left: 6px solid #0b8376;
 }
 
-.border-l-grey-dark-6 {
+.border_l-grey-dark-6 {
   border-left: 6px solid #676767;
 }
 
-.border-l-grey-light-6 {
+.border_l-grey-light-6 {
   border-left: 6px solid #cccccc;
 }
 
-.border-l-light-6 {
+.border_l-light-6 {
   border-left: 6px solid #f7f8f7;
 }
 
@@ -99539,19 +99547,19 @@ p {
   border-bottom: 7px solid #f7f8f7;
 }
 
-.border-l-green-7 {
+.border_l-green-7 {
   border-left: 7px solid #0b8376;
 }
 
-.border-l-grey-dark-7 {
+.border_l-grey-dark-7 {
   border-left: 7px solid #676767;
 }
 
-.border-l-grey-light-7 {
+.border_l-grey-light-7 {
   border-left: 7px solid #cccccc;
 }
 
-.border-l-light-7 {
+.border_l-light-7 {
   border-left: 7px solid #f7f8f7;
 }
 
@@ -100339,19 +100347,19 @@ p {
   border-bottom: 8px solid #f7f8f7;
 }
 
-.border-l-green-8 {
+.border_l-green-8 {
   border-left: 8px solid #0b8376;
 }
 
-.border-l-grey-dark-8 {
+.border_l-grey-dark-8 {
   border-left: 8px solid #676767;
 }
 
-.border-l-grey-light-8 {
+.border_l-grey-light-8 {
   border-left: 8px solid #cccccc;
 }
 
-.border-l-light-8 {
+.border_l-light-8 {
   border-left: 8px solid #f7f8f7;
 }
 
@@ -101139,19 +101147,19 @@ p {
   border-bottom: 9px solid #f7f8f7;
 }
 
-.border-l-green-9 {
+.border_l-green-9 {
   border-left: 9px solid #0b8376;
 }
 
-.border-l-grey-dark-9 {
+.border_l-grey-dark-9 {
   border-left: 9px solid #676767;
 }
 
-.border-l-grey-light-9 {
+.border_l-grey-light-9 {
   border-left: 9px solid #cccccc;
 }
 
-.border-l-light-9 {
+.border_l-light-9 {
   border-left: 9px solid #f7f8f7;
 }
 
@@ -101939,19 +101947,19 @@ p {
   border-bottom: 10px solid #f7f8f7;
 }
 
-.border-l-green-10 {
+.border_l-green-10 {
   border-left: 10px solid #0b8376;
 }
 
-.border-l-grey-dark-10 {
+.border_l-grey-dark-10 {
   border-left: 10px solid #676767;
 }
 
-.border-l-grey-light-10 {
+.border_l-grey-light-10 {
   border-left: 10px solid #cccccc;
 }
 
-.border-l-light-10 {
+.border_l-light-10 {
   border-left: 10px solid #f7f8f7;
 }
 

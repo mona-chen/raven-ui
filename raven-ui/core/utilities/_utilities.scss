@@ -65,10 +65,12 @@ $utilities: (
     "prefix": "justify",
     "values": (
       "between": space-between,
-      "f-end": flex-end,
+      "end": flex-end,
       "center": center,
       "around": space-around,
-      "evenly": space-evenly
+      "evenly": space-evenly,
+      "start": flex-start,
+      "stretch": stretch,
     )
   ),
 
@@ -108,6 +110,7 @@ $utilities: (
         "bolder" : bolder,
         )
   ),
+
   
   "font-size": (
     "prefix": "text",
@@ -618,6 +621,9 @@ $utilities: (
       }
     }
 
+    
+    
+
     .center {
       justify-content: center;
       align-items: center;
@@ -697,7 +703,6 @@ $utilities: (
   @for $i from 1 through 10 {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 10
-    
     //normal border 
     @if($j == 0){
       @if($i == 1){
@@ -769,9 +774,11 @@ $utilities: (
           }}
       }
       @each $k, $v in $border-colors {
-        .border-l-#{$k}-#{$i} {
+        .border_l-#{$k}-#{$i} {
           border-left: $i + px solid $v ;
         }
+
+        
       }
     } @else {
     @each $k, $v in $border-colors {
