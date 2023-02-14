@@ -76650,6 +76650,26 @@ p {
   text-decoration: none;
 }
 
+.font-b {
+  font-weight: bold;
+}
+
+.font-i {
+  font-weight: italic;
+}
+
+.font-n {
+  font-weight: normal;
+}
+
+.font-l {
+  font-weight: lighter;
+}
+
+.font-bolder {
+  font-weight: bolder;
+}
+
 .text-d2xl {
   font-size: 7.2rem;
 }
