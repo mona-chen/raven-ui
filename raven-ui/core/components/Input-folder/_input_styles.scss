@@ -16,6 +16,47 @@
     text-transform: capitalize;
   }
 
+  .form-input-calendar{
+    // display: none ;
+    background-color: #e2e2e2;
+    border-radius: $base-border-radius;
+    border: 0.1rem solid #cccccc;
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: #020202;
+    display: flex;
+
+    .form-control{
+        border: none;
+        outline: none;
+        background-color: #f7f8f7;
+        padding: 2.3rem 1.6rem !important;
+        flex: 1;  
+        padding-left: 3rem;
+        // width: 100%;
+        border-radius: $base-border-radius;
+    }
+
+    .flag-dropdown{
+        border: none;
+        border-radius: $base-border-radius;
+        flex: 0 0 10%;
+
+        .selected-flag{
+            background-color: #f7f8f7;
+            &:hover{
+                background-color: #f7f8f7;
+            }
+            .flag{
+                // border-radius: 50%;
+                // width: 2rem;
+                // height: 2rem;
+                // object-fit: contain;
+            }
+        }
+    }
+}
+
   .wrap {
     display: flex;
     align-items: center;
@@ -41,10 +82,6 @@
         }
       }
     }
-
-    // .input-calender{
-    //     width: 100%;
-    // }
   }
 
   .form-input {
@@ -63,6 +100,10 @@
     &::placeholder {
       color: #b3b3b3;
     }
+  }
+
+  .form-input_search{
+    padding-left: 0rem;
   }
 
   .error-text {
@@ -130,9 +171,6 @@
     align-items: center;
 
     .seach-box {
-      //   padding-left: 1rem;
-      // transform: translateX(1remf);
-      flex: 0 0 5%;
       display: grid;
       place-items: center;
 
@@ -159,11 +197,21 @@
       cursor: pointer;
     }
   }
+
+  .input-group__search{
+    padding-left: 1.6rem
+  }
 }
 
 @each $key, $val in $colors {
   .form-group__#{$key} {
     @include form-group;
+
+    .form-input-calendar{
+        .form-control{
+            caret-color: $val;
+        }
+    }
 
     .form-input {
       caret-color: $val;
@@ -191,6 +239,24 @@
     }
   }
 
+  .input-group{
+    .show-hide {
+        color: $val !important;
+      }
+      .form-input {
+        padding: 1.2rem;
+        &:focus:not(:valid) {
+          outline: none;
+          border: none;
+        }
+  
+        &:focus:valid {
+          outline: none;
+          border: none;
+        }
+      }
+  }
+
   .input-group__#{$key} {
     .show-hide {
       color: $val !important;
@@ -207,5 +273,10 @@
         border: none;
       }
     }
+  }
+
+  .border-error{
+    border: .1rem solid #FF0F00 !important;
+    border-radius: $base-border-radius;
   }
 }

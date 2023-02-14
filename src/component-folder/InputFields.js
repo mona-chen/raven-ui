@@ -3,7 +3,9 @@ import Select from "react-select";
 import Flatpicker from "react-flatpickr";
 import moment from "moment";
 import calendarIcon from "../img/calendarcalendar-icon.svg";
-import searchIcon from "../img/search.svg"
+import searchIcon from "../img/search.svg";
+import ReactPhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const InputFields = () => {
   const [showPasword, setShowPassword] = useState(false);
@@ -37,6 +39,7 @@ const InputFields = () => {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gridGap: "2rem",
+        alignItems: "flex-start",
       }}
     >
       {/* form group start text */}
@@ -111,11 +114,11 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green ">
         <label htmlFor="" className="form-label">
           Date
         </label>
-        <div className="wrap">
+        <div className="wrap ">
           <Flatpicker
             id="calendar-input"
             value={toDate}
@@ -137,16 +140,21 @@ const InputFields = () => {
       {/* form group end */}
       {/* form group start text */}
       <div className="form-group form-group__green">
-        <label htmlFor="" className="form-label">&nbsp;</label>
-        <div className="input-group input-group__green">
-            <div className="seach-box">   <figure className="img-box ">
-            <img src={searchIcon} alt="" className="img" />
-          </figure></div>
-       
+        <label htmlFor="" className="form-label">
+          &nbsp;
+        </label>
+        <div className="input-group input-group__green input-group__search ">
+          <div className="seach-box">
+            {" "}
+            <figure className="img-box ">
+              <img src={searchIcon} alt="" className="img" />
+            </figure>
+          </div>
+
           <input
             type="text"
             placeholder="Search"
-            className="form-input"
+            className="form-input form-input_search"
           />
         </div>
       </div>
@@ -170,6 +178,44 @@ const InputFields = () => {
         <p className="error-text">
           There is an error with the values you provided
         </p>
+      </div>
+      {/* form group end */}
+      {/* form group start text */}
+      <div className="form-group form-group__green">
+        <label htmlFor="" className="form-label">
+          Mobile Number
+        </label>
+        <ReactPhoneInput
+          country="ng"
+          containerClass={"form-input-calendar"}
+          inputClass={""}
+          enableSearchField
+          disableSearchIcon
+        />
+        <p className="error-text">
+          There is an error with the values you provided
+        </p>
+      </div>
+      {/* form group end */}
+      {/* form group start text */}
+      <div className="form-group form-group__green">
+        <label htmlFor="" className="form-label">
+          &nbsp;
+        </label>
+        <div className="input-group input-group__green input-group__search ">
+          <div className="seach-box">
+            {" "}
+            <figure className="img-box ">
+              <img src={searchIcon} alt="" className="img" />
+            </figure>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Search"
+            className="form-input form-input_search"
+          />
+        </div>
       </div>
       {/* form group end */}
     </div>

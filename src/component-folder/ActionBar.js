@@ -50,7 +50,7 @@ const ActionBar = () => {
             <p className="text">Lorem, ipsum.</p>
             <div className="arrow-icon">
               <svg
-                className="icon"
+                className="icon"  
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
