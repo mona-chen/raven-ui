@@ -23,7 +23,7 @@ const Toasts = () => {
         </div>
       </div>
       {/* <!-- toast end  --> */}
-      <div className="mt-2 mb-2"></div>
+      <div className="mt-20 mb-20"></div>
       {/* <!-- toast start  --> */}
       <div className="toast-wrap toast-wrap__success">
         <figure className="img-box">
@@ -40,7 +40,7 @@ const Toasts = () => {
         </div>
       </div>
       {/* <!-- toast end  --> */}
-      <div className="mt-2 mb-2"></div>
+      <div className="mt-20 mb-20"></div>
       {/* <!-- toast start  --> */}
       <div className="toast-wrap toast-wrap__info">
         <figure className="img-box">
@@ -57,7 +57,7 @@ const Toasts = () => {
         </div>
       </div>
       {/* <!-- toast end  --> */}
-      <div className="mt-2 mb-2"></div>
+      <div className="mt-20 mb-20"></div>
       {/* <!-- toast start  --> */}
       <div className="toast-wrap toast-wrap__warning">
         <figure className="img-box">

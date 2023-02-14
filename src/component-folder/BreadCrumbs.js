@@ -24,7 +24,7 @@ const BreadCrumbs = () => {
           <div className="crumb-step crumb-step-active__green">stepTwo</div>
         </div>
         {/* <!-- bread ccrumb end --> */}
-        <div className="mt-2 mb-2"></div>
+        <div className="mt-20 mb-20"></div>
         {/* <!-- bread ccrumb start --> */}
         <div className="bread-crumb-parent">
           <div className="crumb-step">Parent</div>

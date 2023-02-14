@@ -36,7 +36,7 @@ const ActionBar = () => {
           </div>
         </div>
         {/* <!-- action bar end --> */}
-        <div className="mt-2 mb-2"></div>
+        <div className="mt-20 mb-20"></div>
         {/* <!-- action bar start --> */}
         <div className="action_bar action_bar__error">
           <figure className="img-box">
@@ -66,7 +66,7 @@ const ActionBar = () => {
           </div>
         </div>
         {/* <!-- action bar end --> */}
-        <div className="mt-2 mb-2"></div>
+        <div className="mt-20 mb-20"></div>
         {/* <!-- action bar start --> */}
         <div className="action_bar action_bar__warning">
           <figure className="img-box">

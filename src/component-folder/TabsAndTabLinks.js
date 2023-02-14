@@ -4,7 +4,7 @@ const TabsAndTabLinks = () => {
   return (
    <>
     {/* <!-- tab start  --> */}
-    <div className="tab-link-parent mb-2">
+    <div className="tab-link-parent mb-20">
           <p className="tab-link tab-link__black text-white">All</p>
           <p className="tab-link">Today</p>
           <p className="tab-link">Last 7days</p>
@@ -14,7 +14,7 @@ const TabsAndTabLinks = () => {
         </div>
         {/* <!-- tab end  --> */}
         {/* <!-- tab start  --> */}
-        <div className="tab-link-parent mb-2">
+        <div className="tab-link-parent mb-20">
           <p className="tab-link">All</p>
           <p className="tab-link">Today</p>
           <p className="tab-link">Last 7days</p>
@@ -24,7 +24,7 @@ const TabsAndTabLinks = () => {
         </div>
         {/* <!-- tab end  --> */}
         {/* <!-- tab start  --> */}
-        <div className="tab-link-parent mb-2">
+        <div className="tab-link-parent mb-20">
           <p className="tab-link">All</p>
           <p className="tab-link">Today</p>
           <p className="tab-link">Last 7days</p>
@@ -35,7 +35,7 @@ const TabsAndTabLinks = () => {
         {/* <!-- tab end  --> */}
         {/* <!-- ----- --> */}
         {/* <!-- tab start  --> */}
-        <div className="tab-link-parent mb-2">
+        <div className="tab-link-parent mb-20">
           <p className="tab-link">All</p>
           <p className="tab-link">Today</p>
           <p className="tab-link tab-link_faded__green text-white">
@@ -47,7 +47,7 @@ const TabsAndTabLinks = () => {
         </div>
         {/* <!-- tab end  --> */}
         {/* <!-- tab start  --> */}
-        <div className="tab-link-parent mb-2">
+        <div className="tab-link-parent mb-20">
           <p className="tab-link">All</p>
           <p className="tab-link">Today</p>
           <p className="tab-link">Last 7days</p>
