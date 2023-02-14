@@ -1,7 +1,7 @@
 {
-  "name": "react-raven-css-folder",
+  "name": "ravenbank-ui",
   "version": "0.1.0",
-  "private": true,
+  "description": "A utility first css framework by Raven bank.",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,7 +17,8 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.7.0",
     "sass": "^1.58.1",
-    "web-vitals": "^3.1.1"
+    "web-vitals": "^3.1.1",
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
@@ -29,8 +30,10 @@
   "scripts": {
     "start": "npm run start:react & npm run start:gulp",
     "start:react": "react-scripts start",
-    "start:gulp": "cd raven-ui && gulp",
-    "postinstall": "npm run start:gulp"
+    "start:gulp": "cd raven-ui && gulp"
+  },
+  "bin": {
+    "raven": "./cli/bin/index.js"
   },
   "eslintConfig": {
     "extends": [
