@@ -18263,19 +18263,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__error .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__error .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__error .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__error .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__error .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__error .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__error .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__error .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__error .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__error .wrap {
@@ -18388,6 +18408,13 @@ p {
 .form-group__error .form-input-calendar .form-control {
   caret-color: #ff0f00;
 }
+.form-group__error .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #ff0f00;
+}
+.form-group__error .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__error .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__error .form-input {
   caret-color: #ff0f00;
 }
@@ -18438,7 +18465,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -18469,19 +18496,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__info .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__info .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__info .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__info .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__info .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__info .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__info .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__info .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__info .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__info .wrap {
@@ -18594,6 +18641,13 @@ p {
 .form-group__info .form-input-calendar .form-control {
   caret-color: #f6c31c;
 }
+.form-group__info .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #f6c31c;
+}
+.form-group__info .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__info .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__info .form-input {
   caret-color: #f6c31c;
 }
@@ -18644,7 +18698,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -18675,19 +18729,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__white .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__white .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__white .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__white .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__white .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__white .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__white .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__white .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__white .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__white .wrap {
@@ -18800,6 +18874,13 @@ p {
 .form-group__white .form-input-calendar .form-control {
   caret-color: #ffffff;
 }
+.form-group__white .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #ffffff;
+}
+.form-group__white .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__white .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__white .form-input {
   caret-color: #ffffff;
 }
@@ -18850,7 +18931,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -18881,19 +18962,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__blue .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__blue .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__blue .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__blue .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__blue .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__blue .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__blue .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__blue .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__blue .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__blue .wrap {
@@ -19006,6 +19107,13 @@ p {
 .form-group__blue .form-input-calendar .form-control {
   caret-color: #476885;
 }
+.form-group__blue .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #476885;
+}
+.form-group__blue .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__blue .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__blue .form-input {
   caret-color: #476885;
 }
@@ -19056,7 +19164,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -19087,19 +19195,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__green .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__green .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__green .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__green .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__green .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__green .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__green .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__green .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__green .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__green .wrap {
@@ -19212,6 +19340,13 @@ p {
 .form-group__green .form-input-calendar .form-control {
   caret-color: #0b8376;
 }
+.form-group__green .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #0b8376;
+}
+.form-group__green .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__green .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__green .form-input {
   caret-color: #0b8376;
 }
@@ -19262,7 +19397,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -19293,19 +19428,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__purple .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__purple .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__purple .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__purple .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__purple .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__purple .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__purple .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__purple .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__purple .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__purple .wrap {
@@ -19418,6 +19573,13 @@ p {
 .form-group__purple .form-input-calendar .form-control {
   caret-color: #755ae2;
 }
+.form-group__purple .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #755ae2;
+}
+.form-group__purple .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__purple .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__purple .form-input {
   caret-color: #755ae2;
 }
@@ -19468,7 +19630,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -19499,19 +19661,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__orange .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__orange .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__orange .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__orange .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__orange .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__orange .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__orange .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__orange .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__orange .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__orange .wrap {
@@ -19624,6 +19806,13 @@ p {
 .form-group__orange .form-input-calendar .form-control {
   caret-color: #ea872d;
 }
+.form-group__orange .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #ea872d;
+}
+.form-group__orange .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__orange .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__orange .form-input {
   caret-color: #ea872d;
 }
@@ -19674,7 +19863,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -19705,19 +19894,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__black .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__black .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__black .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__black .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__black .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__black .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__black .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__black .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__black .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__black .wrap {
@@ -19830,6 +20039,13 @@ p {
 .form-group__black .form-input-calendar .form-control {
   caret-color: #020202;
 }
+.form-group__black .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #020202;
+}
+.form-group__black .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__black .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__black .form-input {
   caret-color: #020202;
 }
@@ -19880,7 +20096,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -19911,19 +20127,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__deep-green .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__deep-green .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__deep-green .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__deep-green .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__deep-green .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__deep-green .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__deep-green .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__deep-green .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__deep-green .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__deep-green .wrap {
@@ -20036,6 +20272,13 @@ p {
 .form-group__deep-green .form-input-calendar .form-control {
   caret-color: #014345;
 }
+.form-group__deep-green .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #014345;
+}
+.form-group__deep-green .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__deep-green .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__deep-green .form-input {
   caret-color: #014345;
 }
@@ -20086,7 +20329,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -20117,19 +20360,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__grey .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__grey .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__grey .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__grey .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__grey .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__grey .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__grey .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__grey .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__grey .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__grey .wrap {
@@ -20242,6 +20505,13 @@ p {
 .form-group__grey .form-input-calendar .form-control {
   caret-color: #CCCCCC;
 }
+.form-group__grey .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #CCCCCC;
+}
+.form-group__grey .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__grey .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__grey .form-input {
   caret-color: #CCCCCC;
 }
@@ -20292,7 +20562,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 
@@ -20323,19 +20593,39 @@ p {
   outline: none;
   background-color: #f7f8f7;
   padding: 2.3rem 1.6rem !important;
-  flex: 1;
-  padding-left: 3rem;
+  width: calc(100% - 3rem);
+  margin-left: auto;
   border-radius: 0.8rem;
+}
+.form-group__base-bg-black .form-input-calendar .open {
+  background-color: #f7f8f7 !important;
+  border-radius: 0.8rem !important;
+}
+.form-group__base-bg-black .form-input-calendar .open .open {
+  background-color: #f7f8f7 !important;
 }
 .form-group__base-bg-black .form-input-calendar .flag-dropdown {
   border: none;
   border-radius: 0.8rem;
-  flex: 0 0 10%;
+  width: 3rem;
 }
 .form-group__base-bg-black .form-input-calendar .flag-dropdown .selected-flag {
   background-color: #f7f8f7;
+  border-radius: 0.8rem;
 }
 .form-group__base-bg-black .form-input-calendar .flag-dropdown .selected-flag:hover {
+  background-color: #f7f8f7;
+}
+.form-group__base-bg-black .form-input-calendar .flag-dropdown .selected-flag .flag img {
+  border-radius: 50%;
+}
+.form-group__base-bg-black .form-input-calendar .flag-dropdown .country-list .country .country-name {
+  color: #020202;
+}
+.form-group__base-bg-black .form-input-calendar .open {
+  background-color: #f7f8f7;
+}
+.form-group__base-bg-black .form-input-calendar .open .open {
   background-color: #f7f8f7;
 }
 .form-group__base-bg-black .wrap {
@@ -20448,6 +20738,13 @@ p {
 .form-group__base-bg-black .form-input-calendar .form-control {
   caret-color: #676767;
 }
+.form-group__base-bg-black .form-input-calendar .flag-dropdown .country-list .highlight {
+  background-color: #676767;
+}
+.form-group__base-bg-black .form-input-calendar .flag-dropdown .country-list .highlight .dial-code,
+.form-group__base-bg-black .form-input-calendar .flag-dropdown .country-list .highlight .country-name {
+  color: #ffffff;
+}
 .form-group__base-bg-black .form-input {
   caret-color: #676767;
 }
@@ -20498,7 +20795,7 @@ p {
 }
 
 .border-error {
-  border: 0.1rem solid #FF0F00 !important;
+  border: 0.1rem solid #ff0f00 !important;
   border-radius: 0.8rem;
 }
 

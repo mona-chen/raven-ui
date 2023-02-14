@@ -23,7 +23,7 @@ const InputFields = () => {
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected ? "#222632" : "white",
+      backgroundColor: state.isSelected ? "#0b8376" : "white",
     }),
   };
 
@@ -191,6 +191,7 @@ const InputFields = () => {
           inputClass={""}
           enableSearchField
           disableSearchIcon
+          placeholder=""
         />
         <p className="error-text">
           There is an error with the values you provided
