@@ -13,6 +13,7 @@ import InputFields from "./component-folder/InputFields";
 import RadioCheck from "./component-folder/RadioCheck";
 import Padding from "./utilities/Padding";
 import Margin from './utilities/Margin';
+import Tables from "./component-folder/Tables";
 
 function App() {
   return (
@@ -71,6 +72,10 @@ function App() {
 
         <h3 className="mb-20">Input Fields</h3>
         <InputFields />
+        <hr className="mt-40 mb-40" />
+
+        <h3 className="mb-20">Tables</h3>
+        <Tables />
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Utilities</h3>
