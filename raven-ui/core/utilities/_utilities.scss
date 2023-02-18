@@ -9,7 +9,7 @@ $utilities: (
     "prefix": "o",
     "values": (
       "10": 0.1,
-      "20": 0.2,
+      "20": 0.2, 
       "30": 0.3,
       "40": 0.4,
       "50": 0.5,
@@ -32,7 +32,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "display",
+    "prefix": "display", display-n
     "values": (
       "n": none,
       "b": block,
@@ -142,8 +142,9 @@ $utilities: (
  
 */
 
+
 // padding using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "padding": (
@@ -176,7 +177,7 @@ $utilities: (
   }
 
 // padding-left using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing{
   //create the object properties from 1 to 72
  $util :(
    "padding-left": (
@@ -209,7 +210,7 @@ $utilities: (
   }
 
 // padding-right using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing {
   //create the object properties from 1 to 72
  $util :(
    "padding-right": (
@@ -242,7 +243,7 @@ $utilities: (
   }
 
 // padding-top using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing {
   //create the object properties from 1 to 72
  $util :(
    "padding-top": (
@@ -275,7 +276,7 @@ $utilities: (
   }
 
 // padding-bottom using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing {
   //create the object properties from 1 to 72
  $util :(
    "padding-bottom": (
@@ -308,7 +309,7 @@ $utilities: (
   }
 
 //padding for both left and right (padding-x)
-@for $i from 0 through 72 {
+@each $i in $sizing {
   .p-x {
     padding-left: math.div(($base-padding * $i), 10) + rem;
     padding-right: math.div(($base-padding * $i), 10) + rem;
@@ -316,7 +317,7 @@ $utilities: (
 }
 
 //padding for both top and bottom (padding-y)
-@for $i from 0 through 72 {
+@each $i in $sizing {
   .p-y {
     padding-top: math.div(($base-padding * $i), 10) + rem;
     padding-bottom: math.div(($base-padding * $i), 10) + rem;
@@ -331,7 +332,7 @@ $utilities: (
 
 
 //loop through and generate the decimal classes - padding
-  @for $i from 0 through 72 {
+@each $i in $sizing {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 72
    $util :(
@@ -368,7 +369,7 @@ $utilities: (
 */
 
 // margin using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "margin": (
@@ -401,7 +402,7 @@ $utilities: (
   }
 
 // margin-left using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "margin-left": (
@@ -434,7 +435,7 @@ $utilities: (
   }
 
 // margin-right using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "margin-right": (
@@ -467,7 +468,7 @@ $utilities: (
   }
 
 // margin-top using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "margin-top": (
@@ -500,7 +501,7 @@ $utilities: (
   }
 
 // margin-bottom using whole numbers
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   //create the object properties from 1 to 72
  $util :(
    "margin-bottom": (
@@ -533,7 +534,7 @@ $utilities: (
   }
 
 //margin for both left and right (margin-x)
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   .m-x {
     margin-left: math.div(($base-margin * $i), 10) + rem;
     margin-right: math.div(($base-margin * $i), 10) + rem;
@@ -541,7 +542,7 @@ $utilities: (
 }
 
 //margin for both top and bottom (margin-y)
-@for $i from 0 through 72 {
+@each $i in $sizing  {
   .m-y {
     margin-top: math.div(($base-margin * $i), 10) + rem;
     margin-bottom: math.div(($base-margin * $i), 10) + rem;
@@ -556,7 +557,7 @@ $utilities: (
 
 
 //loop through and generate the decimal classes - margin
-  @for $i from 0 through 72 {
+  @each $i in $sizing  {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 72
    $util :(
@@ -628,6 +629,7 @@ $utilities: (
       justify-content: center;
       align-items: center;
     }
+    @debug(math.div(2, 10) + rem);
 
     // ==== width ====
     @for $i from 0 to 2000 {
@@ -635,6 +637,7 @@ $utilities: (
         width: math.div($i, 10) + rem;
       }
     }
+
 
     @for $i from 0 to 100 {
       .wp-#{$i}{
@@ -716,7 +719,9 @@ $utilities: (
           border: $i + px solid $v ;
         }
       }
-    } @else {
+    } 
+    //todo: remove this 
+    @else {
       @each $k, $v in $border-colors {
         .border-#{$k}-#{$i}-#{$j} {
           border: $i + math.div($j, 10) + px solid $v ;

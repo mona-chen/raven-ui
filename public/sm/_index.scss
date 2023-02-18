@@ -1,12 +1,12 @@
 @use 'sass:math';
 
-@include lg {
+@include sm {
 
 $font-weight: thin,normal, lighter, light, bold, bolder, 100, 200, 300, 400, 500, 600, 700, 800,  900;
 
 $utilities: (
   "padding": (
-    "prefix": "lg:p",
+    "prefix": "sm:p",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -17,7 +17,7 @@ $utilities: (
     ),
   ),
   "padding-left": (
-    "prefix": "lg:pl",
+    "prefix": "sm:pl",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -28,7 +28,7 @@ $utilities: (
     ),
   ),
   "padding-right": (
-    "prefix": "lg:pr",
+    "prefix": "sm:pr",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -39,7 +39,7 @@ $utilities: (
     ),
   ),
   "padding-top": (
-    "prefix": "lg:pt",
+    "prefix": "sm:pt",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -50,7 +50,7 @@ $utilities: (
     ),
   ),
   "padding-bottom": (
-    "prefix": "lg:pb",
+    "prefix": "sm:pb",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -61,7 +61,7 @@ $utilities: (
     ),
   ),
   "margin": (
-    "prefix": "lg:m",
+    "prefix": "sm:m",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -72,7 +72,7 @@ $utilities: (
     ),
   ),
   "margin-left": (
-    "prefix": "lg:ml",
+    "prefix": "sm:ml",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -83,7 +83,7 @@ $utilities: (
     ),
   ),
   "margin-right": (
-    "prefix": "lg:mr",
+    "prefix": "sm:mr",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -94,7 +94,7 @@ $utilities: (
     ),
   ),
   "margin-top": (
-    "prefix": "lg:mt",
+    "prefix": "sm:mt",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -105,7 +105,7 @@ $utilities: (
     ),
   ),
   "margin-bottom": (
-    "prefix": "lg:mb",
+    "prefix": "sm:mb",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -117,7 +117,7 @@ $utilities: (
   ),
 
   "opacity": (
-    "prefix": "lg:o",
+    "prefix": "sm:o",
     "values": (
       "10": 0.1,
       "20": 0.2,
@@ -132,7 +132,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "lg:br",
+    "prefix": "sm:br",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -143,7 +143,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "lg:display",
+    "prefix": "sm:display",
     "values": (
       "n": none,
       "b": block,
@@ -154,7 +154,7 @@ $utilities: (
   ),
 
   "align-items": (
-    "prefix": "lg:align",
+    "prefix": "sm:align",
     "values": (
       "f-start": flex-start,
       "f-end": flex-end,
@@ -163,7 +163,7 @@ $utilities: (
   ),
 
   "flex-direction": (
-    "prefix": "lg:flex",
+    "prefix": "sm:flex",
     "values": (
       "row": row,
       "column": column,
@@ -171,7 +171,7 @@ $utilities: (
   ),
 
   "justify-content": (
-    "prefix": "lg:justify",
+    "prefix": "sm:justify",
     "values": (
       "between": space-between,
       "f-end": flex-end,
@@ -182,7 +182,7 @@ $utilities: (
   ),
 
   "text-align": (
-    "prefix": "lg:text",
+    "prefix": "sm:text",
     "values": (
         "center" : center,
         "start" : start,
@@ -194,7 +194,7 @@ $utilities: (
   ),
   
   "font-size": (
-    "prefix": "lg:text",
+    "prefix": "sm:text",
     "values": (
         "d2xl" : $base-font-size * 7.2,
         "dxl" : $base-font-size * 6,
@@ -214,12 +214,12 @@ $utilities: (
 );
 
 // generate utility classes with decimal values
-@for $i from 0 through 72 {
+@each $i in $sizing  {
 
   //create the object properties from 1 to 72
  $util :(
    "padding": (
-    "prefix": "lg:p",
+    "prefix": "sm:p",
     "values": (
       #{$i}: $base-padding * $i,
     ),
@@ -251,12 +251,12 @@ $utilities: (
 
 
   //loop through and generate the decimal classes
-  @for $i from 0 through 72 {
+  @each $i in $sizing  {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 72
    $util :(
      "padding": (
-      "prefix": "lg:p",
+      "prefix": "sm:p",
       "values": (
         #{$i}: $base-padding * $i,
       ),
@@ -298,20 +298,20 @@ $utilities: (
   
     //flex related
     @for $i from 0 to 50 {
-      .lg:gap-#{$i}{
+      .gap-#{$i}{
         gap: $i + rem;
       }
     }
 
     //width
     @for $i from 0 to 2000 {
-      .lg:w-#{$i}{
+      .w-#{$i}{
         width: $i + rem;
       }
     }
 
     @for $i from 0 to 100 {
-      .lg:wp-#{$i}{
+      .wp-#{$i}{
         width: percentage(math.div($i, 100));
       }
     }
@@ -319,7 +319,7 @@ $utilities: (
 
     //font-related
     @each $v in $font-weight {
-      .lg:font-#{$v}{
+      .font-#{$v}{
         font-weight: $v;
       }
     }

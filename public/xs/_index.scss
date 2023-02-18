@@ -1,12 +1,12 @@
 @use 'sass:math';
 
-@include sm {
+@include xs {
 
 $font-weight: thin,normal, lighter, light, bold, bolder, 100, 200, 300, 400, 500, 600, 700, 800,  900;
-
+$cursor: pointer, not-allowed, scroll;
 $utilities: (
   "padding": (
-    "prefix": "sm:p",
+    "prefix": "xs:p",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -17,7 +17,7 @@ $utilities: (
     ),
   ),
   "padding-left": (
-    "prefix": "sm:pl",
+    "prefix": "xs:pl",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -28,7 +28,7 @@ $utilities: (
     ),
   ),
   "padding-right": (
-    "prefix": "sm:pr",
+    "prefix": "xs:pr",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -39,7 +39,7 @@ $utilities: (
     ),
   ),
   "padding-top": (
-    "prefix": "sm:pt",
+    "prefix": "xs:pt",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -50,7 +50,7 @@ $utilities: (
     ),
   ),
   "padding-bottom": (
-    "prefix": "sm:pb",
+    "prefix": "xs:pb",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -61,7 +61,7 @@ $utilities: (
     ),
   ),
   "margin": (
-    "prefix": "sm:m",
+    "prefix": "xs:m",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -72,7 +72,7 @@ $utilities: (
     ),
   ),
   "margin-left": (
-    "prefix": "sm:ml",
+    "prefix": "xs:ml",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -83,7 +83,7 @@ $utilities: (
     ),
   ),
   "margin-right": (
-    "prefix": "sm:mr",
+    "prefix": "xs:mr",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -94,7 +94,7 @@ $utilities: (
     ),
   ),
   "margin-top": (
-    "prefix": "sm:mt",
+    "prefix": "xs:mt",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -105,7 +105,7 @@ $utilities: (
     ),
   ),
   "margin-bottom": (
-    "prefix": "sm:mb",
+    "prefix": "xs:mb",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -117,7 +117,7 @@ $utilities: (
   ),
 
   "opacity": (
-    "prefix": "sm:o",
+    "prefix": "xs:o",
     "values": (
       "10": 0.1,
       "20": 0.2,
@@ -132,7 +132,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "sm:br",
+    "prefix": "xs:br",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -143,7 +143,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "sm:display",
+    "prefix": "xs:display",
     "values": (
       "n": none,
       "b": block,
@@ -154,7 +154,7 @@ $utilities: (
   ),
 
   "align-items": (
-    "prefix": "sm:align",
+    "prefix": "xs:align",
     "values": (
       "f-start": flex-start,
       "f-end": flex-end,
@@ -163,7 +163,7 @@ $utilities: (
   ),
 
   "flex-direction": (
-    "prefix": "sm:flex",
+    "prefix": "xs:flex",
     "values": (
       "row": row,
       "column": column,
@@ -171,7 +171,7 @@ $utilities: (
   ),
 
   "justify-content": (
-    "prefix": "sm:justify",
+    "prefix": "xs:justify",
     "values": (
       "between": space-between,
       "f-end": flex-end,
@@ -182,7 +182,7 @@ $utilities: (
   ),
 
   "text-align": (
-    "prefix": "sm:text",
+    "prefix": "xs:text",
     "values": (
         "center" : center,
         "start" : start,
@@ -194,7 +194,7 @@ $utilities: (
   ),
   
   "font-size": (
-    "prefix": "sm:text",
+    "prefix": "xs:text",
     "values": (
         "d2xl" : $base-font-size * 7.2,
         "dxl" : $base-font-size * 6,
@@ -214,12 +214,12 @@ $utilities: (
 );
 
 // generate utility classes with decimal values
-@for $i from 0 through 72 {
+@each $i in $sizing  {
 
   //create the object properties from 1 to 72
  $util :(
    "padding": (
-    "prefix": "sm:p",
+    "prefix": "xs:p",
     "values": (
       #{$i}: $base-padding * $i,
     ),
@@ -251,12 +251,12 @@ $utilities: (
 
 
   //loop through and generate the decimal classes
-  @for $i from 0 through 72 {
+  @each $i in $sizing  {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 72
    $util :(
      "padding": (
-      "prefix": "sm:p",
+      "prefix": "xs:p",
       "values": (
         #{$i}: $base-padding * $i,
       ),
@@ -298,23 +298,51 @@ $utilities: (
   
     //flex related
     @for $i from 0 to 50 {
-      .gap-#{$i}{
+      .xs:gap-#{$i}{
         gap: $i + rem;
       }
     }
 
+    //grid-relate
+    .grid-center {
+        display: grid;
+        place-items: center;
+    }
+
     //width
     @for $i from 0 to 2000 {
-      .w-#{$i}{
+      .xs:w-#{$i}{
         width: $i + rem;
       }
     }
 
+    //border & radius related
+    .curved {
+        border-radius: 1rem;
+    }
+
+    .curved-top {
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+    }
+
+    .rounded {
+        border-radius: 50%;
+    }
+
     @for $i from 0 to 100 {
-      .wp-#{$i}{
+      .xs:wp-#{$i}{
         width: percentage(math.div($i, 100));
       }
     }
+
+    //mouse related 
+    @each $v in $cursor {
+        .cursor-#{$v} {
+            cursor: $v;
+        }
+    }
+
     
 
     //font-related

@@ -3,6 +3,8 @@ const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss')
+const kss = require('kss');
+const kssConfig = require('./kss-config.json');
 const fs = require('fs');
 let config = require('rc')('raven', {
   custom_path: 'extend',
@@ -38,6 +40,8 @@ function build(){
     //   }))
     .pipe(postcss([autoprefixer()]))
     .pipe(dest(css_path))
+        // .pipe(kss(kssConfig))
+
 }
 
 async function  watcher(){

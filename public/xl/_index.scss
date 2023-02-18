@@ -1,12 +1,12 @@
 @use 'sass:math';
 
-@include xs {
+@include xl {
 
 $font-weight: thin,normal, lighter, light, bold, bolder, 100, 200, 300, 400, 500, 600, 700, 800,  900;
-$cursor: pointer, not-allowed, scroll;
+
 $utilities: (
   "padding": (
-    "prefix": "xs:p",
+    "prefix": "xl:p",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -17,7 +17,7 @@ $utilities: (
     ),
   ),
   "padding-left": (
-    "prefix": "xs:pl",
+    "prefix": "xl:pl",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -28,7 +28,7 @@ $utilities: (
     ),
   ),
   "padding-right": (
-    "prefix": "xs:pr",
+    "prefix": "xl:pr",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -39,7 +39,7 @@ $utilities: (
     ),
   ),
   "padding-top": (
-    "prefix": "xs:pt",
+    "prefix": "xl:pt",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -50,7 +50,7 @@ $utilities: (
     ),
   ),
   "padding-bottom": (
-    "prefix": "xs:pb",
+    "prefix": "xl:pb",
     "values": (
       "0": 0,
       "1": $base-padding,
@@ -61,7 +61,7 @@ $utilities: (
     ),
   ),
   "margin": (
-    "prefix": "xs:m",
+    "prefix": "xl:m",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -72,7 +72,7 @@ $utilities: (
     ),
   ),
   "margin-left": (
-    "prefix": "xs:ml",
+    "prefix": "xl:ml",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -83,7 +83,7 @@ $utilities: (
     ),
   ),
   "margin-right": (
-    "prefix": "xs:mr",
+    "prefix": "xl:mr",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -94,7 +94,7 @@ $utilities: (
     ),
   ),
   "margin-top": (
-    "prefix": "xs:mt",
+    "prefix": "xl:mt",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -105,7 +105,7 @@ $utilities: (
     ),
   ),
   "margin-bottom": (
-    "prefix": "xs:mb",
+    "prefix": "xl:mb",
     "values": (
       "0": 0,
       "1": $base-margin,
@@ -117,7 +117,7 @@ $utilities: (
   ),
 
   "opacity": (
-    "prefix": "xs:o",
+    "prefix": "xl:o",
     "values": (
       "10": 0.1,
       "20": 0.2,
@@ -132,7 +132,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "xs:br",
+    "prefix": "xl:br",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -143,7 +143,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "xs:display",
+    "prefix": "xl:display",
     "values": (
       "n": none,
       "b": block,
@@ -154,7 +154,7 @@ $utilities: (
   ),
 
   "align-items": (
-    "prefix": "xs:align",
+    "prefix": "xl:align",
     "values": (
       "f-start": flex-start,
       "f-end": flex-end,
@@ -163,7 +163,7 @@ $utilities: (
   ),
 
   "flex-direction": (
-    "prefix": "xs:flex",
+    "prefix": "xl:flex",
     "values": (
       "row": row,
       "column": column,
@@ -171,7 +171,7 @@ $utilities: (
   ),
 
   "justify-content": (
-    "prefix": "xs:justify",
+    "prefix": "xl:justify",
     "values": (
       "between": space-between,
       "f-end": flex-end,
@@ -182,7 +182,7 @@ $utilities: (
   ),
 
   "text-align": (
-    "prefix": "xs:text",
+    "prefix": "xl:text",
     "values": (
         "center" : center,
         "start" : start,
@@ -194,7 +194,7 @@ $utilities: (
   ),
   
   "font-size": (
-    "prefix": "xs:text",
+    "prefix": "xl:text",
     "values": (
         "d2xl" : $base-font-size * 7.2,
         "dxl" : $base-font-size * 6,
@@ -214,12 +214,12 @@ $utilities: (
 );
 
 // generate utility classes with decimal values
-@for $i from 0 through 72 {
+@each $i in $sizing  {
 
   //create the object properties from 1 to 72
  $util :(
    "padding": (
-    "prefix": "xs:p",
+    "prefix": "xl:p",
     "values": (
       #{$i}: $base-padding * $i,
     ),
@@ -233,11 +233,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .xl:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .xl:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -251,12 +251,12 @@ $utilities: (
 
 
   //loop through and generate the decimal classes
-  @for $i from 0 through 72 {
+  @each $i in $sizing  {
     @for $j from 0 through 9 {
     //create the object properties from 1 to 72
    $util :(
      "padding": (
-      "prefix": "xs:p",
+      "prefix": "xl:p",
       "values": (
         #{$i}: $base-padding * $i,
       ),
@@ -269,7 +269,7 @@ $utilities: (
       $prefix: map-get($map, "prefix");
       $values: map-get($map, "values");
    
-          .#{$prefix}-#{$i}-#{$j}{
+          .xl:#{$prefix}-#{$i}-#{$j}{
             #{$property} :  #{$base-padding * $i + math.div($j, 10)};
           }
   
@@ -285,11 +285,11 @@ $utilities: (
 
     @each $k, $v in $values {
         @if($k == "default"){
-            .#{$prefix}{
+            .xl:#{$prefix}{
                 #{$property} : $v;
             }
         } @else {
-            .#{$prefix}-#{$k}{
+            .xl:#{$prefix}-#{$k}{
                 #{$property} : $v;
             }
         }}
@@ -298,51 +298,23 @@ $utilities: (
   
     //flex related
     @for $i from 0 to 50 {
-      .xs:gap-#{$i}{
+      .gap-#{$i}{
         gap: $i + rem;
       }
     }
 
-    //grid-relate
-    .grid-center {
-        display: grid;
-        place-items: center;
-    }
-
     //width
     @for $i from 0 to 2000 {
-      .xs:w-#{$i}{
+      .w-#{$i}{
         width: $i + rem;
       }
     }
 
-    //border & radius related
-    .curved {
-        border-radius: 1rem;
-    }
-
-    .curved-top {
-        border-top-right-radius: 1rem;
-        border-top-left-radius: 1rem;
-    }
-
-    .rounded {
-        border-radius: 50%;
-    }
-
     @for $i from 0 to 100 {
-      .xs:wp-#{$i}{
+      .wp-#{$i}{
         width: percentage(math.div($i, 100));
       }
     }
-
-    //mouse related 
-    @each $v in $cursor {
-        .cursor-#{$v} {
-            cursor: $v;
-        }
-    }
-
     
 
     //font-related
@@ -378,7 +350,7 @@ $utilities: (
 
 //   @for $i from 1 to 72 {
 //     @for $j from 1 to 9 {
-//       .#{$prefix}-#{$i}.#{$j}{
+//       .xl:#{$prefix}-#{$i}.xl:#{$j}{
 //         #{$property} : #{$i + $j/10};
 //       }
 //     }

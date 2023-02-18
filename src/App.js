@@ -14,6 +14,7 @@ import RadioCheck from "./component-folder/RadioCheck";
 import Padding from "./utilities/Padding";
 import Margin from './utilities/Margin';
 import Tables from "./component-folder/Tables";
+import Text from "./utilities/Text";
 
 function App() {
   return (
@@ -85,6 +86,9 @@ function App() {
         <hr className="mt-40 mb-40" />
         <h5 className="mb-1">Margin</h5>
         <Margin />
+        <hr className="mt-40 mb-40" />
+        <h5 className="mb-1">Fonts & Text</h5>
+        <Text />
       </div>
     </div>
   );
