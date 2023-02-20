@@ -115,7 +115,7 @@ $utilities: (
   "font-size": (
     "prefix": "text",
     "values": (
-        "d2xl" : $base-font-size * 7.2,
+        "dxxl" : $base-font-size * 7.2,
         "dxl" : $base-font-size * 6,
         "dlg" : $base-font-size * 4.8,
         "dmd" : $base-font-size * 3.6,
@@ -629,7 +629,6 @@ $utilities: (
       justify-content: center;
       align-items: center;
     }
-    @debug(math.div(2, 10) + rem);
 
     // ==== width ====
     @for $i from 0 to 2000 {
