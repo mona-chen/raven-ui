@@ -25379,10 +25379,12 @@ p {
 }
 .table .table-head tr th,
 .table thead tr th {
+  background-color: #F7F8F7;
   text-align: left;
   text-transform: capitalize;
   font-size: 1.3rem;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
   border-bottom: 0.6px solid #e5e6e6;
 }
 .table .table-head tr > *:first-child,
@@ -25520,10 +25522,12 @@ p {
 }
 .table_strip .table-head tr th,
 .table_strip thead tr th {
+  background-color: #F7F8F7;
   text-align: left;
   text-transform: capitalize;
   font-size: 1.3rem;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
   border-bottom: 0.6px solid #e5e6e6;
 }
 .table_strip .table-head tr > *:first-child,
@@ -25654,6 +25658,7 @@ p {
 }
 .table_strip .table-head tr th,
 .table_strip thead tr th {
+  background-color: #F7F8F7;
   border-bottom: unset;
 }
 .table_strip .table-body > *:not(:last-child) td,
@@ -25662,8 +25667,8 @@ p {
 .table_strip tbody > *:not(:last-child) .table-data {
   border-bottom: unset;
 }
-.table_strip .table-body > *:nth-child(odd),
-.table_strip tbody > *:nth-child(odd) {
+.table_strip .table-body > *:nth-child(even),
+.table_strip tbody > *:nth-child(even) {
   background-color: #f9f9f9;
 }
 
