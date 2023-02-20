@@ -37,11 +37,11 @@
       }
     }
 
-    .tab-link_faded__#{$key} {
-        background-color: rgba($val, .1);
+    .tab-link_faded {
+        background-color: #E8FFF6;
         cursor: default;
         font-weight: 500;
-        color: $val;
+        color: #0B8376;
      
         &:hover {
           transform: unset !important;

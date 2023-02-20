@@ -14,7 +14,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-one"
-              className="toggle-label toggle-label__green"
+              className="toggle-label toggle-label__green-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>
@@ -31,7 +31,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-two"
-              className="toggle-label toggle-label__purple"
+              className="toggle-label toggle-label__purple-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>
@@ -48,7 +48,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-three"
-              className="toggle-label toggle-label__black"
+              className="toggle-label toggle-label__black-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>
@@ -65,7 +65,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-four"
-              className="toggle-label toggle-label__deep-green"
+              className="toggle-label toggle-label__deep-green-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>
@@ -82,7 +82,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-five"
-              className="toggle-label toggle-label__orange"
+              className="toggle-label toggle-label__orange-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>
@@ -99,7 +99,7 @@ const ToogleSlide = () => {
             />
             <label
               for="toggle-slide-six"
-              className="toggle-label toggle-label__blue"
+              className="toggle-label toggle-label__blue-light"
             >
               <span className="child-one"></span>
               <span className="child-two"></span>

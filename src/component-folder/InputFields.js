@@ -4,6 +4,7 @@ import Flatpicker from "react-flatpickr";
 import moment from "moment";
 import calendarIcon from "../img/calendarcalendar-icon.svg";
 import searchIcon from "../img/search.svg";
+import flagIcon from "../img/NGflag-select.svg";
 import ReactPhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -43,7 +44,7 @@ const InputFields = () => {
       }}
     >
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           Header text *{" "}
         </label>
@@ -60,7 +61,7 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           Number
         </label>
@@ -77,11 +78,11 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start password */}
-      <div className="form-group form-group__green form-group_password">
+      <div className="form-group form-group__green-light form-group_password">
         <label htmlFor="" className="form-label">
           Password
         </label>
-        <div className="input-group input-group__green">
+        <div className="input-group input-group__green-light">
           <input
             type={showPasword ? "text" : "password"}
             placeholder="Placeholder Here"
@@ -97,7 +98,7 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           Select
         </label>
@@ -114,7 +115,7 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green ">
+      <div className="form-group form-group__green-light ">
         <label htmlFor="" className="form-label">
           Date
         </label>
@@ -139,11 +140,11 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           &nbsp;
         </label>
-        <div className="input-group input-group__green input-group__search ">
+        <div className="input-group input-group__green-light input-group__search ">
           <div className="seach-box">
             {" "}
             <figure className="img-box ">
@@ -160,7 +161,7 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           Textarea
         </label>
@@ -181,7 +182,7 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           Mobile Number
         </label>
@@ -192,6 +193,7 @@ const InputFields = () => {
           enableSearchField
           disableSearchIcon
           placeholder=""
+          onlyCountries={["ng"]}
         />
         <p className="error-text">
           There is an error with the values you provided
@@ -199,21 +201,24 @@ const InputFields = () => {
       </div>
       {/* form group end */}
       {/* form group start text */}
-      <div className="form-group form-group__green">
+      <div className="form-group form-group__green-light">
         <label htmlFor="" className="form-label">
           &nbsp;
         </label>
-        <div className="input-group input-group__green input-group__search ">
-          <div className="seach-box">
-            {" "}
+        <div className="input-group input-group__green-light input-group__phone">
+          <div className="phone-wrap">
             <figure className="img-box ">
-              <img src={searchIcon} alt="" className="img" />
+              <img src={flagIcon} alt="" className="img" />
             </figure>
+            <span>+234</span>
+            <svg className="down-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
+            </svg>
           </div>
 
           <input
             type="text"
-            placeholder="Search"
+            placeholder=""
             className="form-input form-input_search"
           />
         </div>

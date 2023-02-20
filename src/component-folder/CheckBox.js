@@ -12,7 +12,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__green"
+              className="label-check label-check__green-dark"
               for="input-check-one"
             >
               <svg
@@ -33,7 +33,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__black"
+              className="label-check label-check__black-light"
               for="input-check-two"
             >
               <svg
@@ -54,7 +54,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__orange"
+              className="label-check label-check__orange-light"
               for="input-check-three"
             >
               <svg
@@ -75,7 +75,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__purple"
+              className="label-check label-check__purple-light"
               for="input-check-four"
             >
               <svg
@@ -96,7 +96,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__blue"
+              className="label-check label-check__blue-light"
               for="input-check-five"
             >
               <svg
@@ -117,7 +117,7 @@ const CheckBox = () => {
               className="input-check input-check"
             />
             <label
-              className="label-check label-check__deep-green"
+              className="label-check label-check__deep-green-light"
               for="input-check-six"
             >
               <svg

@@ -59,7 +59,6 @@
         background-color: #f7f8f7;
         border-radius: $base-border-radius;
 
-
         &:hover {
           background-color: #f7f8f7;
         }
@@ -77,8 +76,6 @@
           }
         }
       }
-
-      
     }
 
     .open {
@@ -233,6 +230,48 @@
 
   .input-group__search {
     padding-left: 1.6rem;
+  }
+
+  .input-group__phone {
+    padding: .5rem 0rem .5rem 1.6rem;
+    
+
+    .form-input{
+      padding: .9rem 1rem ;
+      // background-color: red;
+    }
+
+    .phone-wrap {
+      display: flex;
+      align-self: stretch;
+      align-items: center;
+      gap: 0.7rem;
+      border-right: 0.1rem solid #cccccc;
+      padding-right:  1rem;
+      // background-color: green;
+
+      .down-icon{
+        fill: #020202;
+        width: 1.2rem;
+        height: 1.2rem;
+        transform: translateY(.2rem);
+      }
+
+      .img-box {
+        width: 2rem;
+        height: 2rem;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
   }
 }
 
