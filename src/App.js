@@ -15,6 +15,9 @@ import Padding from "./utilities/Padding";
 import Margin from './utilities/Margin';
 import Tables from "./component-folder/Tables";
 import Text from "./utilities/Text";
+import TableStrip from "./component-folder/TableStrip";
+import Pagination from "./component-folder/Pagination";
+import SmallTable from "./component-folder/SmallTable";
 
 function App() {
   return (
@@ -75,8 +78,20 @@ function App() {
         <InputFields />
         <hr className="mt-40 mb-40" />
 
-        <h3 className="mb-20">Tables</h3>
+        <h3 className="mb-20">Table Example — Default Table</h3>
         <Tables />
+        <hr className="mt-40 mb-40" />
+
+        <h3 className="mb-20">Table Example — Striped Table</h3>
+        <TableStrip />
+        <hr className="mt-40 mb-40" />
+
+        <h3 className="mb-20">Table Example — Mobile Table</h3>
+        <SmallTable />
+        <hr className="mt-40 mb-40" />
+
+        <h3 className="mb-20">Pagination</h3>
+        <Pagination />
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Utilities</h3>

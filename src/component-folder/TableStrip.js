@@ -3,11 +3,11 @@ import tableImg from "../img/table-icon.svg";
 import editIcon from "../img/edit-icon.svg";
 import actionIcon from "../img/action-icon.svg";
 
-const Tables = () => {
+const TableStrip = () => {
   return (
     <>
       {/* table start */}
-      <table className="table">
+      <table className="table table_strip">
         {/* table head start */}
         <thead className="table-head">
           <tr>
@@ -79,4 +79,4 @@ const Tables = () => {
   );
 };
 
-export default Tables;
+export default TableStrip;

@@ -15,7 +15,7 @@ const ToolTips = () => {
       >
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__black tool-tip-wrap_top-center">
+          <div className="tool-tip-wrap tool-tip-wrap__black-light tool-tip-wrap_top-center">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -23,7 +23,7 @@ const ToolTips = () => {
         {/* box end */}
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__black tool-tip-wrap_bottom-center">
+          <div className="tool-tip-wrap tool-tip-wrap__black-light tool-tip-wrap_bottom-center">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -31,7 +31,7 @@ const ToolTips = () => {
         {/* box end */}
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__black tool-tip-wrap_top-left">
+          <div className="tool-tip-wrap tool-tip-wrap__black-light tool-tip-wrap_top-left">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -39,7 +39,7 @@ const ToolTips = () => {
         {/* box end */}
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__orange tool-tip-wrap_bottom-right">
+          <div className="tool-tip-wrap tool-tip-wrap__orange-light tool-tip-wrap_bottom-right">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -47,7 +47,7 @@ const ToolTips = () => {
         {/* box end */}
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__deep-green tool-tip-wrap_top-right">
+          <div className="tool-tip-wrap tool-tip-wrap__deep-green-light tool-tip-wrap_top-right">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -56,7 +56,7 @@ const ToolTips = () => {
 
         <div style={{ position: "relative" }} className="">
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__black tool-tip-wrap_bottom-left">
+          <div className="tool-tip-wrap tool-tip-wrap__black-light tool-tip-wrap_bottom-left">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -68,7 +68,7 @@ const ToolTips = () => {
           className=""
         >
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__green tool-tip-wrap_left">
+          <div className="tool-tip-wrap tool-tip-wrap__green-light tool-tip-wrap_left">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -79,7 +79,7 @@ const ToolTips = () => {
           className=""
         >
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap__purple tool-tip-wrap_right">
+          <div className="tool-tip-wrap tool-tip-wrap__purple-light tool-tip-wrap_right">
             <p className="text">Hi there I Am a Tooltip</p>
           </div>
           {/* tool tip end */}
@@ -90,7 +90,7 @@ const ToolTips = () => {
           className=""
         >
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip_mascot tool-tip-wrap_big tool-tip-wrap__black tool-tip-wrap_bottom-center">
+          <div className="tool-tip-wrap tool-tip_mascot tool-tip-wrap_big tool-tip-wrap__black-light tool-tip-wrap_bottom-center">
             <figure className="img-box">
               <img src={mascotImg} alt="" className="img" />
             </figure>
@@ -113,7 +113,7 @@ const ToolTips = () => {
           className=""
         >
           {/* tool tip start */}
-          <div className="tool-tip-wrap tool-tip-wrap_big tool-tip-wrap__deep-green tool-tip-wrap_top-center">
+          <div className="tool-tip-wrap tool-tip-wrap_big tool-tip-wrap__deep-green-light tool-tip-wrap_top-center">
             <p className="title">Yeah Cool Right</p>
             <p className="text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,

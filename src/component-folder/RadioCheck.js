@@ -12,7 +12,7 @@ const RadioCheck = () => {
           className="input-radio input-radio"
           //   checked={true}
         />
-        <label className="label-radio label-radio__green" for="input-radio-one">
+        <label className="label-radio label-radio__green-light" for="input-radio-one">
           <span className="check"></span>
         </label>
       </div>
@@ -25,7 +25,7 @@ const RadioCheck = () => {
           className="input-radio input-radio"
           //   checked={true}
         />
-        <label className="label-radio label-radio__black" for="input-radio-two">
+        <label className="label-radio label-radio__black-light" for="input-radio-two">
           <span className="check"></span>
         </label>
       </div>
@@ -38,7 +38,7 @@ const RadioCheck = () => {
           className="input-radio input-radio"
           //   checked={true}
         />
-        <label className="label-radio label-radio__purple" for="input-radio-three">
+        <label className="label-radio label-radio__purple-light" for="input-radio-three">
           <span className="check"></span>
         </label>
       </div>
@@ -51,7 +51,7 @@ const RadioCheck = () => {
           className="input-radio input-radio"
           //   checked={true}
         />
-        <label className="label-radio label-radio__orange" for="input-radio-four">
+        <label className="label-radio label-radio__orange-light" for="input-radio-four">
           <span className="check"></span>
         </label>
       </div>
@@ -64,7 +64,7 @@ const RadioCheck = () => {
           className="input-radio input-radio"
         //   checked={true}
         />
-        <label className="label-radio label-radio__deep-green" for="input-radio-five">
+        <label className="label-radio label-radio__deep-green-light" for="input-radio-five">
           <span className="check"></span>
         </label>
       </div>

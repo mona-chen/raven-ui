@@ -6,10 +6,10 @@
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  border: 0;
+  border: none;
   padding: $padding;
   border-radius: $radius;
-  background-color: $bg-color;
+  // background-color: $bg-color;
   width: max-content;
   outline: none;
   opacity: 1;
@@ -27,6 +27,8 @@
 @mixin btn_rounded() {
   display: grid;
   place-items: center;
+  height: 5rem;
+  width: 5rem;
 }
 
 // mixin for btn with icon
@@ -63,260 +65,53 @@
   }
 }
 
-.btn {
+.raven-btn {
   @include btn;
+  @include btn-icon;
 }
 
+
+
+//  buttons colors
 @each $key, $val in $colors {
-  .btn__#{$key} {
-    @include btn($val);
-  }
 
-  .btn_outline__#{$key} {
-    @include btn($white);
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-  }
 
-  .btn-complement__#{$key} {
-    @include btn($val);
-    color: light-comp($val);
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// small sized buttons
-@each $key, $val in $colors {
-  .btn_sm__#{$key} {
+  .btn-sm {
     @include btn($val, 1.1rem 2.4rem);
-
-    // &:hover{
-    //     background-color: lighten($val, 5)
-    // }
+    @include btn-icon;
   }
 
-  .btn_sm_outline__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-    // &:hover {
-    //     background-color: $val;
-    // }
-  }
-
-  .btn_sm_complement__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    color: light-comp($val);
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// medium sized buttons
-@each $key, $val in $colors {
-  .btn_md__#{$key} {
+  .btn-md {
     @include btn($val, 1.6rem 2.4rem);
-
-    // &:hover{
-    //     background-color: lighten($val, 5)
-    // }
+    @include btn-icon;
   }
 
-  .btn_md_outline__#{$key} {
-    @include btn($val, 1.6rem 2.4rem);
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-    // &:hover {
-    //     background-color: $val;
-    // }
-  }
 
-  .btn_md_complement__#{$key} {
-    @include btn($val, 1.6rem 2.4rem);
-    color: light-comp($val);
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// large sized buttons
-@each $key, $val in $colors {
-  .btn_lg__#{$key} {
+  .btn-lg{
     @include btn($val, 2rem 5.6rem);
-
-    // &:hover{
-    //     background-color: lighten($val, 5)
-    // }
+    @include btn-icon;
   }
 
-  .btn_lg_outline__#{$key} {
-    @include btn($val, 2rem 5.6rem);
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-    // &:hover {
-    //     background-color: $val;
-    // }
-  }
-
-  .btn_lg_complement__#{$key} {
-    @include btn($val, 2rem 5.6rem);
-    color: light-comp($val);
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-//rounded btn
-// small sized buttons
-@each $key, $val in $colors {
-  .btn_rounded__#{$key} {
+  .btn-rounded {
     @include btn($val, 0, 50%);
     @include btn-rounded;
-    height: 5rem;
-    width: 5rem;
-
-    // &:hover{
-    //     background-color: lighten($val, 5)
-    // }
   }
 
-  .btn_rounded_outline__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-    // &:hover {
-    //     background-color: $val;
-    // }
-  }
-
-  .btn_rounded_complement__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    color: light-comp($val);
-    &:hover {
-      color: $val;
-      background-color: light-comp($val);
-    }
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// small sized icon buttons
-@each $key, $val in $colors {
-  .btn-icon_sm__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    @include btn-icon;
-  }
-
-  .btn-icon_sm_outline__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    @include btn-icon;
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-  }
-
-  .btn-icon_sm_complement__#{$key} {
-    @include btn($val, 1.1rem 2.4rem);
-    @include btn-icon;
-    color: light-comp($val);
-    &:hover {
-      color: $val;
-      background-color: light-comp($val);
-    }
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// medium sized icon buttons
-@each $key, $val in $colors {
-  .btn-icon_md__#{$key} {
-    @include btn($val, 1.6rem 2.4rem);
-    @include btn-icon;
-  }
-
-  .btn-icon_md_outline__#{$key} {
-    @include btn($val, 1.6rem 2.4rem);
-    @include btn-icon;
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-  }
-
-  .btn-icon-md-complement-#{$key} {
-    @include btn($val, 1.6rem 2.4rem);
-    @include btn-icon;
-    color: light-comp($val);
-    // &:hover {
-    //     color: $val;
-    //     background-color: light-comp($val);
-    // }
-  }
-}
-
-// large sized icon buttons
-@each $key, $val in $colors {
-  .btn-icon_lg__#{$key} {
-    @include btn($val, 2rem 5.6rem);
-    @include btn-icon;
-  }
-
-  .btn-icon-lg_outline-#{$key} {
-    @include btn($val, 2rem 5.6rem);
-    @include btn-icon;
-    border: $base-border-thickness solid $val;
-    background-color: #ffffff;
-  }
-
-  .btn-icon-lg-complement-#{$key} {
-    @include btn($val, 2rem 5.6rem);
-    @include btn-icon;
-    color: light-comp($val);
-  }
-
-  .btn_disabled {
-    @include btn_disabled;
-  }
-}
-
-// btn extend buttons
-@each $key, $val in $colors {
-  .btn_extended__#{$key} {
+  .btn-extended {
     @include btn($val, 1.6rem, 10rem);
     @include btn-icon;
     @include btn-extend();
   }
 
-  .btn_extended_outline__#{$key} {
-    @include btn($val, 1.6rem, 10rem);
-    @include btn-icon;
-    @include btn-extend();
-    border: $base-border-thickness solid $val;
+  .btn-#{$key} {
+    background-color: $val;
+   }
+
+   .btn-outline-#{$key}{
+    border: $base-border-thickness solid $val !important;
     background-color: #ffffff;
   }
-
-  .btn_extended_complement__#{$key} {
-    @include btn($val, 1.6rem, 10rem);
-    @include btn-icon;
-    @include btn-extend();
-    color: light-comp($val);
-    &:hover {
-      color: $val;
-      background-color: light-comp($val);
-    }
-  }
+   
 
   .btn_disabled {
     @include btn_disabled;

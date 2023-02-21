@@ -34,18 +34,29 @@
 // $orange: var(--primary-orange);
 // $deep_green: var(--primary-deep-green);
 
-// primary colors -----
-$error: #ff0f00;
-$info: #f6c31c;
-$white: #ffffff;
-$black: #020202;
-$green: #0b8376;
-$blue: #476885;
-$purple: #755ae2;
-$orange: #ea872d;
-$deep_green: #014345;
+// primary colors light -----
+$error_light: #ff0f00;
+$info_light: #f6c31c;
+$white_light: #ffffff;
+$black_light: #020202;
+$green_light: #0b8376;
+$blue_light: #476885;
+$purple_light: #755ae2;
+$orange_light: #ea872d;
+$deep_green_light: #014345;
 
-// base colors -----
+// primary colors dark -----
+$error_dark: #ff0f00;
+$info_dark: #f6c31c;
+$black_dark: #ffffff;
+$white_dark: #020202;
+$green_dark: #0b8376;
+$blue_dark: #a0d2fe;
+$purple_dark: #755ae2;
+$orange_dark: #ea872d;
+$deep_green_dark: #0b8376;
+
+// base colors  -----
 $base_white: #ffffff;
 $base_black: #020202;
 $base_background_white: #f9f9f9;
@@ -53,35 +64,42 @@ $base_background_black: #676767;
 
 //color palette
 $colors: (
-  "error": $error,
-  "info": $info,
-  "white": $white,
-  "blue": $blue,
-  "green": $green,
-  "purple": $purple,
-  "orange": $orange,
-  "black": $black,
-  "deep-green": $deep_green,
-  "grey": #CCCCCC,
+  "error-light": $error_light,
+  "info-light": $info_light,
+  "white-light": $white_light,
+  "blue-light": $blue_light,
+  "green-light": $green_light,
+  "purple-light": $purple_light,
+  "orange-light": $orange_light,
+  "black-light": $black_light,
+  "deep-green-light": $deep_green_light,
+  "grey": #cccccc,
   "base-bg-black": #676767,
+  "error-dark": #ff0f00,
+  "info-dark": $info_dark,
+  "dark-dark": $black_dark,
+  "white-dark": $white_dark,
+  "green-dark": $green_dark,
+  "blue-dark": $blue_dark,
+  "purple-dark": $purple_dark,
+  "orange-dark": $orange_dark,
+  "deep-green-dark": $deep_green_dark,
 );
-
-
 
 // spacing
 $base-padding: 1rem;
 $base-margin: 1rem;
 
 // borders
-$base-border-thickness: .1rem;
-$base-border-radius: .8rem;
-$base-btn-border-radius: .8rem;
+$base-border-thickness: 0.1rem;
+$base-border-radius: 0.8rem;
+$base-btn-border-radius: 0.8rem;
 
 $border-colors: (
   "green": #0b8376,
   "grey-dark": #676767,
   "grey-light": #cccccc,
-  "light": #f7f8f7
+  "light": #f7f8f7,
 );
 
 //box-shadow
