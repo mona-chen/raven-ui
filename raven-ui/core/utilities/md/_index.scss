@@ -6,7 +6,7 @@
 $utilities: (
   
   "opacity": (
-    "prefix": "o",
+    "prefix": "md:o",
     "values": (
       "10": 0.1,
       "20": 0.2, 
@@ -21,7 +21,7 @@ $utilities: (
     ),
   ),
   "border-radius": (
-    "prefix": "br",
+    "prefix": "md:br",
     "values": (
       "default": $base-border-radius,
       "none": 0,
@@ -32,7 +32,7 @@ $utilities: (
     )
   ),
   "display": (
-    "prefix": "display", display-n
+    "prefix": "md:display", display-n
     "values": (
       "n": none,
       "b": block,
@@ -45,7 +45,7 @@ $utilities: (
 
 
   "align-items": (
-    "prefix": "align",
+    "prefix": "md:align",
     "values": (
       "f-start": flex-start,
       "f-end": flex-end,
@@ -54,7 +54,7 @@ $utilities: (
   ),
 
   "flex-direction": (
-    "prefix": "flex",
+    "prefix": "md:flex",
     "values": (
       "row": row,
       "column": column,
@@ -62,7 +62,7 @@ $utilities: (
   ),
 
   "justify-content": (
-    "prefix": "justify",
+    "prefix": "md:justify",
     "values": (
       "between": space-between,
       "end": flex-end,
@@ -75,7 +75,7 @@ $utilities: (
   ),
 
   "text-align": (
-    "prefix": "text",
+    "prefix": "md:text",
     "values": (
         "center" : center,
         "start" : start,
@@ -87,7 +87,7 @@ $utilities: (
   ),
 
   "text-decoration": (
-    "prefix": "text",
+    "prefix": "md:text",
     "values": (
         "dashed" : dashed,
         "underline" : underline,
@@ -101,7 +101,7 @@ $utilities: (
   ),
 
   "font-weight": (
-    "prefix": "font",
+    "prefix": "md:font",
     "values": (
         "b" : bold,
         "i" : italic,
@@ -113,7 +113,7 @@ $utilities: (
 
   
   "font-size": (
-    "prefix": "text",
+    "prefix": "md:text",
     "values": (
         "dxxl" : $base-font-size * 7.2,
         "dxl" : $base-font-size * 6,
@@ -148,7 +148,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "padding": (
-    "prefix": "p",
+    "prefix": "md:p",
     "values": (
       #{$i}: math.div(($base-padding * $i), 10)  ,
     ),
@@ -181,7 +181,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "padding-left": (
-    "prefix": "pl",
+    "prefix": "md:pl",
     "values": (
       #{$i}: math.div(($base-padding * $i), 10)  ,
     ),
@@ -214,7 +214,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "padding-right": (
-    "prefix": "pr",
+    "prefix": "md:pr",
     "values": (
       #{$i}: math.div(($base-padding * $i), 10)  ,
     ),
@@ -247,7 +247,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "padding-top": (
-    "prefix": "pt",
+    "prefix": "md:pt",
     "values": (
       #{$i}: math.div(($base-padding * $i), 10)  ,
     ),
@@ -280,7 +280,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "padding-bottom": (
-    "prefix": "pb",
+    "prefix": "md:pb",
     "values": (
       #{$i}: math.div(($base-padding * $i), 10)  ,
     ),
@@ -310,7 +310,7 @@ $utilities: (
 
 //padding for both left and right (padding-x)
 @each $i in $sizing {
-  .p-x {
+  .md:p-x {
     padding-left: math.div(($base-padding * $i), 10) + rem;
     padding-right: math.div(($base-padding * $i), 10) + rem;
   }
@@ -318,14 +318,14 @@ $utilities: (
 
 //padding for both top and bottom (padding-y)
 @each $i in $sizing {
-  .p-y {
+  .md:p-y {
     padding-top: math.div(($base-padding * $i), 10) + rem;
     padding-bottom: math.div(($base-padding * $i), 10) + rem;
   }
 }
 
 //padding auto (padding-auto)
-  .p-auto {
+  .md:p-auto {
     padding: auto;
   };
 
@@ -337,7 +337,7 @@ $utilities: (
     //create the object properties from 1 to 72
    $util :(
      "padding": (
-      "prefix": "p",
+      "prefix": "md:p",
       "values": (
         #{$i}: math.div(($base-padding * $i), 10)  ,
         ),
@@ -349,7 +349,7 @@ $utilities: (
       $prefix: map-get($map, "prefix");
       $values: map-get($map, "values");
    
-          .#{$prefix}-#{$i}-#{$j}{
+          .md:#{$prefix}-#{$i}-#{$j}{
             #{$property} :  #{$base-padding * $i + math.div($j, 10)};
           }
   
@@ -373,7 +373,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "margin": (
-    "prefix": "m",
+    "prefix": "md:m",
     "values": (
       #{$i}: math.div(($base-margin * $i), 10)  ,
     ),
@@ -387,11 +387,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .md:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .md:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -406,7 +406,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "margin-left": (
-    "prefix": "ml",
+    "prefix": "md:ml",
     "values": (
       #{$i}: math.div(($base-margin * $i), 10)  ,
     ),
@@ -420,11 +420,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .md:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .md:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -439,7 +439,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "margin-right": (
-    "prefix": "mr",
+    "prefix": "md:mr",
     "values": (
       #{$i}: math.div(($base-margin * $i), 10)  ,
     ),
@@ -453,11 +453,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .md:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .md:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -472,7 +472,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "margin-top": (
-    "prefix": "mt",
+    "prefix": "md:mt",
     "values": (
       #{$i}: math.div(($base-margin * $i), 10)  ,
     ),
@@ -486,11 +486,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .md:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .md:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -505,7 +505,7 @@ $utilities: (
   //create the object properties from 1 to 72
  $util :(
    "margin-bottom": (
-    "prefix": "mb",
+    "prefix": "md:mb",
     "values": (
       #{$i}: math.div(($base-margin * $i), 10)  ,
     ),
@@ -519,11 +519,11 @@ $utilities: (
   
       @each $k, $v in $values {
           @if($k == "default"){
-              .#{$prefix}{
+              .md:#{$prefix}{
                   #{$property} : $v;
               }
           } @else {
-              .#{$prefix}-#{$k}{
+              .md:#{$prefix}-#{$k}{
                   #{$property} : $v;
               
           }
@@ -535,7 +535,7 @@ $utilities: (
 
 //margin for both left and right (margin-x)
 @each $i in $sizing  {
-  .m-x {
+  .md:m-x {
     margin-left: math.div(($base-margin * $i), 10) + rem;
     margin-right: math.div(($base-margin * $i), 10) + rem;
   }
@@ -543,14 +543,14 @@ $utilities: (
 
 //margin for both top and bottom (margin-y)
 @each $i in $sizing  {
-  .m-y {
+  .md:m-y {
     margin-top: math.div(($base-margin * $i), 10) + rem;
     margin-bottom: math.div(($base-margin * $i), 10) + rem;
   }
 }
 
 //margin auto (margin-auto)
-  .m-auto {
+  .md:m-auto {
     margin: auto;
   };
 
@@ -562,7 +562,7 @@ $utilities: (
     //create the object properties from 1 to 72
    $util :(
      "margin": (
-      "prefix": "m",
+      "prefix": "md:m",
       "values": (
         #{$i}: math.div(($base-margin * $i), 10)  ,
         ),
@@ -574,7 +574,7 @@ $utilities: (
       $prefix: map-get($map, "prefix");
       $values: map-get($map, "values");
    
-          .#{$prefix}-#{$i}-#{$j}{
+          .md:#{$prefix}-#{$i}-#{$j}{
             #{$property} :  #{$base-margin * $i + math.div($j, 10)};
           }
   
@@ -601,11 +601,11 @@ $utilities: (
 
     @each $k, $v in $values {
         @if($k == "default"){
-            .#{$prefix}{
+            .md:#{$prefix}{
                 #{$property} : $v;
             }
         } @else {
-            .#{$prefix}-#{$k}{
+            .md:#{$prefix}-#{$k}{
                 #{$property} : $v;
             }
         }}
@@ -617,7 +617,7 @@ $utilities: (
   
     //flex related
     @for $i from 0 to 50 {
-      .gap-#{$i}{
+      .md:gap-#{$i}{
         gap: math.div($i, 10) + rem;
       }
     }
@@ -625,41 +625,41 @@ $utilities: (
     
     
 
-    .center {
+    .md:center {
       justify-content: center;
       align-items: center;
     }
 
     // ==== width ====
     @for $i from 0 to 2000 {
-      .w-#{$i}{
+      .md:w-#{$i}{
         width: math.div($i, 10) + rem;
       }
     }
 
 
     @for $i from 0 to 100 {
-      .wp-#{$i}{
+      .md:wp-#{$i}{
         width: percentage(math.div($i, 100));
       }
     }
 
     @for $i from 0 to 101 {
-      .wv-#{$i}{
+      .md:wv-#{$i}{
         width: $i + vw;
       }
     }
 
      // ==== height ====
      @for $i from 0 to 2000 {
-      .h-#{$i}{
+      .md:h-#{$i}{
         height: math.div($i, 10) + rem;
       }
     }
 
     // ===== height in percentage =====
     @for $i from 0 to 100 {
-      .hp-#{$i}{
+      .md:hp-#{$i}{
         height: percentage(math.div($i, 100));
       }
     }
@@ -667,7 +667,7 @@ $utilities: (
     // ===== height in view width =====
 
     @for $i from 0 to 101 {
-      .hv-#{$i}{
+      .md:hv-#{$i}{
         height: $i + vw;
       }
     }
@@ -675,7 +675,7 @@ $utilities: (
 
     // font-related-utilities
     @each $v in $font-weight {
-      .font-#{$v}{
+      .md:font-#{$v}{
         font-weight: $v;
       }
     }
@@ -689,13 +689,13 @@ $utilities: (
    );
 
    @each $k, $v in $shadow {
-    .shadow-#{$k} {
+    .md:shadow-#{$k} {
       box-shadow : $v
     }
    }
 
    // related to display
-   .flex {
+   .md:flex {
     display: flex;
    }
 
@@ -709,12 +709,12 @@ $utilities: (
     @if($j == 0){
       @if($i == 1){
         @each $k, $v in $border-colors {
-          .border-#{$k} {
+          .md:border-#{$k} {
             border: $i + px solid $v ;
           }}
       }
       @each $k, $v in $border-colors {
-        .border-#{$k}-#{$i} {
+        .md:border-#{$k}-#{$i} {
           border: $i + px solid $v ;
         }
       }
@@ -722,7 +722,7 @@ $utilities: (
     //todo: remove this 
     @else {
       @each $k, $v in $border-colors {
-        .border-#{$k}-#{$i}-#{$j} {
+        .md:border-#{$k}-#{$i}-#{$j} {
           border: $i + math.div($j, 10) + px solid $v ;
         }
       }
@@ -733,18 +733,18 @@ $utilities: (
     @if($j == 0){
       @if($i == 1){
         @each $k, $v in $border-colors {
-          .border-t-#{$k} {
+          .md:border-t-#{$k} {
             border-top: $i + px solid $v ;
           }}
       }
       @each $k, $v in $border-colors {
-        .border-t-#{$k}-#{$i} {
+        .md:border-t-#{$k}-#{$i} {
           border-top: $i + px solid $v ;
         }
       }
     } @else {
     @each $k, $v in $border-colors {
-      .border-t-#{$k}-#{$i}-#{$j} {
+      .md:border-t-#{$k}-#{$i}-#{$j} {
         border-top: $i + math.div($j, 10) + px solid $v ;
       }
     }}
@@ -753,18 +753,18 @@ $utilities: (
     @if($j == 0){
       @if($i == 1){
         @each $k, $v in $border-colors {
-          .border-b-#{$k} {
+          .md:border-b-#{$k} {
             border-bottom: $i + px solid $v ;
           }}
       }
       @each $k, $v in $border-colors {
-        .border-b-#{$k}-#{$i} {
+        .md:border-b-#{$k}-#{$i} {
           border-bottom: $i + px solid $v ;
         }
       }
     } @else {
     @each $k, $v in $border-colors {
-      .border-b-#{$k}-#{$i}-#{$j} {
+      .md:border-b-#{$k}-#{$i}-#{$j} {
         border-bottom: $i + math.div($j, 10) + px solid $v ;
       }
     }}
@@ -773,12 +773,12 @@ $utilities: (
     @if($j == 0){
       @if($i == 1){
         @each $k, $v in $border-colors {
-          .border-l-#{$k} {
+          .md:border-l-#{$k} {
             border-left: $i + px solid $v ;
           }}
       }
       @each $k, $v in $border-colors {
-        .border_l-#{$k}-#{$i} {
+        .md:border_l-#{$k}-#{$i} {
           border-left: $i + px solid $v ;
         }
 
@@ -786,7 +786,7 @@ $utilities: (
       }
     } @else {
     @each $k, $v in $border-colors {
-      .border-l-#{$k}-#{$i}-#{$j} {
+      .md:border-l-#{$k}-#{$i}-#{$j} {
         border-left: $i + math.div($j, 10) + px solid $v ;
       }
     }}
@@ -795,18 +795,18 @@ $utilities: (
     @if($j == 0){
       @if($i == 1){
         @each $k, $v in $border-colors {
-          .border-r-#{$k} {
+          .md:border-r-#{$k} {
             border-right: $i + px solid $v ;
           }}
       }
       @each $k, $v in $border-colors {
-        .border-r-#{$k}-#{$i} {
+        .md:border-r-#{$k}-#{$i} {
           border-right: $i + px solid $v ;
         }
       }
     } @else {
     @each $k, $v in $border-colors {
-      .border-r-#{$k}-#{$i}-#{$j} {
+      .md:border-r-#{$k}-#{$i}-#{$j} {
         border-right: $i + math.div($j, 10) + px solid $v ;
       }}
     }
@@ -823,7 +823,7 @@ $utilities: (
   }
 }
 
-.fadeIn {
+.md:fadeIn {
   animation-name: fadeIn;
   animation-duration: 1s;
 }
@@ -837,22 +837,22 @@ $utilities: (
   }
 }
 
-.slideInRight {
+.md:slideInRight {
   animation-name: slideInRight;
   animation-duration: 1s;
 }
 
 
 //transitions
-.transition-fast {
+.md:transition-fast {
   transition: all 0.2s ease-in-out;
 }
 
-.transition-normal {
+.md:transition-normal {
   transition: all 0.5s ease-in-out;
 }
 
-.transition-slow {
+.md:transition-slow {
   transition: all 1s ease-in-out;
 }
 

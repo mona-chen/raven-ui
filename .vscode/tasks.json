@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Styles",
+			"type": "shell",
+			"command": "gulp",
+			"options": {
+				"cwd": "./raven-ui/"
+			},
+			"presentation": {
+				"reveal": "silent"
+			},
+			"problemMatcher": {
+                "owner": "starting",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*)$",
+                    "file": 1
+                }},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	],
+		  "presentation": {
+			"reveal": "silent"
+		  }
+		}
