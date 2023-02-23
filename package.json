@@ -1,6 +1,6 @@
 {
   "name": "raven-bank-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A utility first css framework by Raven bank.",
   "dependencies": {
     "@babel/cli": "^7.21.0",
