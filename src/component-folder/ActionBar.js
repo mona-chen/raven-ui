@@ -4,7 +4,7 @@ import errorIcon from "../img/error-toast-icon.svg";
 import warningIcon from "../img/toast-warning-icon.svg";
 import infoIcon from "../img/toast-info-icon.svg";
 
-const ActionBar = () => {
+const ActionBar = (props) => { 
   return (
    <>
        {/* <!-- action bar start --> */}
