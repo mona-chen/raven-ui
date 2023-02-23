@@ -1,6 +1,6 @@
 {
   "name": "raven-bank-ui",
-  "version": "0.3.1",
+  "version": "0.1.1",
   "description": "A utility first css framework by Raven bank.",
   "peerDependencies": {
     "moment": "^2.29.4",
