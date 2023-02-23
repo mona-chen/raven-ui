@@ -1,6 +1,6 @@
 {
   "name": "raven-bank-ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A utility first css framework by Raven bank.",
   "peerDependencies": {
     "@babel/cli": "^7.21.0",
@@ -24,7 +24,6 @@
     "react-select": "^5.7.0",
     "yargs": "^17.6.2"
   },
-
   "scripts": {
     "start": "npm run start:react & npm run start:gulp",
     "build": "./node_modules/.bin/babel src --out-file index.js",
@@ -37,7 +36,7 @@
   "eslintConfig": {
     "extends": [
       "react-app"
-        ]
+    ]
   },
   "browserslist": {
     "production": [
