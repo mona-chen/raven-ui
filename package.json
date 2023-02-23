@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "npm run start:react & npm run start:gulp",
-    "build": "./node_modules/.bin/babel src --out-file lib/index.js",
+    "build": "./node_modules/.bin/babel src/component-folder --out-file lib/index.js",
     "start:react": "react-scripts start",
     "start:gulp": "cd raven-ui && gulp"
   },
