@@ -1,4 +1,5 @@
 import React from 'react'
+import RavenToggleSlide from '../Reusables/RavenToggleSlide'
 
 const ToogleSlide = () => {
   return (
@@ -106,6 +107,7 @@ const ToogleSlide = () => {
             </label>
           </div>
           {/* <!-- toggle wrap end --> */}
+          <RavenToggleSlide color={`orange-light`} />
         </div>
    </>
   )

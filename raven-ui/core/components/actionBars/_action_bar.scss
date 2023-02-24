@@ -1,17 +1,29 @@
+.action-bar-wrapper-box {
+  width: 100%;
+  overflow-y: hidden;
+}
+
 @mixin action-bar(
   $bg-color: #e2e2e2,
   $padding: $base-padding $base-padding,
   $radius: $base-border-radius
 ) {
-  width: 100%;
+  // width: 100%;
   font-size: 1.25rem;
-  padding: $padding;
-//   border-radius: $radius;
+  // padding: $padding;
+  //   border-radius: $radius;
   display: flex;
   align-items: center;
   //   grid-template-columns: ;
   gap: 2rem;
   background: #fff6ed;
+  max-height: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: all 0.5s linear-bezier(0, 1.05, 0, 1);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  width: 100%;
 
   .img-box {
     width: 2.5rem;
@@ -34,7 +46,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    
 
     &:hover .arrow-icon {
       transform: translateX(0.2rem);
@@ -55,8 +66,8 @@
       transition: all 0.3s;
       position: relative;
 
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -68,8 +79,8 @@
         z-index: 1;
       }
 
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
@@ -81,11 +92,9 @@
         z-index: 2;
       }
 
-      &>*{
+      & > * {
         z-index: 3;
       }
-
-     
 
       .icon {
         width: 1rem;
@@ -125,36 +134,34 @@
     }
 
     .action-box {
-        .text {
-          color: #ff0f00;
+      .text {
+        color: #ff0f00;
+      }
+
+      .arrow-icon {
+        &::after {
+          background-color: #ffdfdd;
         }
-    
-        .arrow-icon {
-    
-          &::after{
-            background-color: #ffdfdd;
-          }
-    
-          &::before{
-            background-color: #ff0f00;
-          }
-    
+
+        &::before {
+          background-color: #ff0f00;
         }
       }
+    }
   }
 
-//   .action_bar-success {
-//     @include action-bar;
-//     background: #d1f5d7 !important;
-//     // border: 0.15rem solid #b3efbc !important;
+  //   .action_bar-success {
+  //     @include action-bar;
+  //     background: #d1f5d7 !important;
+  //     // border: 0.15rem solid #b3efbc !important;
 
-//     .cancel {
-//       background-color: #b3efbc;
-//       svg {
-//         fill: #1ace37;
-//       }
-//     }
-//   }
+  //     .cancel {
+  //       background-color: #b3efbc;
+  //       svg {
+  //         fill: #1ace37;
+  //       }
+  //     }
+  //   }
 
   .action_bar__info {
     @include action-bar;
@@ -168,22 +175,20 @@
     }
 
     .action-box {
-        .text {
-          color: #476885;
+      .text {
+        color: #476885;
+      }
+
+      .arrow-icon {
+        &::after {
+          background-color: #b9defe;
         }
-    
-        .arrow-icon {
-    
-          &::after{
-            background-color: #b9defe;
-          }
-    
-          &::before{
-            background-color: #476885;
-          }
-    
+
+        &::before {
+          background-color: #476885;
         }
       }
+    }
   }
 
   .action_bar__warning {
@@ -198,21 +203,38 @@
     }
 
     .action-box {
-        .text {
-          color: #ea872d;
+      .text {
+        color: #ea872d;
+      }
+
+      .arrow-icon {
+        &::after {
+          background-color: #ffe6cd;
         }
-    
-        .arrow-icon {
-    
-          &::after{
-            background-color: #ffe6cd;
-          }
-    
-          &::before{
-            background-color: #ea872d;
-          }
-    
+
+        &::before {
+          background-color: #ea872d;
         }
       }
+    }
+  }
+
+  .action_bar_show {
+    padding: $base-padding $base-padding;
+    max-height: 7rem;
+    transition: all 0.5s linear-bezier(0, 1.05, 0, 1);
+  }
+
+  .action_bar__transform {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes translateActionUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }

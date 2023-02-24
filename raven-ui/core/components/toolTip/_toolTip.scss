@@ -1,3 +1,15 @@
+.tooltip-hover-wrap {
+  cursor: pointer;
+  // background-color: red;
+  position: relative;
+  width: max-content;
+
+  &:hover .tool-tip-wrap {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
 @mixin tool-tip-wrap(
   $bg-color: #020202,
   $padding: $base-padding $base-padding,
@@ -16,6 +28,9 @@
   justify-content: center;
   position: absolute;
   color: #ffffff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
 
   &::after {
     content: "";
@@ -27,7 +42,7 @@
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
   }
 
-  .img-box{
+  .img-box {
     width: 10rem;
     height: 6rem;
     position: absolute;
@@ -35,22 +50,22 @@
     right: 0rem;
     transform: translateX(15%);
 
-    .img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
   .got {
-    color: #ffffff;
+    // color: #ffffff;
     align-self: flex-end;
     margin-top: 0.7rem;
     font-size: 1.35rem;
   }
 
   .text {
-    color: #E5E6E6;
+    // color: #e5e6e6;
     font-size: 1.2rem;
     font-weight: 400;
   }
@@ -58,15 +73,16 @@
   .title {
     font-weight: 800;
     margin-bottom: 0.6rem;
-    color: #ffffff;
+    // color: #ffffff;
     font-size: 1.5rem;
+    text-transform: capitalize
   }
 }
 
 @each $key, $val in $colors {
   .tool-tip-wrap__#{$key} {
     @include tool-tip-wrap;
-    color: $val;
+    // color: $val;
     font-weight: 800;
     background-color: $val;
 
@@ -75,14 +91,14 @@
     }
   }
 
-  .tool-tip-wrap_big{
+  .tool-tip-wrap_big {
     padding: 2.4rem 1.6rem;
   }
 
   .tool-tip-wrap_top-center {
-    top: 0%;
+    bottom: 100%;
     left: 50%;
-    transform: translateY(-100%) translateX(-50%);
+    transform: translateY(-2rem) translateX(-50%);
 
     &::after {
       top: 100%;
@@ -92,9 +108,9 @@
   }
 
   .tool-tip-wrap_top-right {
-    top: 0%;
+    bottom: 100%;
     left: 100%;
-    transform: translateY(-100%);
+    transform: translateY(-2rem) translateX(-15%);
 
     &::after {
       top: 100%;
@@ -104,9 +120,9 @@
   }
 
   .tool-tip-wrap_top-left {
-    top: 0%;
+    bottom: 100%;
     left: 0%;
-    transform: translateY(-100%) translateX(-100%);
+    transform: translateY(-2rem) translateX(-85%);
 
     &::after {
       top: 100%;
@@ -118,7 +134,7 @@
   .tool-tip-wrap_bottom-center {
     top: 100%;
     left: 50%;
-    transform: translateY(100%) translateX(-50%);
+    transform: translateY(2rem) translateX(-50%);
 
     &::after {
       top: 0%;
@@ -130,7 +146,7 @@
   .tool-tip-wrap_bottom-left {
     top: 100%;
     left: 0%;
-    transform: translateY(100%) translateX(-100%);
+    transform: translateY(2rem) translateX(-85%);
 
     &::after {
       top: 0%;
@@ -142,7 +158,7 @@
   .tool-tip-wrap_bottom-right {
     top: 100%;
     left: 100%;
-    transform: translateY(100%) translateX(0%);
+    transform: translateY(2rem) translateX(-20%);
 
     &::after {
       top: 0%;
@@ -153,8 +169,8 @@
 
   .tool-tip-wrap_left {
     top: 50%;
-    left: 0%;
-    transform: translateY(-50%) translateX(-100%);
+    right: 100%;
+    transform: translateY(-50%) translateX(-2rem);
 
     &::after {
       top: 50%;
@@ -166,7 +182,7 @@
   .tool-tip-wrap_right {
     top: 50%;
     left: 100%;
-    transform: translateY(-50%) translateX(0%);
+    transform: translateY(-50%) translateX(2rem);
 
     &::after {
       top: 50%;
@@ -175,9 +191,9 @@
     }
   }
 
-  .tool-tip_mascot{
-    .text{
-        width: 90%;
+  .tool-tip_mascot {
+    .text {
+      width: 90%;
     }
   }
 }

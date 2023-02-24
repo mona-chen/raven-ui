@@ -1,4 +1,5 @@
 import React from "react";
+import RavenRadioCheck from "../Reusables/RavenRadioCheck";
 
 const RadioCheck = () => {
   return (
@@ -69,6 +70,8 @@ const RadioCheck = () => {
         </label>
       </div>
       {/* <!-- check end --> */}
+      <RavenRadioCheck color={`purple-light`} id="221" name={`testing-radio`} />
+      <RavenRadioCheck color={`black-light`} id="22" name={`testing-radio`} />
     </div>
    </>
   );
