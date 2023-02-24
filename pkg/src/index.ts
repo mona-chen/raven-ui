@@ -1,4 +1,3 @@
-import MyCounter from './components/App'
 import RavenActionBar from './components/RavenActionBar'
 import RavenButton from './components/RavenButton'
 import RavenCheckBox from './components/RavenCheckBox'
@@ -10,7 +9,6 @@ import RavenToolTip from './components/RavenToolTip'
 // import '../styles/index.css'
 
 export {
-  MyCounter,
   RavenActionBar,
   RavenButton,
   RavenCheckBox,

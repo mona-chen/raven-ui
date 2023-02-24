@@ -4,15 +4,17 @@ import errorIcon from '../img/error-toast-icon.svg'
 import warningIcon from '../img/toast-warning-icon.svg'
 import infoIcon from '../img/toast-info-icon.svg'
 
-interface Props {
-  msg: string
-  actionText: string
-  onCancel: any
-  onAction: any
-  visible: boolean
-  type: string
-  className: string
-}
+// interface Props {
+//   msg: string
+//   actionText: string
+//   onCancel: any
+//   onAction: any
+//   visible: boolean
+//   type: string
+//   className: string
+// }
+
+type Props = any
 const RavenActionBar = ({ msg, actionText, onCancel, onAction, visible, type, className }: Props) => {
   const [translateUp, setTranslateUp] = useState(false)
 
