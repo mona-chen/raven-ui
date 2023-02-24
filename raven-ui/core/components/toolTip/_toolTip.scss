@@ -1,7 +1,7 @@
 .tooltip-hover-wrap {
   cursor: pointer;
   // background-color: red;
-  position: relative;
+  position: relative !important;
   width: max-content;
 
   &:hover .tool-tip-wrap {
@@ -35,8 +35,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0%;
-    left: 2rem;
+    // top: 0%;
+    // left: 2rem;
     width: 1.1rem;
     height: 1.1rem;
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
@@ -62,6 +62,7 @@
     align-self: flex-end;
     margin-top: 0.7rem;
     font-size: 1.35rem;
+    font-weight: 600;
   }
 
   .text {
@@ -83,6 +84,7 @@
   .tool-tip-wrap__#{$key} {
     @include tool-tip-wrap;
     // color: $val;
+    // position: absolute;
     font-weight: 800;
     background-color: $val;
 
@@ -96,8 +98,9 @@
   }
 
   .tool-tip-wrap_top-center {
-    bottom: 100%;
-    left: 50%;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: unset;
     transform: translateY(-2rem) translateX(-50%);
 
     &::after {

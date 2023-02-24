@@ -10,30 +10,7 @@ import "react-phone-input-2/lib/style.css";
 import RavenInputField from "../Reusables/RavenInputField";
 
 const InputFields = () => {
-  const [showPasword, setShowPassword] = useState(false);
-  const [selectVal, setSelectVal] = useState("");
-  const [toDate, settoDate] = useState("");
-  const reactSelectStyleTable = {
-    control: (base, state) => ({
-      ...base,
-      border: state.isFocused ? "0.1rem solid #6F6F6F" : "0.1rem solid #6F6F6F",
-      // backgroundColor: state.isSelected ? "#6F6F6F" : "white",
-      boxShadow: state.isFocused ? "0.1rem solid #6F6F6F" : 0,
-      "&:hover": {
-        // border: state.isFocused ? 0 : 0
-      },
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? "#0b8376" : "white",
-    }),
-  };
-
-  const selectOption = [
-    { label: "Option one", value: "1" },
-    { label: "Option two", value: "2" },
-    { label: "Option three", value: "3" },
-  ];
+ 
 
   return (
     <div
@@ -51,7 +28,7 @@ const InputFields = () => {
         label={"password"}
         color={`green-light`}
       />
-      <RavenInputField type={`number`} label={"number"} color={`green-light`} />
+      <RavenInputField type={`number`} label={"number"} color={`purple-light`} />
       <RavenInputField type={`phone`} label={"phone"} color={`green-light`} />
       <RavenInputField type={`search`} label={"search"} color={`green-light`} />
       <RavenInputField type={`date`} label={"date"} color={`green-light`} />

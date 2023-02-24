@@ -1,80 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import tableImg from "../img/table-icon.svg";
 import editIcon from "../img/edit-icon.svg";
 import actionIcon from "../img/action-icon.svg";
+import RavenTable from "../Reusables/RavenTable";
+import RavenTableRow from "../Reusables/RavenTableRow";
 
 const Tables = () => {
+  // const headList = [
+  //   { label: "Narration", value: "narration" },
+  //   { label: "Type", value: "type" },
+  //   { label: "Amount", value: "amount" },
+  //   { label: "Transaction Date", value: "transaction_date" },
+  // ];
+
+  const headListTwo = ["Narration", "Type", "Amount", "Transaction Date"];
+  const [indexNo, setIndexNo] = useState("");
+
+  const bodyList = [
+    {
+      des: "Olakunle Olutayo — GTBank",
+      img: tableImg,
+      type: "Money Received",
+      amount: "₦12,000,000.00",
+      date: "5 Sept, 2022 - 5:48PM",
+    },
+    {
+      des: "Kayode david — Uba",
+      img: tableImg,
+      type: "Money Sent",
+      amount: "₦3,000,000.00",
+      date: "5 Jan, 2022 - 5:48PM",
+    },
+    {
+      des: "Messi Ronaldo — Access",
+      img: tableImg,
+      type: "Money Received",
+      amount: "₦12,92,000.00",
+      date: "5 Dec, 2022 - 5:48PM",
+    },
+  ];
   return (
     <>
-      {/* table start */}
-      <table className="table">
-        {/* table head start */}
-        <thead className="table-head">
-          <tr>
-            <th>NARRATION</th>
-            <th>TYPE</th>
-            <th>AMOUNT</th>
-            <th>TRANSACTION DATE</th>
-            <th>ACTION(S)</th>
-          </tr>
-        </thead>
-        {/* table head end */}
-        {/* table body start */}
-        <tbody className="table-body">
-          <tr className="table-row">
-            <td className="table-data">
-              <div className="img-text">
-                <figure className="img-box">
-                  <img src={tableImg} alt="" className="img" />
-                </figure>
-                <span>Olakunle Olutayo — GTBank</span>
-              </div>
-            </td>
-            <td className="table-data">Money Received</td>
-            <td className="table-data">₦12,000,000.00</td>
-            <td className="table-data">5 Sept, 2022 - 5:48PM</td>
-            <td className="table-data">
-              {" "}
-              <div className="action-box">
-                {" "}
-                <figure className="img-box">
-                  <img src={editIcon} alt="" className="img" />
-                </figure>
-                <figure className="img-box">
-                  <img src={actionIcon} alt="" className="img" />
-                </figure>
-              </div>
-            </td>
-          </tr>
-          <tr className="table-row">
-            <td className="table-data">
-              {" "}
-              <div className="img-text">
-                <figure className="img-box">
-                  <img src={tableImg} alt="" className="img" />
-                </figure>
-                <span>Olakunle Olutayo — GTBank</span>
-              </div>
-            </td>
-            <td className="table-data">Money Received</td>
-            <td className="table-data">₦12,000,000.00</td>
-            <td className="table-data">5 Sept, 2022 - 5:48PM</td>
-            <td className="table-data">
-              <div className="action-box">
-                {" "}
-                <figure className="img-box">
-                  <img src={editIcon} alt="" className="img" />
-                </figure>
-                <figure className="img-box">
-                  <img src={actionIcon} alt="" className="img" />
-                </figure>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-        {/* table body end */}
-      </table>
-      {/* table end */}
+
+      <RavenTable headerList={headListTwo} action>
+        {bodyList?.map((chi, idx) => {
+          const { amount, date, des, img, type } = chi;
+          return (
+            <RavenTableRow
+              key={idx}
+              rowNo={idx}
+              indexNo={indexNo}
+              setIndexNo={() => setIndexNo(idx)}
+              loading={false}
+              // oneObj={{label: des, img: img}}
+              one={des}
+              two={type}
+              three={amount}
+              four={date}
+              action
+              deleteText={`Delete`}
+              editText={`Edit`}
+              downloadText={`download`}
+              // onEdit={() => {}}
+            />
+          );
+        })}
+      </RavenTable>
+
+      <div className="mb-20"></div>
+
+      <h3 className="mb-20">Table Example — Striped Table</h3>
+
+      <RavenTable headerList={headListTwo} tableStrip action>
+        {bodyList?.map((chi, idx) => {
+          const { amount, date, des, img, type } = chi;
+          return (
+            <RavenTableRow
+              key={idx}
+              rowNo={idx}
+              indexNo={indexNo}
+              setIndexNo={() => setIndexNo(idx)}
+              loading={false}
+              // oneObj={{label: des, img: img}}
+              one={des}
+              two={type}
+              three={amount}
+              four={date}
+              action
+              deleteText={`Delete`}
+              editText={`Edit`}
+              downloadText={`download`}
+              // onEdit={() => {}}
+            />
+          );
+        })}
+      </RavenTable>
     </>
   );
 };

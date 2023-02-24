@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import arrowRightImg from "../img/table-icon.svg";
+import RavenTableMobile from "../Reusables/RavenTableMobile";
 
 const SmallTable = () => {
   const [selectValue, setSelectValue] = useState({
@@ -36,7 +37,7 @@ const SmallTable = () => {
 
   const testList = [
     {
-      name: "timi test",
+      narration: "timi test",
       bank: "gtb",
       amount: "#120,920",
       date: "12/03/1995",
@@ -44,7 +45,7 @@ const SmallTable = () => {
       value: "keke",
     },
     {
-      name: "tayo test",
+      narration: "tayo test",
       bank: "zenith",
       amount: "#92,830",
       date: "12/03/1995",
@@ -52,7 +53,7 @@ const SmallTable = () => {
       value: "keke",
     },
     {
-      name: "nonso test",
+      narration: "nonso test",
       bank: "raven",
       amount: "#5,180",
       date: "12/03/1995",
@@ -60,7 +61,7 @@ const SmallTable = () => {
       value: "keke",
     },
     {
-      name: "bolu test",
+      narration: "bolu test",
       bank: "uba",
       amount: "#67,140",
       date: "12/03/1995",
@@ -75,55 +76,16 @@ const SmallTable = () => {
   };
 
   return (
-    <div className="mobile-table-wrap">
-      {/* header wrap start */}
-      <div className="header-wrap">
-        <div className="title">NARRATION</div>
-        <div className="title">
-          <Select
-            styles={reactSelectStyleTable}
-            className="select-title"
-            value={selectValue}
-            options={formatHeaderListOption(optionTable)}
-            onChange={(e) => {
-              setSelectValue(e);
-            }}
-          />
-        </div>
-      </div>
-      {/* header wrap end */}
-      {/* mobile body start */}
-      <div className="mobile-body">
-        {testList.map((chi, idx) => {
-          const { name, amount, bank, date, type, value } = chi;
-          return (
-            <div key={idx} className="table-row">
-              <div className="value">
-                <figure className="img-box">
-                  <img src={arrowRightImg} alt="" className="img" />
-                </figure>
-                <div className="text-box">
-                  {" "}
-                  <p className="value-one">{name}</p>
-                  <p className="value-two">{bank}</p>
-                </div>
-              </div>
-              <div className="value">
-                <div className="text-box">
-                  {" "}
-                  <p className="value-one ">{chi[`${selectValue.value}`]}</p>
-                  <p className="value-two"></p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-        {/* row start */}
+    <>
 
-        {/* row-end */}
-      </div>
-      {/* mobile body end */}
-    </div>
+      <RavenTableMobile
+        oneObj={{ label: "NARRATION", value: "narration" }}
+        optionTable={optionTable}
+        selectValue={selectValue}
+        setSelectValue={setSelectValue}
+        list={testList}
+      />
+    </>
   );
 };
 

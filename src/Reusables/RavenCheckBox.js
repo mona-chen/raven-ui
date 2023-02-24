@@ -13,7 +13,7 @@ const RavenCheckBox = ({ onChange, color, style, id, value, checked }) => {
       />
       <label
         className={`label-check label-check__${color}`}
-        for={`input-check-${id}`}
+        htmlFor={`input-check-${id}`}
         style={style}
       >
         <svg
