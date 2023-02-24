@@ -56,17 +56,17 @@ function build(){
           ] 
         }))
       .pipe(postcss([autoprefixer()]))
-      .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
+      // .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
+      // .pipe(rename({ suffix: '.min' }))   
       .pipe(dest(css_path))
-      .pipe(rename({ suffix: '.min' }))
       // .pipe(kss(kssConfig))
     } else {
       return src(`${custom_path}/**/*.scss`)
       .pipe(sass())
       .pipe(postcss([autoprefixer()]))
-      .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
+      // .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
+      // .pipe(rename({ suffix: '.min' })) 
       .pipe(dest(css_path))
-      .pipe(rename({ suffix: '.min' }))
       // .pipe(kss(kssConfig))
     }
 }
