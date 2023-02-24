@@ -1,23 +1,20 @@
 const {src, dest, watch, series} = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
-const crypto = require('crypto')
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss')
-const kss = require('kss');
-const kssConfig = require('raven-ui/kss-config.json');
 const fs = require('fs');
 const rename = require('gulp-rename');
 const header = require('gulp-header');
 let config = require('rc')('raven', {
-  custom_path: '../../src/extend',
-  css_path: '../../../src/styles'
+  custom_path: '../src/extend',
+  css_path: '../src/styles'
 })
 console.log(config);
 
 const {css_path, custom_path, purge} = config;
 
-const destPath = '../../src';
+const destPath = '../src';
 const symlinkPath = '.parent';
 const configPath = '.ravenrc'
 
@@ -34,13 +31,13 @@ fs.watch(".ravenrc", (eventType, filename) => {
 
 async function init () {
     if (!fs.existsSync(symlinkPath)) {
-        await fs.symlink('../../src', symlinkPath, 'dir', (err) => {
+        await fs.symlink('../src', symlinkPath, 'dir', (err) => {
           if (err) throw err;
         });
       }
 
       if (!fs.existsSync(configPath)) {
-        await fs.symlink('../../src/.ravenrc', configPath, 'dir', (err) => {
+        await fs.symlink('../src/.ravenrc', configPath, 'dir', (err) => {
           if (err) throw err;
         });
       }
