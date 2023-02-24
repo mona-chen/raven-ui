@@ -86,9 +86,9 @@ function App() {
         <Tables />
         <hr className="mt-40 mb-40" />
 
-        <h3 className="mb-20">Table Example — Striped Table</h3>
-        <TableStrip />
-        <hr className="mt-40 mb-40" />
+        {/* <h3 className="mb-20">Table Example — Striped Table</h3>
+        <TableStrip /> */}
+        {/* <hr className="mt-40 mb-40" /> */}
 
         <h3 className="mb-20">Table Example — Mobile Table</h3>
         <SmallTable />

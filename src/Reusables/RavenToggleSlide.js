@@ -14,7 +14,7 @@ const RavenToggleSlide = ({style, id, color, onChange, value, checked}) => {
       onChange={onChange}
     />
     <label
-      for={`toggle-slide-${id}`}
+      htmlFor={`toggle-slide-${id}`}
       className={`toggle-label toggle-label__${color}`}
     >
       <span className="child-one"></span>

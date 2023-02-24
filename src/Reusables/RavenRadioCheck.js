@@ -22,7 +22,7 @@ const RavenRadioCheck = ({
       />
       <label
         className={`label-radio label-radio__${color}`}
-        for={`input-radio-${id}`}
+        htmlFor={`input-radio-${id}`}
       >
         <span className="check"></span>
       </label>

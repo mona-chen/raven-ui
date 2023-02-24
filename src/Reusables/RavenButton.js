@@ -21,8 +21,8 @@ const RavenButton = ({
         onClick={onClick}
         className={`raven-btn btn-icon ${className}`}
       >
-        <figure>
-          <img src={arrowRightImg} alt="" />
+        <figure className="img-box">
+          <img className="img" src={arrowRightImg} alt="" />
         </figure>
       </button>
     );
@@ -36,8 +36,8 @@ const RavenButton = ({
         }}
         className={`raven-btn btn-icon ${className}`}
       >
-        <figure>
-          <img src={plusIcon} alt="" />
+        <figure className="img-box">
+          <img className="img" src={plusIcon} alt="" />
         </figure>
       </button>
     );
@@ -51,8 +51,8 @@ const RavenButton = ({
           }}
         className={`raven-btn btn-icon ${className}`}
       >
-        <figure>
-          <img src={timesIcon} alt="" />
+        <figure className="img-box">
+          <img className="img" src={timesIcon} alt="" />
         </figure>
       </button>
     );
@@ -65,8 +65,8 @@ const RavenButton = ({
         onClick={onClick}
         className={`raven-btn btn-icon ${className}`}
       >
-        <figure>
-          <img src={icon} alt="" />
+        <figure className="img-box">
+          <img className="img" src={icon} alt="" />
         </figure>
         {btnText}
       </button>
