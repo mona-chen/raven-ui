@@ -4,10 +4,7 @@ import arrowRightImg from "../img/table-icon.svg";
 import RavenTableMobile from "../Reusables/RavenTableMobile";
 
 const SmallTable = () => {
-  const [selectValue, setSelectValue] = useState({
-    label: "amount",
-    value: "amount",
-  });
+
   const reactSelectStyleTable = {
     control: (base, state) => ({
       ...base,
@@ -70,19 +67,20 @@ const SmallTable = () => {
     },
   ];
 
-  const formatHeaderListOption = (list) => {
-    const newList = list.filter((chi) => chi?.value !== selectValue?.value);
-    return newList;
-  };
+  //   const formatHeaderListOption = (list) => {
+  //     const newList = list.filter((chi) => chi?.value !== selectValue?.value);
+  //     return newList;
+  //   };
 
   return (
     <>
-
       <RavenTableMobile
-        oneObj={{ label: "NARRATION", value: "narration" }}
-        optionTable={optionTable}
-        selectValue={selectValue}
-        setSelectValue={setSelectValue}
+        defaultOptionOne={{ label: "NARRATION", value: "narration" }}
+        defaultOptionTwo={{
+          label: "amount",
+          value: "amount",
+        }}
+        filterOption={optionTable}
         list={testList}
       />
     </>

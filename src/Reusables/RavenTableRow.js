@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import editIcon from "../img/edit-icon.svg";
 import actionIcon from "../img/action-icon.svg";
 import RavenDropDown from "./RavenDropDown";
+import TableContext from "../context/TableContext";
 
 const RavenTableRow = ({
   one,
@@ -27,10 +28,7 @@ const RavenTableRow = ({
   onEdit,
   dontShowEdit,
   dontShowAction,
-  showActionBox,
-  indexNo,
   rowNo,
-  setIndexNo,
   editText,
   deleteText,
   downloadText,
@@ -38,10 +36,12 @@ const RavenTableRow = ({
   onDownload,
 }) => {
   const [showDropAction, setShowDropAction] = useState(false);
+  const tableCtx = useContext(TableContext);
+  
   return (
     <tr
       style={{
-        zIndex: showDropAction && rowNo === indexNo ? "3" : "1",
+        zIndex: showDropAction && rowNo === tableCtx?.dropDownActive ? "3" : "1",
       }}
       className="table-row"
     >
@@ -49,7 +49,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -64,7 +64,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -93,7 +93,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -108,7 +108,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -137,7 +137,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -152,7 +152,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -181,7 +181,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -196,7 +196,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -211,7 +211,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -226,7 +226,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -241,7 +241,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -256,7 +256,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -271,7 +271,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -286,7 +286,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -301,7 +301,7 @@ const RavenTableRow = ({
         <td
           onClick={() => {
             onRowClick && onRowClick();
-            setShowDropAction(false);
+            tableCtx?.setShowDropActive("")
           }}
           className="table-data"
         >
@@ -335,8 +335,9 @@ const RavenTableRow = ({
                   <div className="action-wrap">
                     <figure
                       onClick={() => {
-                        setIndexNo();
-                        indexNo === rowNo
+                        // setIndexNo();
+                        tableCtx?.setShowDropActive(rowNo)
+                        tableCtx?.dropDownActive === rowNo
                           ? setShowDropAction(!showDropAction)
                           : setShowDropAction(true);
                       }}
@@ -347,7 +348,7 @@ const RavenTableRow = ({
                     {/* action drop start */}
                     <div
                       className={`drop-box ${
-                        showDropAction && indexNo === rowNo && "drop-box-show"
+                        showDropAction && tableCtx?.dropDownActive === rowNo && "drop-box-show"
                       }`}
                     >
                       {editText || deleteText || downloadText ? (

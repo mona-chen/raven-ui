@@ -14,7 +14,6 @@ const Tables = () => {
   // ];
 
   const headListTwo = ["Narration", "Type", "Amount", "Transaction Date"];
-  const [indexNo, setIndexNo] = useState("");
 
   const bodyList = [
     {
@@ -49,16 +48,15 @@ const Tables = () => {
             <RavenTableRow
               key={idx}
               rowNo={idx}
-              indexNo={indexNo}
-              setIndexNo={() => setIndexNo(idx)}
               loading={false}
-              // oneObj={{label: des, img: img}}
-              one={des}
+              oneObj={{label: des, img: img}}
+              // one={des}
               two={type}
               three={amount}
               four={date}
               action
-              deleteText={`Delete`}
+              on
+              deleteText={`Delete Payroll`}
               editText={`Edit`}
               downloadText={`download`}
               // onEdit={() => {}}
@@ -78,8 +76,6 @@ const Tables = () => {
             <RavenTableRow
               key={idx}
               rowNo={idx}
-              indexNo={indexNo}
-              setIndexNo={() => setIndexNo(idx)}
               loading={false}
               // oneObj={{label: des, img: img}}
               one={des}

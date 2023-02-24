@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import TableContext, { TableContextProvider } from "../context/TableContext";
 
 const RavenTable = ({
   headerList,
@@ -7,30 +8,31 @@ const RavenTable = ({
   action,
   children,
 }) => {
-  // const [actionToShow, setActionToShow] = useState("")
-  //   const getTableBodyList = (list) => {
-  //     const headValues = headerList.map((chi) => chi?.value);
-  //     console.log(headValues);
-  //   };
-
+  const tableCtx = useContext(TableContext);
   return (
-    <table className={`table ${tableStrip && "table_strip"} ${className} `}>
-      {/* table head start */}
-      <thead className="table-head">
-        <tr>
-          {headerList &&
-            headerList.map((chi, idx) => {
-              const { label } = chi;
-              return <th key={idx}>{label || chi}</th>;
-            })}
-          {action && <th>ACTION(S)</th>}
-        </tr>
-      </thead>
-      {/* table head end */}
-      {/* table body start */}
-      <tbody className="table-body">{children}</tbody>
-      {/* table body end */}
-    </table>
+    <TableContextProvider>
+      <table className={`table ${tableStrip && "table_strip"} ${className} `}>
+        {/* table head start */}
+        <thead className="table-head">
+          <tr
+            onClick={() => {
+              tableCtx?.setShowDropActive("");
+            }}
+          >
+            {headerList &&
+              headerList.map((chi, idx) => {
+                const { label } = chi;
+                return <th key={idx}>{label || chi}</th>;
+              })}
+            {action && <th>ACTION(S)</th>}
+          </tr>
+        </thead>
+        {/* table head end */}
+        {/* table body start */}
+        <tbody className="table-body">{children}</tbody>
+        {/* table body end */}
+      </table>
+    </TableContextProvider>
   );
 };
 
