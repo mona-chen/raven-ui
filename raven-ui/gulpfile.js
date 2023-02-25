@@ -52,7 +52,7 @@ function build(){
             '.parent/**/*.tsx',
             '.parent/**/*.ts',
             '.parent/**/*.js',
-            '.monarc'
+            '.ravenrc'
           ] 
         }))
       .pipe(postcss([autoprefixer()]))

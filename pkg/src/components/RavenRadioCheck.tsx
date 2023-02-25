@@ -10,9 +10,9 @@ interface Props {
   checked: boolean
 }
 
-const RavenRadioCheck = ({ color, name, style, id, value, checked }: Props) => {
+const RavenRadioCheck = ({ color, className, name, style, id, value, checked }: Props) => {
   return (
-    <div className='radio-box-wrap'>
+    <div className={`radio-box-wrap ${className}`}>
       <input
         type='radio'
         id={`input-radio-${id}`}

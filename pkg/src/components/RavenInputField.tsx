@@ -7,6 +7,8 @@ import searchIcon from '../img/search.svg'
 import flagIcon from '../img/NGflag-select.svg'
 // import ReactPhoneInput from "react-phone-input-2";
 // import "react-phone-input-2/lib/style.css";
+import { NumericFormat } from 'react-number-format'
+import { PatternFormat } from 'react-number-format'
 
 interface Props {
   color: any
@@ -31,6 +33,7 @@ interface Props {
   selectClassName: any
   textareaColumn: any
   textareaRow: any
+  numberPrefix: any
 }
 
 const reactSelectStyleTable = {
@@ -72,6 +75,7 @@ const RavenInputField = ({
   selectClassName,
   textareaColumn,
   textareaRow,
+  numberPrefix,
 }: Props) => {
   const [showPasword, setShowPassword] = useState(false)
 
@@ -93,8 +97,7 @@ const RavenInputField = ({
               <path d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z' />
             </svg>
           </div>
-
-          <input
+          <PatternFormat
             type='text'
             className='form-input form-input_search'
             id={id}
@@ -102,6 +105,7 @@ const RavenInputField = ({
             value={value}
             name={name}
             placeholder={placeholder || 'Placeholder Here'}
+            format='### ### ### ##'
           />
         </div>
         {showError && <p className='error-text'>{errorText}</p>}
@@ -177,7 +181,7 @@ const RavenInputField = ({
           <Flatpicker
             id={id || `cal-${label}`}
             value={value}
-            onChange={(date: any) => {
+            onChange={(date) => {
               onChange(date)
             }}
             name={name}
@@ -222,6 +226,35 @@ const RavenInputField = ({
       </div>
     )
   }
+  if (type === 'number') {
+    return (
+      <div className={`form-group form-group__${color} ${className}`} style={style}>
+        {label && (
+          <label htmlFor={id} className='form-label'>
+            {label}
+          </label>
+        )}
+        {/* <div className="input-group"> */}
+        <NumericFormat
+          className={`form-input ${showError && 'border-error'}`}
+          decimalScale={3}
+          decimalSeparator='.'
+          disabled={disabled}
+          type='text'
+          thousandsGroupStyle='lakh'
+          allowNegative
+          prefix={numberPrefix}
+          thousandSeparator=','
+          placeholder={placeholder || 'Placeholder Here'}
+          id={id}
+          onChange={onChange}
+          value={value}
+          name={name}
+        />
+        {showError && <p className='error-text'>{errorText}</p>}
+      </div>
+    )
+  }
   if (type === 'password') {
     return (
       <div className={`form-group form-group__${color} form-group_password`}>
@@ -241,7 +274,7 @@ const RavenInputField = ({
             value={value}
             name={name}
           />
-          <p id={type} className='show-hide' onClick={() => setShowPassword(!showPasword)}>
+          <p className='show-hide' onClick={() => setShowPassword(!showPasword)}>
             {showPasword ? 'Hide' : 'Show'}
           </p>
         </div>
@@ -266,7 +299,6 @@ const RavenInputField = ({
         onChange={onChange}
         value={value}
         name={name}
-        autoComplete={`${false}`}
       />
       {/* </div> */}
       {showError && <p className='error-text'>{errorText}</p>}

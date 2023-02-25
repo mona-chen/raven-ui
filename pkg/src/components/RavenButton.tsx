@@ -18,62 +18,90 @@ import timesIcon from '../img/test-times-icon.svg'
 // }
 
 type Props = any
-const RavenButton = ({ className, btnText, onClick, style, icon, addBtn, arrowBtn, cancelBtn }: Props) => {
-  if (arrowBtn) {
-    return (
-      <button style={style} onClick={onClick} className={`raven-btn btn-icon ${className}`}>
-        <figure>
-          <img src={arrowRightImg} alt='' />
-        </figure>
-      </button>
-    )
-  }
-  if (addBtn) {
+const RavenButton = ({ className, label, onClick, style, type, color, size, textColor, disabled }: Props) => {
+  if (type === 'btn-extended') {
     return (
       <button
         style={style}
         onClick={() => {
           onClick && onClick()
         }}
-        className={`raven-btn btn-icon ${className}`}
+        className={`raven-btn btn-extended btn-${color || 'green-light'}   ${
+          size === 'small' ? 'btn-sm' : size === 'big' ? 'btn-lg' : 'btn-md'
+        } text-${textColor || 'white-light'} ${className} ${disabled && 'btn_disabled'}`}
       >
-        <figure>
-          <img src={plusIcon} alt='' />
+        <figure className='img-box-two'>
+          <img src={plusIcon} alt='' className='img' />
         </figure>
+        {label}
       </button>
     )
   }
-  if (cancelBtn) {
+  if (type === 'btn-plus') {
     return (
       <button
         style={style}
         onClick={() => {
           onClick && onClick()
         }}
-        className={`raven-btn btn-icon ${className}`}
+        className={`raven-btn btn-${color || 'green-light'} btn-rounded text-${
+          textColor || 'white-light'
+        } ${className} ${disabled && 'btn_disabled'}`}
       >
-        <figure>
-          <img src={timesIcon} alt='' />
+        <figure className='img-box-two'>
+          <img src={plusIcon} alt='' className='img' />
+        </figure>
+      </button>
+    )
+  }
+  if (type === 'btn-cancel') {
+    return (
+      <button
+        style={style}
+        onClick={() => {
+          onClick && onClick()
+        }}
+        className={`raven-btn btn-${color || 'green-light'} btn-rounded text-${
+          textColor || 'white-light'
+        } ${className} ${disabled && 'btn_disabled'}`}
+      >
+        <figure className='img-box-two img-cancel'>
+          <img src={timesIcon} alt='' className='img' />
         </figure>
       </button>
     )
   }
 
-  if (icon) {
+  if (type === 'btn-icon') {
     return (
-      <button style={style} onClick={onClick} className={`raven-btn btn-icon ${className}`}>
-        <figure>
-          <img src={icon} alt='' />
+      <button
+        style={style}
+        onClick={() => {
+          onClick && onClick()
+        }}
+        className={`raven-btn btn-icon  ${size === 'small' ? 'btn-sm' : size === 'big' ? 'btn-lg' : 'btn-md'} btn-${
+          color || 'green-light'
+        } text-${textColor || 'white-light'} ${className} ${disabled && 'btn_disabled'} `}
+      >
+        {label}
+        <figure className='img-box'>
+          <img src={arrowRightImg} alt='' className='img' />
         </figure>
-        {btnText}
       </button>
     )
   }
   return (
-    <button style={style} onClick={onClick} className={`raven-btn ${className}`}>
-      {btnText}
+    <button
+      style={style}
+      onClick={() => {
+        onClick && onClick()
+      }}
+      className={`raven-btn   ${size === 'small' ? 'btn-sm' : size === 'big' ? 'btn-lg' : 'btn-md'} btn-${
+        color || 'green-light'
+      } text-${textColor || 'white-light'} ${className} ${disabled && 'btn_disabled'}`}
+    >
+      {label}
     </button>
   )
 }
-
 export default RavenButton
