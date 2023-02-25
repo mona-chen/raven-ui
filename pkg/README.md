@@ -1,11 +1,10 @@
-# my-react-typescript-package
-
+# Raven Bank UI
 [![NPM version][npm-image]][npm-url]
 [![Build][github-build]][github-build-url]
 ![npm-typescript]
 [![License][github-license]][github-license-url]
 
-This is a lightweight version of the Raven bank UI , visit the website ["Raven bank"](https://getravenbank.com) for more.
+This is a lightweight component library for Raven Bank , visit the website ["Raven bank"](https://getravenbank.com) for more.
 
 
 
