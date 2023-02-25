@@ -8,7 +8,6 @@ This is a lightweight component library for Raven Bank , visit the website ["Rav
 
 
 
-It is simple React counter.
 
 [**Live Demo**](https://getravenbank.com/)
 
