@@ -6,7 +6,7 @@ const Pagination = () => {
   return (
     <>
       <RavenPagination
-        color="green-light"
+        color="black-light"
         // numSpacing={2}
         currentPage={9}
         totalPage={10}

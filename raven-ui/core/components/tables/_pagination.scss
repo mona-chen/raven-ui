@@ -83,7 +83,7 @@
     }
   }
 
-  .pagination-wrap__black {
+  .pagination-wrap__black_#{$key} {
     .child {
       &:hover {
         color: #020202;
@@ -91,5 +91,19 @@
         background-color: #f7f8f7;
       }
     }
+
+    .current {
+        background-color: $val;
+        border: none;
+        color: #ffffff;
+        cursor: default;
+  
+        &:hover {
+          transform: unset;
+          background-color: $val;
+          border: none;
+          color: #ffffff;
+        }
+      }
   }
 }

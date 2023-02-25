@@ -49,7 +49,7 @@ const RavenPagination = ({
   }
 
   return (
-    <div className={`pagination-wrap pagination-wrap__${color} ${blackHover && "pagination-wrap__black"} ${className}`}>
+    <div className={`pagination-wrap pagination-wrap__${color} ${blackHover && `pagination-wrap__black_${color}`} ${className}`}>
       {!removePrev && (
         <p
           className="child"
