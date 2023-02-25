@@ -24,6 +24,7 @@ const InputFields = () => {
       <RavenInputField
         type={`password`}
         label={"password"}
+        showPasswordStrength
         color={`black-light`}
       />
       <RavenInputField

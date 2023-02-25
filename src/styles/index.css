@@ -21963,6 +21963,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__error-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__error-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__error-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__error-light .form-input {
   border: none;
   outline: none;
@@ -22276,6 +22293,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__info-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__info-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__info-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__info-light .form-input {
   border: none;
@@ -22591,6 +22625,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__white-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__white-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__white-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__white-light .form-input {
   border: none;
   outline: none;
@@ -22904,6 +22955,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__blue-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__blue-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__blue-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__blue-light .form-input {
   border: none;
@@ -23219,6 +23287,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__green-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__green-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__green-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__green-light .form-input {
   border: none;
   outline: none;
@@ -23532,6 +23617,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__purple-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__purple-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__purple-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__purple-light .form-input {
   border: none;
@@ -23847,6 +23949,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__orange-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__orange-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__orange-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__orange-light .form-input {
   border: none;
   outline: none;
@@ -24160,6 +24279,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__black-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__black-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__black-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__black-light .form-input {
   border: none;
@@ -24475,6 +24611,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__deep-green-light .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__deep-green-light .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__deep-green-light .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__deep-green-light .form-input {
   border: none;
   outline: none;
@@ -24788,6 +24941,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__grey .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__grey .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__grey .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__grey .form-input {
   border: none;
@@ -25103,6 +25273,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__base-bg-black .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__base-bg-black .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__base-bg-black .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__base-bg-black .form-input {
   border: none;
   outline: none;
@@ -25416,6 +25603,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__error-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__error-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__error-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__error-dark .form-input {
   border: none;
@@ -25731,6 +25935,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__info-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__info-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__info-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__info-dark .form-input {
   border: none;
   outline: none;
@@ -26044,6 +26265,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__dark-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__dark-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__dark-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__dark-dark .form-input {
   border: none;
@@ -26359,6 +26597,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__white-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__white-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__white-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__white-dark .form-input {
   border: none;
   outline: none;
@@ -26672,6 +26927,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__green-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__green-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__green-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__green-dark .form-input {
   border: none;
@@ -26987,6 +27259,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__blue-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__blue-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__blue-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__blue-dark .form-input {
   border: none;
   outline: none;
@@ -27300,6 +27589,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__purple-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__purple-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__purple-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__purple-dark .form-input {
   border: none;
@@ -27615,6 +27921,23 @@ p {
   width: 100%;
   height: 100%;
 }
+.form-group__orange-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__orange-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__orange-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
+}
 .form-group__orange-dark .form-input {
   border: none;
   outline: none;
@@ -27928,6 +28251,23 @@ p {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+.form-group__deep-green-dark .progress-text-box {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.form-group__deep-green-dark .progress-text-box .text {
+  margin-left: auto;
+  color: #676767;
+  font-size: 1.25rem;
+}
+.form-group__deep-green-dark .progress-text-box .progress-box {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+  gap: 0.5rem;
 }
 .form-group__deep-green-dark .form-input {
   border: none;

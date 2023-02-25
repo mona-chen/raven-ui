@@ -5,6 +5,7 @@ import calendarIcon from "../img/calendarcalendar-icon.svg";
 import searchIcon from "../img/search.svg";
 import flagIcon from "../img/NGflag-select.svg";
 import { NumericFormat, PatternFormat } from "react-number-format";
+import ProgressBar from "./ProgressBar";
 require(`flatpickr/dist/themes/airbnb.css`);
 
 const reactSelectStyleTable = {
@@ -52,11 +53,61 @@ const RavenInputField = ({
   numberPrefix,
   showColor,
   onActionClick,
+  showPasswordStrength,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   require(`flatpickr/dist/themes/${
     color.split("-")[1] === "dark" ? "dark" : "airbnb"
   }.css`);
+
+  const [validate, setValidate] = useState({
+    hasLow: 0,
+    hasCap: 0,
+    hasNumber: 0,
+    has8digit: 0,
+    hasSpecial: 0,
+  });
+
+  const validatePassword = (password) => {
+    if (password.match(/\d+/g)) {
+      setValidate((o) => ({ ...o, hasNumber: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasNumber: 0 }));
+    }
+    if (password.match(/[!@#$%^.&*_=+-]/g)) {
+      setValidate((o) => ({ ...o, hasSpecial: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasSpecial: 0 }));
+    }
+
+    if (password.match(/[A-Z]+/g)) {
+      setValidate((o) => ({ ...o, hasCap: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasCap: 0 }));
+    }
+
+    if (password.match(/[a-z]+/g)) {
+      setValidate((o) => ({ ...o, hasLow: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasLow: 0 }));
+    }
+
+    if (password.length > 7) {
+      setValidate((o) => ({ ...o, has8digit: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, has8digit: 0 }));
+    }
+  };
+
+  function sumValues(obj) {
+    var sum = 0;
+    for (var el in obj) {
+      if (obj.hasOwnProperty(el)) {
+        sum += parseFloat(obj[el]);
+      }
+    }
+    return sum;
+  }
 
   if (type === "phone") {
     return (
@@ -332,7 +383,10 @@ const RavenInputField = ({
             placeholder={placeholder || "Placeholder Here"}
             className={`form-input`}
             id={id}
-            onChange={onChange}
+            onChange={(e) => {
+              validatePassword(e.target.value);
+              onChange(e);
+            }}
             value={value}
             name={name}
           />
@@ -346,6 +400,57 @@ const RavenInputField = ({
           </p>
         </div>
         {showError && <p className="error-text">{errorText}</p>}
+        {/* password strength box start */}
+        {showPasswordStrength && (
+          <div className="progress-text-box">
+            <div className="progress-box">
+              <ProgressBar
+                completed={
+                  sumValues(validate) < 20
+                    ? 0
+                    : sumValues(validate) < 40
+                    ? 50
+                    : 100
+                }
+                bgcolor={
+                  sumValues(validate) < 20
+                    ? ""
+                    : sumValues(validate) >= 20 && sumValues(validate) <= 40
+                    ? "#FF0F00"
+                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    ? "#EA872D"
+                    : sumValues(validate) === 100
+                    ? "#1ACE37"
+                    : ""
+                }
+              />
+              <ProgressBar
+                completed={
+                  sumValues(validate) < 40
+                    ? 0
+                    : sumValues(validate) > 40 && sumValues(validate) <= 60
+                    ? 50
+                    : 100
+                }
+                bgcolor={
+                  sumValues(validate) <= 40
+                    ? ""
+                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    ? "#EA872D"
+                    : sumValues(validate) === 100
+                    ? "#1ACE37"
+                    : ""
+                }
+              />
+              <ProgressBar
+                completed={sumValues(validate) < 100 ? 0 : 100}
+                bgcolor={sumValues(validate) < 100 ? "" : "#1ACE37"}
+              />
+            </div>
+            <p className="text">Password Strength</p>
+          </div>
+        )}
+        {/* password strength box end */}
       </div>
     );
   }
