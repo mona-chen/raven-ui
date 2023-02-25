@@ -1,0 +1,13 @@
+{
+  "title": "Raven CSS Style Guide",
+  "//": "The source and destination paths are relative to this file.",
+  "source": "core/**/*.scss",
+  "builder": "node_modules/michelangelo/kss_styleguide/custom-template/",
+  "//": "The css and js paths are URLs relative to the style guide destination.",
+  "css": [
+    "styles.css"
+  ],
+  "js": []
+
+}
+
