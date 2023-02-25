@@ -10,8 +10,6 @@ import "react-phone-input-2/lib/style.css";
 import RavenInputField from "../Reusables/RavenInputField";
 
 const InputFields = () => {
- 
-
   return (
     <div
       style={{
@@ -28,7 +26,15 @@ const InputFields = () => {
         label={"password"}
         color={`green-light`}
       />
-      <RavenInputField type={`number`} label={"number"} color={`purple-light`} />
+      <RavenInputField
+        type={`number`}
+        label={"number"}
+        color={`orange-light`}
+        numberPrefix="$ "
+        // onChange={(e) => {
+        //   console.log(e.target.value);
+        // }}
+      />
       <RavenInputField type={`phone`} label={"phone"} color={`green-light`} />
       <RavenInputField type={`search`} label={"search"} color={`green-light`} />
       <RavenInputField type={`date`} label={"date"} color={`green-light`} />
@@ -37,6 +43,8 @@ const InputFields = () => {
         type={`textarea`}
         label={"textare"}
         color={`green-light`}
+        // textareaColumn="30"
+        // textareaRow="10"
       />
     </div>
   );
