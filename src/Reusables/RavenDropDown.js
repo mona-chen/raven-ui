@@ -50,8 +50,8 @@ const RavenDropDown = ({
   return (
     <>
       <div style={style} className={`drop-down-wrap ${className}`}>
-        {list.map((chi, idx) => {
-          const { label, img, avatar, labelTwo } = chi;
+        {list?.map((chi, idx) => {
+          const { label, img, avatar, labelTwo } = chi || "";
           return (
             <div
               onClick={() => onAction(chi)}

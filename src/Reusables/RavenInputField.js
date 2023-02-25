@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Select from "react-select";
 import Flatpicker from "react-flatpickr";
-// import moment from "moment";
 import calendarIcon from "../img/calendarcalendar-icon.svg";
 import searchIcon from "../img/search.svg";
 import flagIcon from "../img/NGflag-select.svg";
 import { NumericFormat, PatternFormat } from "react-number-format";
+import ProgressBar from "./ProgressBar";
+require(`flatpickr/dist/themes/airbnb.css`);
 
 const reactSelectStyleTable = {
   control: (base, state) => ({
@@ -24,6 +25,9 @@ const reactSelectStyleTable = {
 };
 
 const RavenInputField = ({
+  labelClassName,
+  labelColor,
+  labelSpanText,
   color,
   value,
   name,
@@ -47,15 +51,78 @@ const RavenInputField = ({
   textareaColumn,
   textareaRow,
   numberPrefix,
+  showColor,
+  onActionClick,
+  showPasswordStrength,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
+  require(`flatpickr/dist/themes/${
+    color.split("-")[1] === "dark" ? "dark" : "airbnb"
+  }.css`);
+
+  const [validate, setValidate] = useState({
+    hasLow: 0,
+    hasCap: 0,
+    hasNumber: 0,
+    has8digit: 0,
+    hasSpecial: 0,
+  });
+
+  const validatePassword = (password) => {
+    if (password.match(/\d+/g)) {
+      setValidate((o) => ({ ...o, hasNumber: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasNumber: 0 }));
+    }
+    if (password.match(/[!@#$%^.&*_=+-]/g)) {
+      setValidate((o) => ({ ...o, hasSpecial: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasSpecial: 0 }));
+    }
+
+    if (password.match(/[A-Z]+/g)) {
+      setValidate((o) => ({ ...o, hasCap: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasCap: 0 }));
+    }
+
+    if (password.match(/[a-z]+/g)) {
+      setValidate((o) => ({ ...o, hasLow: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, hasLow: 0 }));
+    }
+
+    if (password.length > 7) {
+      setValidate((o) => ({ ...o, has8digit: 20 }));
+    } else {
+      setValidate((o) => ({ ...o, has8digit: 0 }));
+    }
+  };
+
+  function sumValues(obj) {
+    var sum = 0;
+    for (var el in obj) {
+      if (obj.hasOwnProperty(el)) {
+        sum += parseFloat(obj[el]);
+      }
+    }
+    return sum;
+  }
 
   if (type === "phone") {
     return (
-      <div className="form-group form-group__green-light">
+      <div style={style} className={`form-group form-group__${color}`}>
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         <div className={`input-group input-group__${color} input-group__phone`}>
@@ -74,7 +141,7 @@ const RavenInputField = ({
           </div>
           <PatternFormat
             type="text"
-            className="form-input form-input_search"
+            className={`form-input form-input_search form-input_${color}`}
             id={id}
             onChange={onChange}
             value={value}
@@ -82,6 +149,7 @@ const RavenInputField = ({
             placeholder={placeholder || "Placeholder Here"}
             format="### ### ### ##"
           />
+          <div className="focus-border"></div>
         </div>
         {showError && <p className="error-text">{errorText}</p>}
       </div>
@@ -93,7 +161,15 @@ const RavenInputField = ({
       <div className={`form-group form-group__${color}`}>
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         {/* <div className="input-group"> */}
@@ -119,7 +195,15 @@ const RavenInputField = ({
       <div className={`form-group form-group__${color}`}>
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         <div
@@ -143,6 +227,7 @@ const RavenInputField = ({
             name={name}
             placeholder={placeholder || "Placeholder Here"}
           />
+          <div className="focus-border"></div>
         </div>
         {showError && <p className="error-text">{errorText}</p>}
       </div>
@@ -150,14 +235,26 @@ const RavenInputField = ({
   }
   if (type === "date") {
     return (
-      <div className={`form-group form-group__${color} ${className}`}>
+      <div
+        style={style}
+        className={`form-group form-group__${color} ${className}`}
+      >
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         <div className={`wrap ${showError && "border-error"}`}>
           <Flatpicker
+            theme="dark"
             id={id || `cal-${label}`}
             value={value}
             onChange={(date) => {
@@ -180,18 +277,29 @@ const RavenInputField = ({
   }
   if (type === "select") {
     return (
-      <div className={`form-group form-group__${color} ${className}`}>
+      <div
+        style={style}
+        className={`form-group form-group__${color} ${className}`}
+      >
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         <Select
           placeholder={placeholder || "Placeholder Here"}
           styles={selectStyles || reactSelectStyleTable}
           //   noOptionsMessage="No Available Option"
-          options={selectOption && selectOption}
-          value={selectValue}
+          options={selectOption}
+          value={value}
           onChange={(e) => onChange && onChange(e)}
           className={`react-select-class ${
             selectValue && "react-select-class-selected"
@@ -213,7 +321,15 @@ const RavenInputField = ({
       >
         {label && (
           <label htmlFor={id} className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         {/* <div className="input-group"> */}
@@ -239,10 +355,21 @@ const RavenInputField = ({
   }
   if (type === "password") {
     return (
-      <div className={`form-group form-group__${color} form-group_password`}>
+      <div
+        style={style}
+        className={`form-group form-group__${color} form-group_password`}
+      >
         {label && (
           <label htmlFor="" className="form-label">
-            {label}
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
           </label>
         )}
         <div
@@ -256,19 +383,74 @@ const RavenInputField = ({
             placeholder={placeholder || "Placeholder Here"}
             className={`form-input`}
             id={id}
-            onChange={onChange}
+            onChange={(e) => {
+              validatePassword(e.target.value);
+              onChange(e);
+            }}
             value={value}
             name={name}
           />
+          <div className="focus-border"></div>
           <p
             type={type}
-            className="show-hide"
+            className={`show-hide show-hide_${showColor}`}
             onClick={() => setShowPassword(!showPasword)}
           >
             {showPasword ? "Hide" : "Show"}
           </p>
         </div>
         {showError && <p className="error-text">{errorText}</p>}
+        {/* password strength box start */}
+        {showPasswordStrength && (
+          <div className="progress-text-box">
+            <div className="progress-box">
+              <ProgressBar
+                completed={
+                  sumValues(validate) < 20
+                    ? 0
+                    : sumValues(validate) < 40
+                    ? 50
+                    : 100
+                }
+                bgcolor={
+                  sumValues(validate) < 20
+                    ? ""
+                    : sumValues(validate) >= 20 && sumValues(validate) <= 40
+                    ? "#FF0F00"
+                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    ? "#EA872D"
+                    : sumValues(validate) === 100
+                    ? "#1ACE37"
+                    : ""
+                }
+              />
+              <ProgressBar
+                completed={
+                  sumValues(validate) < 40
+                    ? 0
+                    : sumValues(validate) > 40 && sumValues(validate) <= 60
+                    ? 50
+                    : 100
+                }
+                bgcolor={
+                  sumValues(validate) <= 40
+                    ? ""
+                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    ? "#EA872D"
+                    : sumValues(validate) === 100
+                    ? "#1ACE37"
+                    : ""
+                }
+              />
+              <ProgressBar
+                completed={sumValues(validate) < 100 ? 0 : 100}
+                bgcolor={sumValues(validate) < 100 ? "" : "#1ACE37"}
+              />
+            </div>
+            <p className="text">Password Strength</p>
+          </div>
+        )}
+        {/* password strength box end */}
       </div>
     );
   }
@@ -279,7 +461,15 @@ const RavenInputField = ({
     >
       {label && (
         <label htmlFor={id} className="form-label">
-          {label}
+          {label}{" "}
+          {labelSpanText && (
+            <span
+              onClick={onActionClick}
+              className={`label-span text-${labelColor} ${labelClassName}`}
+            >
+              {labelSpanText}
+            </span>
+          )}
         </label>
       )}
       {/* <div className="input-group"> */}

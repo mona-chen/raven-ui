@@ -19,7 +19,7 @@ const RavenButton = ({
       <button
         style={style}
         onClick={() => {
-          onClick && onClick();
+          !disabled && onClick && onClick();
         }}
         className={`raven-btn btn-extended btn-${color || "green-light"}   ${
           size === "small" ? "btn-sm" : size === "big" ? "btn-lg" : "btn-md"
@@ -39,7 +39,7 @@ const RavenButton = ({
       <button
         style={style}
         onClick={() => {
-          onClick && onClick();
+          !disabled && onClick && onClick();
         }}
         className={`raven-btn btn-${color || "green-light"} btn-rounded text-${
           textColor || "white-light"
@@ -56,7 +56,7 @@ const RavenButton = ({
       <button
         style={style}
         onClick={() => {
-          onClick && onClick();
+          !disabled && onClick && onClick();
         }}
         className={`raven-btn btn-${color || "green-light"} btn-rounded text-${
           textColor || "white-light"
@@ -74,7 +74,7 @@ const RavenButton = ({
       <button
         style={style}
         onClick={() => {
-          onClick && onClick();
+          !disabled && onClick && onClick();
         }}
         className={`raven-btn btn-icon  ${
           size === "small" ? "btn-sm" : size === "big" ? "btn-lg" : "btn-md"
@@ -93,7 +93,7 @@ const RavenButton = ({
     <button
       style={style}
       onClick={() => {
-        onClick && onClick();
+        !disabled && onClick && onClick();
       }}
       className={`raven-btn   ${
         size === "small" ? "btn-sm" : size === "big" ? "btn-lg" : "btn-md"

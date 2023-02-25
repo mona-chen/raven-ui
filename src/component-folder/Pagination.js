@@ -8,11 +8,11 @@ const Pagination = () => {
       <RavenPagination
         color="black-light"
         // numSpacing={2}
-        currentPage={1}
-        totalPage={3}
+        currentPage={9}
+        totalPage={10}
         blackHover
-        // removeNext
-        // removePrev
+        removeNext
+        removePrev
         // removeNum
         nextPage={"next"}
         prevPage={"prev"}
