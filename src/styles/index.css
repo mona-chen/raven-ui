@@ -5412,7 +5412,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5424,6 +5424,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.raven-btn .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .raven-btn svg {
   width: 1.5rem;
@@ -5474,7 +5479,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5486,6 +5491,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -5504,7 +5514,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5516,6 +5526,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -5534,7 +5549,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5546,6 +5561,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -5564,7 +5584,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -5575,6 +5595,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -5603,7 +5628,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5616,6 +5641,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -5656,7 +5686,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5668,6 +5698,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -5686,7 +5721,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5698,6 +5733,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -5716,7 +5756,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5728,6 +5768,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -5746,7 +5791,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -5757,6 +5802,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -5785,7 +5835,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5798,6 +5848,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -5838,7 +5893,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5850,6 +5905,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -5868,7 +5928,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5880,6 +5940,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -5898,7 +5963,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5910,6 +5975,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -5928,7 +5998,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -5939,6 +6009,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -5967,7 +6042,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -5980,6 +6055,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6020,7 +6100,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6032,6 +6112,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6050,7 +6135,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6062,6 +6147,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6080,7 +6170,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6092,6 +6182,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -6110,7 +6205,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -6121,6 +6216,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -6149,7 +6249,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6162,6 +6262,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6202,7 +6307,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6214,6 +6319,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6232,7 +6342,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6244,6 +6354,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6262,7 +6377,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6274,6 +6389,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -6292,7 +6412,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -6303,6 +6423,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -6331,7 +6456,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6344,6 +6469,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6384,7 +6514,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6396,6 +6526,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6414,7 +6549,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6426,6 +6561,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6444,7 +6584,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6456,6 +6596,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -6474,7 +6619,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -6485,6 +6630,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -6513,7 +6663,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6526,6 +6676,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6566,7 +6721,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6578,6 +6733,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6596,7 +6756,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6608,6 +6768,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6626,7 +6791,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6638,6 +6803,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -6656,7 +6826,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -6667,6 +6837,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -6695,7 +6870,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6708,6 +6883,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6748,7 +6928,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6760,6 +6940,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6778,7 +6963,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6790,6 +6975,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6808,7 +6998,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6820,6 +7010,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -6838,7 +7033,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -6849,6 +7044,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -6877,7 +7077,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6890,6 +7090,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -6930,7 +7135,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6942,6 +7147,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -6960,7 +7170,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -6972,6 +7182,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -6990,7 +7205,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7002,6 +7217,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7020,7 +7240,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7031,6 +7251,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7059,7 +7284,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7072,6 +7297,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -7112,7 +7342,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7124,6 +7354,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -7142,7 +7377,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7154,6 +7389,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -7172,7 +7412,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7184,6 +7424,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7202,7 +7447,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7213,6 +7458,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7241,7 +7491,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7254,6 +7504,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -7294,7 +7549,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7306,6 +7561,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -7324,7 +7584,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7336,6 +7596,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -7354,7 +7619,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7366,6 +7631,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7384,7 +7654,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7395,6 +7665,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7423,7 +7698,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7436,6 +7711,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -7476,7 +7756,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7488,6 +7768,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -7506,7 +7791,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7518,6 +7803,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -7536,7 +7826,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7548,6 +7838,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7566,7 +7861,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7577,6 +7872,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7605,7 +7905,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7618,6 +7918,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -7658,7 +7963,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7670,6 +7975,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -7688,7 +7998,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7700,6 +8010,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -7718,7 +8033,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7730,6 +8045,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7748,7 +8068,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7759,6 +8079,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7787,7 +8112,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7800,6 +8125,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -7840,7 +8170,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7852,6 +8182,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -7870,7 +8205,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7882,6 +8217,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -7900,7 +8240,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7912,6 +8252,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -7930,7 +8275,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -7941,6 +8286,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -7969,7 +8319,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -7982,6 +8332,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8022,7 +8377,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8034,6 +8389,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8052,7 +8412,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8064,6 +8424,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8082,7 +8447,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8094,6 +8459,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -8112,7 +8482,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -8123,6 +8493,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -8151,7 +8526,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8164,6 +8539,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8204,7 +8584,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8216,6 +8596,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8234,7 +8619,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8246,6 +8631,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8264,7 +8654,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8276,6 +8666,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -8294,7 +8689,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -8305,6 +8700,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -8333,7 +8733,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8346,6 +8746,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8386,7 +8791,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8398,6 +8803,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8416,7 +8826,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8428,6 +8838,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8446,7 +8861,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8458,6 +8873,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -8476,7 +8896,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -8487,6 +8907,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -8515,7 +8940,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8528,6 +8953,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8568,7 +8998,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8580,6 +9010,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8598,7 +9033,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8610,6 +9045,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8628,7 +9068,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8640,6 +9080,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -8658,7 +9103,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -8669,6 +9114,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -8697,7 +9147,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8710,6 +9160,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8750,7 +9205,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8762,6 +9217,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8780,7 +9240,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8792,6 +9252,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8810,7 +9275,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8822,6 +9287,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -8840,7 +9310,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -8851,6 +9321,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -8879,7 +9354,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8892,6 +9367,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;
@@ -8932,7 +9412,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8944,6 +9424,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-sm .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-sm svg {
   width: 1.5rem;
@@ -8962,7 +9447,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -8974,6 +9459,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-md .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-md svg {
   width: 1.5rem;
@@ -8992,7 +9482,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -9004,6 +9494,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-lg .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-lg svg {
   width: 1.5rem;
@@ -9022,7 +9517,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: grid;
   place-items: center;
@@ -9033,6 +9528,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-rounded .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-rounded .img-box {
   width: 2rem;
@@ -9061,7 +9561,7 @@ p {
   outline: none;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -9074,6 +9574,11 @@ p {
   -webkit-transform: translateY(-0.1rem);
           transform: translateY(-0.1rem);
   opacity: 0.9;
+}
+.btn-extended .blocks-wrapper {
+  margin-left: 0.5rem;
+  -webkit-transform: scale(2.5);
+          transform: scale(2.5);
 }
 .btn-extended svg {
   width: 1.5rem;

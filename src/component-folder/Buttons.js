@@ -35,7 +35,8 @@ const Buttons = () => {
         <RavenButton
           color={`orange-light`}
           label={`label here`}
-          size={"small"}
+          size={"medium"}
+          loading
         />
         <RavenButton
           color={`deep-green-light`}
