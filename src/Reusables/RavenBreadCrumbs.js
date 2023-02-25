@@ -5,7 +5,7 @@ const RavenBreadCrumbs = ({ color, list, className, onClick }) => {
     <div className={`bread-crumb-parent ${className}`}>
       {list &&
         list?.map((chi, idx) => {
-          console.log(list?.length);
+        //   console.log(list?.length);
           // console.log(idx);
           const { label, active } = chi;
           return (
