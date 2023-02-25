@@ -18,8 +18,12 @@ import Text from "./utilities/Text";
 import TableStrip from "./component-folder/TableStrip";
 import Pagination from "./component-folder/Pagination";
 import SmallTable from "./component-folder/SmallTable";
+import Modal from "./component-folder/Modal";
+import { useState } from "react";
+import RavenButton from "./Reusables/RavenButton";
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
   return (
     <div>
       <nav className="navbar-primary text-white mb-40">
@@ -82,16 +86,30 @@ function App() {
         <Tables />
         <hr className="mt-40 mb-40" />
 
-        <h3 className="mb-20">Table Example — Striped Table</h3>
-        <TableStrip />
-        <hr className="mt-40 mb-40" />
+        {/* <h3 className="mb-20">Table Example — Striped Table</h3>
+        <TableStrip /> */}
+        {/* <hr className="mt-40 mb-40" /> */}
 
         <h3 className="mb-20">Table Example — Mobile Table</h3>
         <SmallTable />
         <hr className="mt-40 mb-40" />
 
+
+
         <h3 className="mb-20">Pagination</h3>
         <Pagination />
+        <hr className="mt-40 mb-40" />
+
+        <h3 className="mb-20">Modal</h3>
+        <p onClick={() => setShowModal(true)}>click me</p>
+        <Modal onClose={() => setShowModal(false)} btnText="Verify Account" showModal={showModal} >
+        <div className="button-wrap">
+          <RavenButton
+            btnText="Verify Account"
+            className={`btn-md btn-black-light text-white-light `}
+          />
+        </div>
+        </Modal>
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Utilities</h3>

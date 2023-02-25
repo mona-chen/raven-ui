@@ -1,0 +1,5 @@
+// cache = ['html', 'body']
+css_path = '../src/styles'
+watch_dir = '../src'
+purge = false
+custom_path = 'extend'
