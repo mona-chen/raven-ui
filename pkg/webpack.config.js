@@ -27,13 +27,10 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'esm/img',
+              esModule: false,
             },
           },
         ],
-      },
-      {
-        test: /\.svg$/i,
-        use: ['svg-inline-loader'],
       },
       {
         resolve: {

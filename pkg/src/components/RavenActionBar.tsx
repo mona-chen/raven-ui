@@ -34,7 +34,8 @@ const RavenActionBar = ({ msg, actionText, onCancel, onAction, visible, type, cl
           }`}
         >
           <figure className='img-box'>
-            <img src={errorIcon} alt='' className='img' />
+            {errorIcon}
+            {/* <img src={errorIcon} alt='' className='img' /> */}
           </figure>
           <p className='text'>{msg}</p>
           <div
