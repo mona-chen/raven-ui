@@ -7,12 +7,13 @@ const Pagination = () => {
     <>
       <RavenPagination
         color="black-light"
-        // numSpacing={2}
-        currentPage={9}
+        // numSpacing={1}
+        currentPage={3}
         totalPage={10}
         blackHover
         // removeNext
         // removePrev
+        // removeNum
         // onNext={() => {}}
         // onPrev={() => {}}
         // onNumView={() => {}}

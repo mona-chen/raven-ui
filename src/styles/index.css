@@ -5429,6 +5429,38 @@ p {
   width: 1.5rem;
   height: 1.5rem;
 }
+.raven-btn .img-box {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  transition: all 0.3s;
+}
+.raven-btn .img-box .img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.raven-btn .img-box-two {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  transition: all 0.3s;
+}
+.raven-btn .img-box-two .img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.raven-btn .img-cancel {
+  width: 1.3rem;
+  height: 1.3rem;
+}
 
 .btn-sm {
   text-decoration: none;
