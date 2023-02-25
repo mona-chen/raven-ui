@@ -2,6 +2,7 @@ import React from "react";
 import arrowRightImg from "../img/test-arrow-icon.svg";
 import plusIcon from "../img/test-icon-plus.svg";
 import timesIcon from "../img/test-times-icon.svg";
+import { Circles, ColorRing, Dna, ThreeDots } from "react-loader-spinner";
 
 const RavenButton = ({
   className,
@@ -13,6 +14,7 @@ const RavenButton = ({
   size,
   textColor,
   disabled,
+  loading,
 }) => {
   if (type === "btn-extended") {
     return (
@@ -101,7 +103,32 @@ const RavenButton = ({
         textColor || "white-light"
       } ${className} ${disabled && "btn_disabled"}`}
     >
-      {label}
+      {!loading && label}{" "}{loading && "Loading..."}
+      {loading && (
+        <div
+          className="loader-wrap"
+          style={{
+            display: "grid",
+            placeItems: "center",
+            alignSelf: "stretch",
+          }}
+        >
+          <ColorRing
+            visible={true}
+            height={"100"}
+            width={"100"}
+            ariaLabel="blocks-loading"
+            wrapperClass="blocks-wrapper"
+            colors={[
+              "#ffffff99",
+              "#ffffff99",
+              "#ffffff99",
+              "#ffffff99",
+              "#ffffff99",
+            ]}
+          />
+        </div>
+      )}
     </button>
   );
 };
