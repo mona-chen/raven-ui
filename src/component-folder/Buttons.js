@@ -26,6 +26,13 @@ const Buttons = () => {
           textColor={`white-light`}
         />
         <RavenButton
+          color={`green-light`}
+          type="btn-icon"
+          label={`label here`}
+          size={"medium"}
+          textColor={`white-light`}
+        />
+        <RavenButton
           color={`orange-light`}
           label={`label here`}
           size={"small"}
