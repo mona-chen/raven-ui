@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Select from "react-select";
-import Flatpicker from "react-flatpickr";
-import moment from "moment";
-import calendarIcon from "../img/calendarcalendar-icon.svg";
-import searchIcon from "../img/search.svg";
-import flagIcon from "../img/NGflag-select.svg";
-import ReactPhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+// import Select from "react-select";
+// import Flatpicker from "react-flatpickr";
+// import moment from "moment";
+// import calendarIcon from "../img/calendarcalendar-icon.svg";
+// import searchIcon from "../img/search.svg";
+// import flagIcon from "../img/NGflag-select.svg";
+// import ReactPhoneInput from "react-phone-input-2";
+// import "react-phone-input-2/lib/style.css";
 import RavenInputField from "../Reusables/RavenInputField";
 
 const InputFields = () => {
@@ -24,7 +24,7 @@ const InputFields = () => {
       <RavenInputField
         type={`password`}
         label={"password"}
-        color={`green-light`}
+        color={`black-light`}
       />
       <RavenInputField
         type={`number`}
@@ -35,7 +35,7 @@ const InputFields = () => {
         //   console.log(e.target.value);
         // }}
       />
-      <RavenInputField type={`phone`} label={"phone"} color={`green-light`} />
+      <RavenInputField type={`phone`} label={"phone"} color={`purple-light`} />
       <RavenInputField type={`search`} label={"search"} color={`green-light`} />
       <RavenInputField type={`date`} label={"date"} color={`green-light`} />
       <RavenInputField type={`select`} label={"select"} color={`green-light`} />
