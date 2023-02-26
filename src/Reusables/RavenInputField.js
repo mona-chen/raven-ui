@@ -65,6 +65,7 @@ const RavenInputField = ({
   onCountDownComplete,
   key,
   showCountDown,
+  thousandFormat,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -225,7 +226,6 @@ const RavenInputField = ({
               onComplete={(num) => {
                 onComplete && onComplete(num);
                 setCompletePin(true);
-                // handleSubmitDirect(num);
               }}
               format={(k) => k.toUpperCase()}
               //  disabled={showTime}
@@ -240,7 +240,7 @@ const RavenInputField = ({
             <p className="text">{timeOut ? "Time out" : "Code expires in"}</p>
             <Countdown
             className="count"
-            key={key}
+             key={key}
               onComplete={() => {
                 setTimeOut(true);
                 onCountDownComplete && onCountDownComplete()
@@ -502,10 +502,10 @@ const RavenInputField = ({
           decimalSeparator="."
           disabled={disabled}
           type="text"
-          thousandsGroupStyle="lakh"
+          thousandsGroupStyle={thousandFormat && "lakh"}
           allowNegative
           prefix={numberPrefix}
-          thousandSeparator=","
+          thousandSeparator={thousandFormat && ","}
           placeholder={placeholder || "Placeholder Here"}
           id={id}
           onChange={onChange}
