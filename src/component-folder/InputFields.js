@@ -33,6 +33,7 @@ const InputFields = () => {
         label={"number"}
         color={`orange-light`}
         numberPrefix="$ "
+        thousandFormat={true}
         // onChange={(e) => {
         //   console.log(e.target.value);
         // }}
