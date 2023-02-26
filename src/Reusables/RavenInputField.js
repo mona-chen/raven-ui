@@ -7,6 +7,8 @@ import flagIcon from "../img/NGflag-select.svg";
 import { NumericFormat, PatternFormat } from "react-number-format";
 import ProgressBar from "./ProgressBar";
 import { ColorRing } from "react-loader-spinner";
+import ReactPinField from "react-pin-field";
+import Countdown from "react-countdown";
 require(`flatpickr/dist/themes/airbnb.css`);
 
 const reactSelectStyleTable = {
@@ -57,8 +59,15 @@ const RavenInputField = ({
   onActionClick,
   showPasswordStrength,
   onSubmit,
+  onComplete,
+  pinFieldNumber,
+  countDownTime,
+  onCountDownComplete,
+  key,
+  showCountDown,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
+  const [completePin, setCompletePin] = useState(false);
   require(`flatpickr/dist/themes/${
     color?.split("-")[1] === "dark" ? "dark" : "airbnb"
   }.css`);
@@ -106,6 +115,7 @@ const RavenInputField = ({
     const sum = a + b + c + d + e;
     return sum;
   }
+  const [timeOut, setTimeOut] = useState(false);
 
   if (type === "submit") {
     return (
@@ -173,6 +183,88 @@ const RavenInputField = ({
             disabled={disabled}
           />
         )}
+      </div>
+    );
+  }
+
+  if (type === "pin") {
+    return (
+      <div
+        style={style}
+        className={`form-group form-group__${color} ${className}`}
+      >
+        {label && (
+          <label htmlFor="" className="form-label">
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
+          </label>
+        )}
+        {/* pin group start */}
+        <div className={`pin-group pin-group_${color}`}>
+          <div
+            style={{ gridTemplateColumns: `repeat(${pinFieldNumber}, 1fr)` }}
+            className={`pin_field_group`}
+          >
+            <ReactPinField
+              type={`password`}
+              length={pinFieldNumber || 6}
+              className={`${`pin_field pin_field_${color}`} ${
+                completePin && "pin_field_completed"
+              }`}
+              onChange={(num) => {
+                setCompletePin(false);
+                onChange && onChange(num);
+              }}
+              onComplete={(num) => {
+                onComplete && onComplete(num);
+                setCompletePin(true);
+                // handleSubmitDirect(num);
+              }}
+              format={(k) => k.toUpperCase()}
+              //  disabled={showTime}
+              validate="0123456789"
+              // eslint-disable-next-line jsx-a11y/no-autofocus
+              autoFocus
+              // ref={ref}
+            />
+          </div>
+          {/* count down start */}
+         {showCountDown && <div className="count-down-box">
+            <p className="text">{timeOut ? "Time out" : "Code expires in"}</p>
+            <Countdown
+            className="count"
+            key={key}
+              onComplete={() => {
+                setTimeOut(true);
+                onCountDownComplete && onCountDownComplete()
+              }}
+              date={
+                countDownTime
+                  ? Date.now() + 60 * countDownTime
+                  : Date.now() + 1000 * 60 * 5
+              }
+              renderer={(props) => (
+                <div>
+                  {timeOut
+                    ? "00:00"
+                    : `${
+                        props.minutes < 10 ? `0${props.minutes}` : props.minutes
+                      }:${props.seconds || "00"}`}
+                </div>
+              )}
+            />
+          </div>}
+
+          {/* count down end */}
+        </div>
+        {/* pin group end */}
       </div>
     );
   }

@@ -26,7 +26,7 @@ const InputFields = () => {
         label={"password"}
         showPasswordStrength
         color={`black-light`}
-        showColor="purple-light"  
+        showColor="purple-light"
       />
       <RavenInputField
         type={`number`}
@@ -37,7 +37,7 @@ const InputFields = () => {
         //   console.log(e.target.value);
         // }}
       />
-       <RavenInputField
+      <RavenInputField
         type={`submit`}
         value={"submit"}
         label="Submit type"
@@ -59,7 +59,14 @@ const InputFields = () => {
         // textareaColumn="30"
         // textareaRow="10"
       />{" "}
-     
+      <RavenInputField
+        type={`pin`}
+        key={"resta"}
+        showCountDown
+        countDownTime={5000}
+        label={<>&nbsp;</>}
+        color={"black-light"}
+      />
     </div>
   );
 };
