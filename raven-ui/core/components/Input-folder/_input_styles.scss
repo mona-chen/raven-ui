@@ -282,6 +282,8 @@
       font-size: 1.3rem;
       cursor: pointer;
       color: currentColor;
+      position: relative;
+      z-index: 4;
     }
   }
 

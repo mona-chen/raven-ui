@@ -1,5 +1,4 @@
 import React from 'react'
-import mascotImg from '../img/tool-tip-mascot.svg'
 
 type Props = any
 
@@ -41,7 +40,7 @@ const RavenToolTip = ({
         >
           {img && (
             <figure className='img-box'>
-              <img src={mascotImg} alt='' className='img' />
+              <img src={img} alt='' className='img' />
             </figure>
           )}
           {title && (
@@ -79,7 +78,7 @@ const RavenToolTip = ({
       >
         {img && (
           <figure className='img-box'>
-            <img src={mascotImg} alt='' className='img' />
+            <img src={img} alt='' className='img' />
           </figure>
         )}
         {title && (

@@ -132,13 +132,8 @@ const RavenInputField = ({
     }
   }
 
-  function sumValues(obj: any) {
-    let sum = 0
-    for (const el in obj) {
-      if (obj.prototype.hasOwnProperty.call(el)) {
-        sum += parseFloat(obj[el])
-      }
-    }
+  function sumValue(a: number, b: number, c: number, d: number, e: number) {
+    const sum = a + b + c + d + e
     return sum
   }
 
@@ -389,36 +384,160 @@ const RavenInputField = ({
           <div className='progress-text-box'>
             <div className='progress-box'>
               <ProgressBar
-                completed={sumValues(validate) < 20 ? 0 : sumValues(validate) < 40 ? 50 : 100}
+                completed={
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) < 20
+                    ? 0
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) < 40
+                    ? 50
+                    : 100
+                }
                 bgcolor={
-                  sumValues(validate) < 20
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) < 20
                     ? ''
-                    : sumValues(validate) >= 20 && sumValues(validate) <= 40
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) >= 20 &&
+                      sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) <= 40
                     ? '#FF0F00'
-                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) > 40 &&
+                      sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) <= 80
                     ? '#EA872D'
-                    : sumValues(validate) === 100
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) === 100
                     ? '#1ACE37'
                     : ''
                 }
               />
               <ProgressBar
                 completed={
-                  sumValues(validate) < 40 ? 0 : sumValues(validate) > 40 && sumValues(validate) <= 60 ? 50 : 100
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) < 40
+                    ? 0
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) > 40 &&
+                      sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) <= 60
+                    ? 50
+                    : 100
                 }
                 bgcolor={
-                  sumValues(validate) <= 40
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) <= 40
                     ? ''
-                    : sumValues(validate) > 40 && sumValues(validate) <= 80
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) > 40 &&
+                      sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) <= 80
                     ? '#EA872D'
-                    : sumValues(validate) === 100
+                    : sumValue(
+                        validate?.has8digit,
+                        validate?.hasCap,
+                        validate?.hasLow,
+                        validate?.hasNumber,
+                        validate?.hasSpecial,
+                      ) === 100
                     ? '#1ACE37'
                     : ''
                 }
               />
               <ProgressBar
-                completed={sumValues(validate) < 100 ? 0 : 100}
-                bgcolor={sumValues(validate) < 100 ? '' : '#1ACE37'}
+                completed={
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) < 100
+                    ? 0
+                    : 100
+                }
+                bgcolor={
+                  sumValue(
+                    validate?.has8digit,
+                    validate?.hasCap,
+                    validate?.hasLow,
+                    validate?.hasNumber,
+                    validate?.hasSpecial,
+                  ) < 100
+                    ? ''
+                    : '#1ACE37'
+                }
               />
             </div>
             <p className='text'>Password Strength</p>
