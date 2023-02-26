@@ -363,11 +363,111 @@
       }
     }
   }
+
+  .pin-group {
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .count-down-box {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5rem;
+      gap: 1rem;
+
+      .text {
+        color: #676767;
+        font-weight: 500;
+      }
+
+      & > *:last-child {
+        color: #ff0f00;
+        font-weight: 700;
+        font-size: 1.3rem;
+        background-color: #ffeceb;
+        padding: .8rem 1.2rem;
+        border-radius: 6.4rem;
+      }
+    }
+
+    .pin_field_group {
+      display: flex;
+      align-items: center;
+      // gap: 1.5rem;
+      grid-column-gap: 1.5rem;
+      justify-self: center;
+
+      input {
+        width: 100% !important;
+      }
+
+      @media only screen and (max-width: 42em) {
+        grid-column-gap: 0rem;
+      }
+    }
+
+    .pin_field {
+      background-color: #f7f8f7;
+      border-radius: $base-border-radius;
+      border: 0.1rem solid #cccccc;
+      font-size: 1.4rem;
+      font-family: inherit;
+      color: #020202;
+      height: 4.6rem;
+      width: unset !important;
+      outline: none;
+      text-align: center;
+      transition-duration: 250ms;
+      transition-property: background, color, border, box-shadow, transform;
+      /* width: calc(100% / 6); */
+
+      @media only screen and (max-width: 25em) {
+        width: 11.5vw;
+        margin-right: 1rem;
+      }
+    }
+
+    .pin_field:focus {
+      // border-color: var(--raven-black-color);
+      outline: none;
+      transform: scale(1.05);
+    }
+
+    .pin_field_completed {
+      /* background-color: #cccccc; */
+      background-color: rgba(40, 167, 69, 0.1);
+      border: 0.1rem solid var(--raven-black-color);
+    }
+
+    .pin_field:invalid {
+      animation: shake 3 linear 75ms;
+      border-color: rgb(220, 53, 69);
+      box-shadow: 0 0 0.25rem rgba(220, 53, 69, 0.5);
+    }
+
+    .pin_field:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    swd-pin-field[completed] .pin_field {
+      // border-color: rgb(40, 167, 69);
+      // background-color: rgba(40, 167, 69, 0.1);
+    }
+  }
 }
 
 @each $key, $val in $colors {
   .form-group__#{$key} {
     @include form-group;
+
+    .pin_field:focus {
+      border-color: $val;
+      outline: none;
+      transform: scale(1.05);
+      caret-color: $val;
+    }
 
     .input-submit {
       background-color: $val;
@@ -469,6 +569,7 @@
     .show-hide {
       // color: $val !important;
     }
+
     .form-input {
       padding: 1.2rem;
       &:focus:not(:valid) {
@@ -486,11 +587,54 @@
         border: none;
       }
     }
+
+    .pin-group_#{$key} {
+      .pin_field_group {
+        input {
+          width: 100% !important;
+        }
+      }
+
+      .pin_field {
+        color: #020202;
+      }
+
+      .pin_field_completed {
+        /* background-color: #cccccc; */
+        background-color: rgba($val, 0.1);
+        border: 0.1rem solid red !important;
+      }
+
+      .pin_field:invalid {
+        animation: shake 3 linear 75ms;
+        border-color: #ff0f00;
+        box-shadow: 0 0 0.25rem rgba(220, 53, 69, 0.2);
+      }
+
+      .pin_field:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      swd-pin-field[completed] .pin_field {
+        background-color: rgba($val, 0.1);
+        border: 0.1rem solid red !important;
+      }
+    }
   }
 
   .form-input_#{$key} {
     caret-color: $val !important;
   }
+
+  // .pin_field_#{$key} input{
+  //   caret-color: $val !important;
+  // }
+
+  // .pin_field_completed {
+  //   /* background-color: #cccccc; */
+  //   background-color: rgba(40, 167, 69, 0.1);
+  // }
 
   .border-error {
     border: 0.1rem solid #ff0f00 !important;
