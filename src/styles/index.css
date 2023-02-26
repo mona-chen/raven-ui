@@ -31885,6 +31885,7 @@ p {
   top: 0;
   left: 0;
   z-index: 1000;
+  background: rgba(2, 2, 2, 0.5);
 }
 .modal-parent-wrap::after {
   content: "";
@@ -31893,18 +31894,17 @@ p {
   left: 0%;
   width: 100%;
   height: 100%;
-  background: #020202;
-  opacity: 0.5;
-  -webkit-backdrop-filter: blur(23.5px);
-          backdrop-filter: blur(23.5px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 .modal-parent-wrap > * {
   position: relative;
   z-index: 3;
 }
 .modal-parent-wrap .content-wrap {
-  min-width: 45rem;
+  max-width: 45rem;
   min-height: 35rem;
+  max-height: 90vh;
   background-color: #ffffff;
   border-radius: 1.6rem;
   position: absolute;
@@ -31914,8 +31914,8 @@ p {
           transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  -webkit-animation: modalAnimation 0.4s ease-in-out;
-          animation: modalAnimation 0.4s ease-in-out;
+  -webkit-animation: modalAnimationUp 0.25s ease-in-out;
+          animation: modalAnimationUp 0.25s ease-in-out;
   align-items: stretch;
   padding: 0;
   overflow: hidden;
@@ -31945,21 +31945,38 @@ p {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 1rem 2rem;
 }
-.modal-parent-wrap .content-wrap .content .button-wrap {
+.modal-parent-wrap .content-wrap .button-wrap {
   margin-top: auto;
   padding: 1.5rem 2rem;
   background-color: #f7f8f7;
 }
-.modal-parent-wrap .content-wrap .content .button-wrap > * {
+.modal-parent-wrap .content-wrap .button-wrap > * {
   width: 100%;
 }
+.modal-parent-wrap .content-wrap-fadeInUp {
+  -webkit-animation: modalAnimationUp 0.25s ease-in-out;
+          animation: modalAnimationUp 0.25s ease-in-out;
+}
+.modal-parent-wrap .content-wrap-fadeInDown {
+  -webkit-animation: modalAnimationDown 0.25s ease-in-out;
+          animation: modalAnimationDown 0.25s ease-in-out;
+}
+.modal-parent-wrap .content-wrap-fadeInLeft {
+  -webkit-animation: modalAnimationLeft 0.25s ease-in-out;
+          animation: modalAnimationLeft 0.25s ease-in-out;
+}
+.modal-parent-wrap .content-wrap-fadeInRight {
+  -webkit-animation: modalAnimationRight 0.25s ease-in-out;
+          animation: modalAnimationRight 0.25s ease-in-out;
+}
 
-@-webkit-keyframes modalAnimation {
+@-webkit-keyframes modalAnimationUp {
   0% {
     -webkit-transform: translate(-50%, -40%);
             transform: translate(-50%, -40%);
-    opacity: 0.8;
+    opacity: 0.6;
   }
   100% {
     -webkit-transform: translate(-50%, -50%);
@@ -31968,11 +31985,83 @@ p {
   }
 }
 
-@keyframes modalAnimation {
+@keyframes modalAnimationUp {
   0% {
     -webkit-transform: translate(-50%, -40%);
             transform: translate(-50%, -40%);
-    opacity: 0.8;
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modalAnimationDown {
+  0% {
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes modalAnimationDown {
+  0% {
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modalAnimationRight {
+  0% {
+    -webkit-transform: translate(-40%, -50%);
+            transform: translate(-40%, -50%);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes modalAnimationRight {
+  0% {
+    -webkit-transform: translate(-40%, -50%);
+            transform: translate(-40%, -50%);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes modalAnimationLeft {
+  0% {
+    -webkit-transform: translate(-60%, -50%);
+            transform: translate(-60%, -50%);
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes modalAnimationLeft {
+  0% {
+    -webkit-transform: translate(-60%, -50%);
+            transform: translate(-60%, -50%);
+    opacity: 0.6;
   }
   100% {
     -webkit-transform: translate(-50%, -50%);
