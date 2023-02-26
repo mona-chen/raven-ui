@@ -19,7 +19,9 @@ const RavenModal = ({
       style={{ display: visble ? "unset" : "none" }}
       className={`modal-parent-wrap ${className}`}
     >
-      <div className={`raven-modal-content-wrap raven-modal-content-wrap-${effect}`}>
+      <div
+        className={`raven-modal-content-wrap raven-modal-content-wrap-${effect}`}
+      >
         {/* close icon box start */}
         <div className="close-box">
           <figure onClick={onClose} className="img-box">
@@ -39,14 +41,23 @@ const RavenModal = ({
               size={"medium"}
               disabled={disabled}
             /> */}
-            <RavenInputField
-              type={`submit`}
-              value={btnLabel}
-              onSubmit={onBtnClick}
-              loading={loading}
-              color={btnColor}
-              disabled={disabled}
-            />
+            <form
+              onSubmit={(e) => {
+                onBtnClick()
+                e.preventDefault();
+              }}
+              action=""
+              className="form"
+            >
+              <RavenInputField
+                type={`submit`}
+                value={btnLabel}
+                onSubmit={onBtnClick}
+                loading={loading}
+                color={btnColor}
+                disabled={disabled}
+              />
+            </form>
           </div>
         )}
         {/* button wrap end */}
