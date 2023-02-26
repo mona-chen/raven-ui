@@ -1,6 +1,6 @@
 import React from "react";
-import RavenButton from "./RavenButton";
 import closeIcon from "../img/close-icon.svg";
+import RavenInputField from "./RavenInputField";
 
 const RavenModal = ({
   visble,
@@ -12,7 +12,7 @@ const RavenModal = ({
   onClose,
   loading,
   disabled,
-  effect
+  effect,
 }) => {
   return (
     <div
@@ -31,12 +31,20 @@ const RavenModal = ({
         {/* button wrap start */}
         {btnLabel && (
           <div className="button-wrap">
-            <RavenButton
+            {/* <RavenButton
               label={btnLabel}
               loading={loading}
               color={btnColor}
               onClick={onBtnClick}
               size={"medium"}
+              disabled={disabled}
+            /> */}
+            <RavenInputField
+              type={`submit`}
+              value={btnLabel}
+              onSubmit={onBtnClick}
+              loading={loading}
+              color={btnColor}
               disabled={disabled}
             />
           </div>
