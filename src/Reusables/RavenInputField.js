@@ -110,7 +110,7 @@ const RavenInputField = ({
   if (type === "submit") {
     return (
       <div className={`form-group form-group__${color} ${className}`}>
-         {label && (
+        {label && (
           <label htmlFor="" className="form-label">
             {label}{" "}
             {labelSpanText && (
@@ -129,12 +129,12 @@ const RavenInputField = ({
               disabled && "input-submit_disabled"
             }`}
             style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: ".5rem",
-                padding: ".5rem 0rem"
-              }}
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: ".5rem",
+              padding: ".5rem 0rem",
+            }}
           >
             {" "}
             Loading...
@@ -143,7 +143,7 @@ const RavenInputField = ({
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
               <ColorRing
@@ -464,7 +464,7 @@ const RavenInputField = ({
           <div className="focus-border"></div>
           <p
             type={type}
-            className={`show-hide show-hide_${showColor}`}
+            className={`show-hide show-hide_${showColor} text-${showColor}`}
             onClick={() => setShowPassword(!showPasword)}
           >
             {showPasword ? "Hide" : "Show"}
