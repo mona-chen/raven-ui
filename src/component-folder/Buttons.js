@@ -33,7 +33,7 @@ const Buttons = () => {
           textColor={`white-light`}
         />
         <RavenButton
-          color={`black-light`}
+          color={`black-dark`}
           label={`label here`}
           size={"medium"}
           loading
