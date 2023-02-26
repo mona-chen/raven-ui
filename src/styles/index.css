@@ -22746,7 +22746,7 @@ p {
 }
 .form-group__error-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__error-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -23228,7 +23228,7 @@ p {
 }
 .form-group__info-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__info-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -23710,7 +23710,7 @@ p {
 }
 .form-group__white-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__white-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -24192,7 +24192,7 @@ p {
 }
 .form-group__blue-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__blue-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -24674,7 +24674,7 @@ p {
 }
 .form-group__green-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__green-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -25156,7 +25156,7 @@ p {
 }
 .form-group__purple-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__purple-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -25638,7 +25638,7 @@ p {
 }
 .form-group__orange-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__orange-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -26120,7 +26120,7 @@ p {
 }
 .form-group__black-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__black-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -26602,7 +26602,7 @@ p {
 }
 .form-group__deep-green-light .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__deep-green-light .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -27084,7 +27084,7 @@ p {
 }
 .form-group__grey .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__grey .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -27566,7 +27566,7 @@ p {
 }
 .form-group__base-bg-black .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__base-bg-black .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -28048,7 +28048,7 @@ p {
 }
 .form-group__error-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__error-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -28530,7 +28530,7 @@ p {
 }
 .form-group__info-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__info-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -29012,7 +29012,7 @@ p {
 }
 .form-group__dark-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__dark-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -29494,7 +29494,7 @@ p {
 }
 .form-group__white-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__white-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -29976,7 +29976,7 @@ p {
 }
 .form-group__green-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__green-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -30458,7 +30458,7 @@ p {
 }
 .form-group__blue-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__blue-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -30940,7 +30940,7 @@ p {
 }
 .form-group__purple-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__purple-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -31422,7 +31422,7 @@ p {
 }
 .form-group__orange-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__orange-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
@@ -31904,7 +31904,7 @@ p {
 }
 .form-group__deep-green-dark .input-submit_disabled {
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .form-group__deep-green-dark .input-submit_disabled:hover {
   -webkit-transform: unset;
