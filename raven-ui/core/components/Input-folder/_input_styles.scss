@@ -25,6 +25,34 @@
     }
   }
 
+  .input-submit{
+    border: none;
+    outline: none;
+    padding: $base-padding * 1.6  $base-padding;
+    width: 100%;
+    border-radius: $base-border-radius;
+    background-color: #0b8376;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:active{
+      border: none;
+      outline: none;
+    }
+
+    &:focus{
+      border: none;
+      overflow: none;
+    }
+
+    &:hover{
+      transform: translateY(-.1rem);
+    }
+  }
+
   .form-input-calendar {
     // display: none ;
     background-color: #e2e2e2;
@@ -161,6 +189,7 @@
 
     &::placeholder {
       color: #b3b3b3;
+      // font-weight: 300;
     }
   }
 
@@ -199,6 +228,7 @@
         & > *:nth-child(1) {
           font-size: 1.4rem;
           color: #b3b3b3;
+          // font-weight: 300;
 
           //   &::placeholder {
           //     color: #b3b3b3;
@@ -282,6 +312,8 @@
       font-size: 1.3rem;
       cursor: pointer;
       color: currentColor;
+      position: relative;
+      z-index: 4;
     }
   }
 
@@ -336,6 +368,27 @@
 @each $key, $val in $colors {
   .form-group__#{$key} {
     @include form-group;
+
+    .input-submit{
+      background-color: $val;
+    }
+
+    .input-submit_disabled{
+      cursor: default;
+      opacity: .5;
+      
+      &:hover{
+        transform: unset;
+      }
+    }
+
+    .input-submit-loading{
+      cursor: default;
+      
+      &:hover{
+        transform: unset;
+      }
+    }
 
     .input-group__phone {
       .form-input:focus ~ .focus-border {

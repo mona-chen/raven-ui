@@ -36,6 +36,17 @@ const InputFields = () => {
         //   console.log(e.target.value);
         // }}
       />
+       <RavenInputField
+        type={`submit`}
+        value={"submit"}
+        label="Submit type"
+        onSubmit={() => {
+          console.log("yes");
+        }}
+        // disabled
+        // loading
+        color={`black-light`}
+      />
       <RavenInputField type={`phone`} label={"phone"} color={`purple-light`} />
       <RavenInputField type={`search`} label={"search"} color={`green-light`} />
       <RavenInputField type={`date`} label={"date"} color={`green-light`} />
@@ -46,7 +57,8 @@ const InputFields = () => {
         color={`green-light`}
         // textareaColumn="30"
         // textareaRow="10"
-      />
+      />{" "}
+     
     </div>
   );
 };

@@ -49,6 +49,7 @@ const Buttons = () => {
           type={`btn-extended`}
           label={`label here`}
           size={"small"}
+          onClick={() => {console.log("yes");}}
           disabled
         />
       </div>
