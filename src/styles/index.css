@@ -35762,7 +35762,7 @@ p {
   z-index: 3;
 }
 .modal-parent-wrap .raven-modal-content-wrap {
-  min-width: 45rem;
+  width: 45rem;
   min-height: 35rem;
   max-height: 90vh;
   background-color: #ffffff;
