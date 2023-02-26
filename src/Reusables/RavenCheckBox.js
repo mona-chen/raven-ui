@@ -1,8 +1,8 @@
 import React from "react";
 
-const RavenCheckBox = ({ onChange, color, style, id, value, checked }) => {
+const RavenCheckBox = ({ onChange, color, style, id, value, checked, className }) => {
   return (
-    <div className="check-box-wrap">
+    <div className={`check-box-wrap ${className}`}>
       <input
         type="checkbox"
         id={`input-check-${id}`}

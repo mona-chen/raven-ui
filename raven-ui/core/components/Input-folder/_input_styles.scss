@@ -25,6 +25,34 @@
     }
   }
 
+  .input-submit {
+    border: none;
+    outline: none;
+    padding: $base-padding * 1.6 $base-padding;
+    width: 100%;
+    border-radius: $base-border-radius;
+    background-color: #0b8376;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:active {
+      border: none;
+      outline: none;
+    }
+
+    &:focus {
+      border: none;
+      overflow: none;
+    }
+
+    &:hover {
+      transform: translateY(-0.1rem);
+    }
+  }
+
   .form-input-calendar {
     // display: none ;
     background-color: #e2e2e2;
@@ -124,25 +152,25 @@
     }
   }
 
-  .progress-text-box{
+  .progress-text-box {
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
     flex-wrap: wrap;
 
-    .text{
-        margin-left: auto;
-        color: #676767;
-        font-size: 1.25rem;
+    .text {
+      margin-left: auto;
+      color: #676767;
+      font-size: 1.25rem;
     }
 
-    .progress-box{
-        display: flex;
-        align-items: center;
-        flex: 0 0 55%;
-        gap: .5rem;
+    .progress-box {
+      display: flex;
+      align-items: center;
+      flex: 0 0 55%;
+      gap: 0.5rem;
     }
-}
+  }
 
   .form-input {
     border: none;
@@ -161,6 +189,7 @@
 
     &::placeholder {
       color: #b3b3b3;
+      // font-weight: 300;
     }
   }
 
@@ -199,6 +228,7 @@
         & > *:nth-child(1) {
           font-size: 1.4rem;
           color: #b3b3b3;
+          // font-weight: 300;
 
           //   &::placeholder {
           //     color: #b3b3b3;
@@ -339,6 +369,27 @@
   .form-group__#{$key} {
     @include form-group;
 
+    .input-submit {
+      background-color: $val;
+    }
+
+    .input-submit_disabled {
+      cursor: default;
+      opacity: 0.5;
+
+      &:hover {
+        transform: unset;
+      }
+    }
+
+    .input-submit-loading {
+      cursor: default;
+
+      &:hover {
+        transform: unset;
+      }
+    }
+
     .input-group__phone {
       .form-input:focus ~ .focus-border {
         visibility: visible;
@@ -392,7 +443,7 @@
     }
 
     .show-hide {
-      color: $val !important;
+      // color: $val ;
     }
   }
 
@@ -416,7 +467,7 @@
 
   .input-group__#{$key} {
     .show-hide {
-      color: $val !important;
+      // color: $val !important;
     }
     .form-input {
       padding: 1.2rem;

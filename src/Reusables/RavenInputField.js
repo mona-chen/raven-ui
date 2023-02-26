@@ -6,6 +6,7 @@ import searchIcon from "../img/search.svg";
 import flagIcon from "../img/NGflag-select.svg";
 import { NumericFormat, PatternFormat } from "react-number-format";
 import ProgressBar from "./ProgressBar";
+import { ColorRing } from "react-loader-spinner";
 require(`flatpickr/dist/themes/airbnb.css`);
 
 const reactSelectStyleTable = {
@@ -25,6 +26,7 @@ const reactSelectStyleTable = {
 };
 
 const RavenInputField = ({
+  textColor,
   labelClassName,
   labelColor,
   labelSpanText,
@@ -54,10 +56,11 @@ const RavenInputField = ({
   showColor,
   onActionClick,
   showPasswordStrength,
+  onSubmit,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   require(`flatpickr/dist/themes/${
-    color.split("-")[1] === "dark" ? "dark" : "airbnb"
+    color?.split("-")[1] === "dark" ? "dark" : "airbnb"
   }.css`);
 
   const [validate, setValidate] = useState({
@@ -99,24 +102,87 @@ const RavenInputField = ({
     }
   };
 
-  function sumValues(obj) {
-    var sum = 0;
-    for (var el in obj) {
-      if (obj?.hasOwnProperty(el)) {
-        sum += parseFloat(obj[el]);
-      }
-    }
-    return sum;
-  }
-
   function sumValue(a, b, c, d, e) {
     const sum = a + b + c + d + e;
     return sum;
   }
 
+  if (type === "submit") {
+    return (
+      <div className={`form-group form-group__${color} ${className}`}>
+        {label && (
+          <label htmlFor="" className="form-label">
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
+          </label>
+        )}
+        {loading ? (
+          <div
+            className={`input-submit input-submit-loading  text-${textColor} ${
+              disabled && "input-submit_disabled"
+            }`}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: ".5rem",
+              padding: ".5rem 0rem",
+            }}
+          >
+            {" "}
+            Loading...
+            <div
+              className="loader-wrap"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <ColorRing
+                visible={true}
+                height={"35"}
+                width={"35"}
+                ariaLabel="blocks-loading"
+                wrapperClass="blocks-wrapper"
+                colors={[
+                  "#ffffff99",
+                  "#ffffff99",
+                  "#ffffff99",
+                  "#ffffff99",
+                  "#ffffff99",
+                ]}
+              />
+            </div>
+          </div>
+        ) : (
+          <input
+            type="submit"
+            value={value}
+            onClick={onSubmit}
+            className={`input-submit  text-${textColor} ${
+              disabled && "input-submit_disabled"
+            }`}
+            disabled={disabled}
+          />
+        )}
+      </div>
+    );
+  }
+
   if (type === "phone") {
     return (
-      <div style={style} className={`form-group form-group__${color}`}>
+      <div
+        style={style}
+        className={`form-group form-group__${color} ${className}`}
+      >
         {label && (
           <label htmlFor="" className="form-label">
             {label}{" "}
@@ -163,7 +229,7 @@ const RavenInputField = ({
 
   if (type === "textarea") {
     return (
-      <div className={`form-group form-group__${color}`}>
+      <div className={`form-group form-group__${color} ${className}`}>
         {label && (
           <label htmlFor="" className="form-label">
             {label}{" "}
@@ -197,7 +263,7 @@ const RavenInputField = ({
 
   if (type === "search") {
     return (
-      <div className={`form-group form-group__${color}`}>
+      <div className={`form-group form-group__${color} ${className}`}>
         {label && (
           <label htmlFor="" className="form-label">
             {label}{" "}
@@ -398,7 +464,7 @@ const RavenInputField = ({
           <div className="focus-border"></div>
           <p
             type={type}
-            className={`show-hide show-hide_${showColor}`}
+            className={`show-hide show-hide_${showColor} text-${showColor}`}
             onClick={() => setShowPassword(!showPasword)}
           >
             {showPasword ? "Hide" : "Show"}

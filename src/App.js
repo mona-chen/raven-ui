@@ -12,7 +12,7 @@ import DropDowns from "./component-folder/DropDowns";
 import InputFields from "./component-folder/InputFields";
 import RadioCheck from "./component-folder/RadioCheck";
 import Padding from "./utilities/Padding";
-import Margin from './utilities/Margin';
+import Margin from "./utilities/Margin";
 import Tables from "./component-folder/Tables";
 import Text from "./utilities/Text";
 import TableStrip from "./component-folder/TableStrip";
@@ -21,9 +21,10 @@ import SmallTable from "./component-folder/SmallTable";
 import Modal from "./component-folder/Modal";
 import { useState } from "react";
 import RavenButton from "./Reusables/RavenButton";
+import RavenModal from "./Reusables/RavenModal";
 
 function App() {
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <nav className="navbar-primary text-white mb-40">
@@ -33,14 +34,16 @@ function App() {
         </div>
       </nav>
       <div className="container">
-        <h4 className="text-dark ">A lightweight CSS framework for Raven Bank</h4>
+        <h4 className="text-dark ">
+          A lightweight CSS framework for Raven Bank
+        </h4>
 
         <hr className="mt-40 mb-40" />
 
         {/* <!-- buttons --> */}
         <h3 className="mb-20">Buttons</h3>
 
-       <Buttons />
+        <Buttons />
 
         <hr className="mt-40 mb-40" />
         <h3 className="mb-20">Tabs & Tablinks</h3>
@@ -94,22 +97,29 @@ function App() {
         <SmallTable />
         <hr className="mt-40 mb-40" />
 
-
-
         <h3 className="mb-20">Pagination</h3>
         <Pagination />
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Modal</h3>
         <p onClick={() => setShowModal(true)}>click me</p>
-        <Modal onClose={() => setShowModal(false)} btnText="Verify Account" showModal={showModal} >
+        <RavenModal
+          onClose={() => setShowModal(false)}
+          visble={showModal}
+          btnLabel="click me"
+          btnColor={`black-light`}
+          effect={`fadeInLeft`}
+        >
+       
+        </RavenModal>
+        {/* <Modal onClose={() => setShowModal(false)} btnText="Verify Account" showModal={showModal} >
         <div className="button-wrap">
           <RavenButton
             btnText="Verify Account"
             className={`btn-md btn-black-light text-white-light `}
           />
         </div>
-        </Modal>
+        </Modal> */}
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Utilities</h3>
