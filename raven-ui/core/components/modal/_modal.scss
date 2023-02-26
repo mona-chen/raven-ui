@@ -15,7 +15,6 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    // background: #020202;
     backdrop-filter: blur(3px);
   }
 
@@ -24,7 +23,7 @@
     z-index: 3;
   }
 
-  .content-wrap {
+  .raven-modal-content-wrap {
     min-width: 45rem;
     // max-width: 65rem;
     min-height: 35rem;
@@ -85,19 +84,19 @@
       }
   }
 
-  .content-wrap-fadeInUp{
+  .raven-modal-content-wrap-fadeInUp{
     animation: modalAnimationUp 0.25s ease-in-out;
   }
 
-  .content-wrap-fadeInDown{
+  .raven-modal-content-wrap-fadeInDown{
     animation: modalAnimationDown 0.25s ease-in-out;
   }
 
-  .content-wrap-fadeInLeft{
+  .raven-modal-content-wrap-fadeInLeft{
     animation: modalAnimationLeft 0.25s ease-in-out;
   }
 
-  .content-wrap-fadeInRight{
+  .raven-modal-content-wrap-fadeInRight{
     animation: modalAnimationRight 0.25s ease-in-out;
   }
 }

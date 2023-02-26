@@ -19,7 +19,7 @@ const RavenModal = ({
       style={{ display: visble ? "unset" : "none" }}
       className={`modal-parent-wrap ${className}`}
     >
-      <div className={`content-wrap content-wrap-${effect}`}>
+      <div className={`raven-modal-content-wrap raven-modal-content-wrap-${effect}`}>
         {/* close icon box start */}
         <div className="close-box">
           <figure onClick={onClose} className="img-box">

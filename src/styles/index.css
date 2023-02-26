@@ -34141,7 +34141,7 @@ p {
   position: relative;
   z-index: 3;
 }
-.modal-parent-wrap .content-wrap {
+.modal-parent-wrap .raven-modal-content-wrap {
   min-width: 45rem;
   min-height: 35rem;
   max-height: 90vh;
@@ -34160,54 +34160,54 @@ p {
   padding: 0;
   overflow: hidden;
 }
-.modal-parent-wrap .content-wrap .close-box {
+.modal-parent-wrap .raven-modal-content-wrap .close-box {
   padding: 2rem;
   padding-top: 2.5rem;
   display: flex;
   justify-content: flex-start;
 }
-.modal-parent-wrap .content-wrap .close-box .img-box {
+.modal-parent-wrap .raven-modal-content-wrap .close-box .img-box {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
-.modal-parent-wrap .content-wrap .close-box .img-box:hover {
+.modal-parent-wrap .raven-modal-content-wrap .close-box .img-box:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-.modal-parent-wrap .content-wrap .close-box .img-box .img {
+.modal-parent-wrap .raven-modal-content-wrap .close-box .img-box .img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.modal-parent-wrap .content-wrap .content {
+.modal-parent-wrap .raven-modal-content-wrap .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
 }
-.modal-parent-wrap .content-wrap .button-wrap {
+.modal-parent-wrap .raven-modal-content-wrap .button-wrap {
   margin-top: auto;
   padding: 1.5rem 2rem;
   background-color: #f7f8f7;
 }
-.modal-parent-wrap .content-wrap .button-wrap > * {
+.modal-parent-wrap .raven-modal-content-wrap .button-wrap > * {
   width: 100%;
 }
-.modal-parent-wrap .content-wrap-fadeInUp {
+.modal-parent-wrap .raven-modal-content-wrap-fadeInUp {
   -webkit-animation: modalAnimationUp 0.25s ease-in-out;
           animation: modalAnimationUp 0.25s ease-in-out;
 }
-.modal-parent-wrap .content-wrap-fadeInDown {
+.modal-parent-wrap .raven-modal-content-wrap-fadeInDown {
   -webkit-animation: modalAnimationDown 0.25s ease-in-out;
           animation: modalAnimationDown 0.25s ease-in-out;
 }
-.modal-parent-wrap .content-wrap-fadeInLeft {
+.modal-parent-wrap .raven-modal-content-wrap-fadeInLeft {
   -webkit-animation: modalAnimationLeft 0.25s ease-in-out;
           animation: modalAnimationLeft 0.25s ease-in-out;
 }
-.modal-parent-wrap .content-wrap-fadeInRight {
+.modal-parent-wrap .raven-modal-content-wrap-fadeInRight {
   -webkit-animation: modalAnimationRight 0.25s ease-in-out;
           animation: modalAnimationRight 0.25s ease-in-out;
 }
