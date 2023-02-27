@@ -10,37 +10,49 @@ import flagIcon from '../img/NGflag-select.svg'
 import { NumericFormat } from 'react-number-format'
 import { PatternFormat } from 'react-number-format'
 import ProgressBar from './ProgressBar'
+import { ColorRing } from 'react-loader-spinner'
+import ReactPinField from 'react-pin-field'
+import Countdown from 'react-countdown'
 
 interface Props {
-  color: any
-  value: any
-  name: string
-  id: any
-  className: any
-  style: any
-  label: string
-  type: any
-  onChange: (e: any) => void
-  placeholder: string
-  errorText: string
-  showError: boolean
-  selectOption: any
-  selectStyles: any
-  selectValue: any
-  disabled: boolean
-  loading: boolean
-  searchable: boolean
-  multi: boolean
-  selectClassName: any
-  textareaColumn: any
-  textareaRow: any
-  numberPrefix: any
-  labelClassName: any
-  showColor: boolean
-  onActionClick: any
-  labelColor: any
-  labelSpanText: string
-  showPasswordStrength: string
+  color?: any
+  value?: any
+  name?: string
+  id?: any
+  className?: any
+  style?: any
+  label?: string
+  type?: any
+  onChange?: any
+  placeholder?: string
+  errorText?: string
+  showError?: boolean
+  selectOption?: any
+  selectStyles?: any
+  selectValue?: any
+  disabled?: boolean
+  loading?: boolean
+  searchable?: boolean
+  multi?: boolean
+  selectClassName?: any
+  textareaColumn?: any
+  textareaRow?: any
+  numberPrefix?: any
+  labelClassName?: any
+  showColor?: boolean
+  onActionClick?: any
+  labelColor?: any
+  labelSpanText?: string
+  showPasswordStrength?: string
+  onSubmit?: any
+  onComplete?: any
+  pinFieldNumber?: number
+  countDownTime?: any
+  onCountDownComplete?: any
+  key?: any
+  showCountDown?: boolean
+  textColor?: any
+  thousandFormat?: boolean
 }
 
 const reactSelectStyleTable = {
@@ -59,7 +71,8 @@ const reactSelectStyleTable = {
   }),
 }
 
-const RavenInputField = ({
+const RavenInputField: React.FC<Props> = ({
+  textColor,
   labelClassName,
   labelColor,
   labelSpanText,
@@ -89,9 +102,18 @@ const RavenInputField = ({
   showColor,
   onActionClick,
   showPasswordStrength,
-}: Props) => {
+  onSubmit,
+  onComplete,
+  pinFieldNumber,
+  countDownTime,
+  onCountDownComplete,
+  key,
+  showCountDown,
+  thousandFormat,
+}) => {
   const [showPasword, setShowPassword] = useState(false)
-  require(`flatpickr/dist/themes/${color.split('-')[1] === 'dark' ? 'dark' : 'airbnb'}.css`)
+  const [completePin, setCompletePin] = useState(false)
+  require(`flatpickr/dist/themes/${color?.split('-')[1] === 'dark' ? 'dark' : 'airbnb'}.css`)
 
   const [validate, setValidate] = useState({
     hasLow: 0,
@@ -132,14 +154,137 @@ const RavenInputField = ({
     }
   }
 
-  function sumValue(a: number, b: number, c: number, d: number, e: number) {
+  function sumValue(a: any, b: any, c: any, d: any, e: any) {
     const sum = a + b + c + d + e
     return sum
+  }
+  const [timeOut, setTimeOut] = useState(false)
+
+  if (type === 'submit') {
+    return (
+      <div className={`form-group form-group__${color} ${className}`}>
+        {label && (
+          <label htmlFor='' className='form-label'>
+            {label}{' '}
+            {labelSpanText && (
+              <span onClick={onActionClick} className={`label-span text-${labelColor} ${labelClassName}`}>
+                {labelSpanText}
+              </span>
+            )}
+          </label>
+        )}
+        {loading ? (
+          <div
+            className={`input-submit input-submit-loading  text-${textColor} ${disabled && 'input-submit_disabled'}`}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '.5rem',
+              padding: '.5rem 0rem',
+            }}
+          >
+            {' '}
+            Loading...
+            <div
+              className='loader-wrap'
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <ColorRing
+                visible={true}
+                height={'35'}
+                width={'35'}
+                ariaLabel='blocks-loading'
+                wrapperClass='blocks-wrapper'
+                colors={['#ffffff99', '#ffffff99', '#ffffff99', '#ffffff99', '#ffffff99']}
+              />
+            </div>
+          </div>
+        ) : (
+          <input
+            type='submit'
+            value={value}
+            onClick={onSubmit}
+            className={`input-submit  text-${textColor} ${disabled && 'input-submit_disabled'}`}
+            disabled={disabled}
+          />
+        )}
+      </div>
+    )
+  }
+
+  if (type === 'pin') {
+    return (
+      <div style={style} className={`form-group form-group__${color} ${className}`}>
+        {label && (
+          <label htmlFor='' className='form-label'>
+            {label}{' '}
+            {labelSpanText && (
+              <span onClick={onActionClick} className={`label-span text-${labelColor} ${labelClassName}`}>
+                {labelSpanText}
+              </span>
+            )}
+          </label>
+        )}
+        {/* pin group start */}
+        <div className={`pin-group pin-group_${color}`}>
+          <div style={{ gridTemplateColumns: `repeat(${pinFieldNumber}, 1fr)` }} className={`pin_field_group`}>
+            <ReactPinField
+              type={`password`}
+              length={pinFieldNumber || 6}
+              className={`${`pin_field pin_field_${color}`} ${completePin && 'pin_field_completed'}`}
+              onChange={(num) => {
+                setCompletePin(false)
+                onChange && onChange(num)
+              }}
+              onComplete={(num) => {
+                onComplete && onComplete(num)
+                setCompletePin(true)
+              }}
+              format={(k) => k.toUpperCase()}
+              //  disabled={showTime}
+              validate='0123456789'
+              autoFocus
+              // ref={ref}
+            />
+          </div>
+          {/* count down start */}
+          {showCountDown && (
+            <div className='count-down-box'>
+              <p className='text'>{timeOut ? 'Time out' : 'Code expires in'}</p>
+              <Countdown
+                className='count'
+                key={key}
+                onComplete={() => {
+                  setTimeOut(true)
+                  onCountDownComplete && onCountDownComplete()
+                }}
+                date={countDownTime ? Date.now() + 60 * countDownTime : Date.now() + 1000 * 60 * 5}
+                renderer={(props: any) => (
+                  <div>
+                    {timeOut
+                      ? '00:00'
+                      : `${props.minutes < 10 ? `0${props.minutes}` : props.minutes}:${props.seconds || '00'}`}
+                  </div>
+                )}
+              />
+            </div>
+          )}
+
+          {/* count down end */}
+        </div>
+        {/* pin group end */}
+      </div>
+    )
   }
 
   if (type === 'phone') {
     return (
-      <div style={style} className={`form-group form-group__${color}`}>
+      <div style={style} className={`form-group form-group__${color} ${className}`}>
         {label && (
           <label htmlFor='' className='form-label'>
             {label}{' '}
@@ -179,7 +324,7 @@ const RavenInputField = ({
 
   if (type === 'textarea') {
     return (
-      <div className={`form-group form-group__${color}`}>
+      <div className={`form-group form-group__${color} ${className}`}>
         {label && (
           <label htmlFor='' className='form-label'>
             {label}{' '}
@@ -210,7 +355,7 @@ const RavenInputField = ({
 
   if (type === 'search') {
     return (
-      <div className={`form-group form-group__${color}`}>
+      <div className={`form-group form-group__${color} ${className}`}>
         {label && (
           <label htmlFor='' className='form-label'>
             {label}{' '}
@@ -259,7 +404,6 @@ const RavenInputField = ({
         )}
         <div className={`wrap ${showError && 'border-error'}`}>
           <Flatpicker
-            // theme='dark'
             id={id || `cal-${label}`}
             value={value}
             onChange={(date) => {
@@ -332,10 +476,10 @@ const RavenInputField = ({
           decimalSeparator='.'
           disabled={disabled}
           type='text'
-          thousandsGroupStyle='lakh'
+          thousandsGroupStyle={thousandFormat ? 'lakh' : undefined}
           allowNegative
           prefix={numberPrefix}
-          thousandSeparator=','
+          thousandSeparator={thousandFormat && ','}
           placeholder={placeholder || 'Placeholder Here'}
           id={id}
           onChange={onChange}
@@ -374,7 +518,10 @@ const RavenInputField = ({
             name={name}
           />
           <div className='focus-border'></div>
-          <p className={`show-hide show-hide_${showColor}`} onClick={() => setShowPassword(!showPasword)}>
+          <p
+            className={`show-hide show-hide_${showColor} text-${showColor}`}
+            onClick={() => setShowPassword(!showPasword)}
+          >
             {showPasword ? 'Hide' : 'Show'}
           </p>
         </div>

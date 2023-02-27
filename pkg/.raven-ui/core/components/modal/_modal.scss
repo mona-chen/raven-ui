@@ -5,6 +5,8 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  background: rgba(2, 2, 2, .5);
+//   opacity: 0.5;
 
   &::after {
     content: "";
@@ -13,9 +15,7 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background: #020202;
-    opacity: 0.5;
-    backdrop-filter: blur(23.5px);
+    backdrop-filter: blur(3px);
   }
 
   & > * {
@@ -23,9 +23,11 @@
     z-index: 3;
   }
 
-  .content-wrap {
-    min-width: 45rem;
+  .raven-modal-content-wrap {
+    width: 45rem;
+    // max-width: 65rem;
     min-height: 35rem;
+    max-height: 90vh;
     background-color: #ffffff;
     border-radius: 1.6rem;
     position: absolute;
@@ -34,7 +36,7 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    animation: modalAnimation 0.4s ease-in-out;
+    animation: modalAnimationUp 0.25s ease-in-out;
     align-items: stretch;
     padding: 0;
     overflow: hidden;
@@ -68,8 +70,10 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      padding: 1rem 2rem;
+    }
 
-      .button-wrap {
+    .button-wrap {
         margin-top: auto;
         padding: 1.5rem 2rem;
         background-color: #f7f8f7;
@@ -78,7 +82,22 @@
           width: 100%;
         }
       }
-    }
+  }
+
+  .raven-modal-content-wrap-fadeInUp{
+    animation: modalAnimationUp 0.25s ease-in-out;
+  }
+
+  .raven-modal-content-wrap-fadeInDown{
+    animation: modalAnimationDown 0.25s ease-in-out;
+  }
+
+  .raven-modal-content-wrap-fadeInLeft{
+    animation: modalAnimationLeft 0.25s ease-in-out;
+  }
+
+  .raven-modal-content-wrap-fadeInRight{
+    animation: modalAnimationRight 0.25s ease-in-out;
   }
 }
 
@@ -86,10 +105,10 @@
   @include modal-parent-wrap;
 }
 
-@keyframes modalAnimation {
+@keyframes modalAnimationUp {
   0% {
     transform: translate(-50%, -40%);
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   100% {
@@ -97,3 +116,39 @@
     opacity: 1;
   }
 }
+
+@keyframes modalAnimationDown {
+    0% {
+      transform: translate(-50%, -60%);
+      opacity: 0.6;
+    }
+  
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes modalAnimationRight {
+    0% {
+      transform: translate(-40%, -50%);
+      opacity: 0.6;
+    }
+  
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes modalAnimationLeft {
+    0% {
+      transform: translate(-60%, -50%);
+      opacity: 0.6;
+    }
+  
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }

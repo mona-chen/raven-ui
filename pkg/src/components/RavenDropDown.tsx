@@ -4,20 +4,20 @@ import dropDownloadIcon from '../img/drop-down-download-icon.svg'
 import dropEditIcon from '../img/drop-down-edit-icon.svg'
 
 interface Props {
-  onChange: (e: any) => void
-  list: any
-  style: any
-  checked: boolean
-  type: string
-  editText: string
-  downloadText: string
-  deleteText: string
-  className: string
-  onEdit: (e: any) => void
-  onDelete: (e: any) => void
-  onDownload: (e: any) => void
-  onAction: (e: any) => void
-  textColor: string
+  onChange?: (e: any) => void
+  list?: any
+  style?: any
+  checked?: boolean
+  type?: string
+  editText?: string
+  downloadText?: string
+  deleteText?: string
+  className?: string
+  onEdit?: (e: any) => void
+  onDelete?: (e: any) => void
+  onDownload?: (e: any) => void
+  onAction?: any
+  textColor?: string
 }
 
 interface Map {

@@ -1,8 +1,20 @@
 import React from 'react'
 
-type Props = any
+interface Props {
+  color?: any
+  text?: string
+  position?: any
+  big?: any
+  className?: any
+  title?: any
+  downText?: any
+  img?: any
+  textColor?: any
+  hoverClassName?: any
+  children?: any
+}
 
-const RavenToolTip = ({
+const RavenToolTip: React.FC<Props> = ({
   color,
   text,
   position,
@@ -14,7 +26,7 @@ const RavenToolTip = ({
   textColor,
   hoverClassName,
   children,
-}: Props) => {
+}) => {
   if (!big && hoverClassName) {
     return (
       <div className={`tooltip-hover-wrap ${hoverClassName}`}>

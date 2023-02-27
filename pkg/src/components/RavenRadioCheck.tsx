@@ -1,13 +1,13 @@
 import React from 'react'
 
 interface Props {
-  color: any
-  className: string
-  name: string
-  style: any
-  id: any
-  value: any
-  checked: boolean
+  color?: any
+  className?: string
+  name?: string
+  style?: any
+  id?: any
+  value?: any
+  checked?: boolean
 }
 
 const RavenRadioCheck = ({ color, className, name, style, id, value, checked }: Props) => {

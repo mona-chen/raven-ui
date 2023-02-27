@@ -3,22 +3,27 @@ import arrowRightImg from '../img/test-arrow-icon.svg'
 import plusIcon from '../img/test-icon-plus.svg'
 import timesIcon from '../img/test-times-icon.svg'
 import { ColorRing } from 'react-loader-spinner'
-// interface Props {
-//   msg: string
-//   actionText: string
-//   onCancel: any
-//   onAction: any
-//   visible: boolean
-//   type: string
-//   btnText: string
-//   onClick: () => void
-//   style: any
-//   icon: any
-//   iconText: string
-//   className: string
-// }
+interface Props {
+  msg: string | undefined
+  actionText: string | undefined
+  onCancel: any | undefined
+  onAction: any | undefined
+  visible: boolean | undefined
+  type: string | undefined
+  btnText: string | undefined
+  onClick?: () => void
+  style: any | undefined
+  icon: any | undefined
+  iconText: string | undefined
+  className: string | undefined
+  label: string | undefined
+  color: any | undefined
+  size: any | undefined
+  textColor: any | undefined
+  disabled: boolean | undefined
+  loading: boolean | undefined
+}
 
-type Props = any
 const RavenButton = ({ className, label, onClick, style, type, color, size, textColor, disabled, loading }: Props) => {
   if (type === 'btn-extended') {
     return (

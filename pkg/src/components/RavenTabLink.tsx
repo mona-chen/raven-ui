@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
 interface Prop {
-  list: any
-  onClick: any
-  color: any
-  textColor: any
-  fadedGreen: any
-  fadedBlack: any
+  list?: any
+  onClick?: any
+  color?: any
+  textColor?: any
+  fadedGreen?: any
+  fadedBlack?: any
 }
 
-const RavenTabLink = ({ list, onClick, color, textColor, fadedGreen, fadedBlack }: Prop) => {
+const RavenTabLink: React.FC<Prop> = ({ list, onClick, color, textColor, fadedGreen, fadedBlack }: Prop) => {
   const [activeLink, setActiveLink] = useState(0)
 
   if (fadedGreen) {

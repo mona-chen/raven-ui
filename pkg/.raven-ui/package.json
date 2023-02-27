@@ -1,6 +1,6 @@
 {
     "name": "raven-bank-css",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A utility first css framework by Raven bank.",
     "main": "index.js",
     "scripts": {

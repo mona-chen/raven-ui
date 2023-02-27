@@ -1,8 +1,14 @@
 import React from 'react'
 
-type Props = any
-
-const RavenToggleSlide = ({ style, id, color, onChange, value, checked }: Props) => {
+interface Props {
+  style?: any
+  id?: string
+  color?: any
+  onChange?: any
+  value?: any
+  checked?: boolean
+}
+const RavenToggleSlide: React.FC<Props> = ({ style, id, color, onChange, value, checked }) => {
   return (
     <div className='toggle-wrap'>
       <input
