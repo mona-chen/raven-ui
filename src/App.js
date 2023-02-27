@@ -109,6 +109,8 @@ function App() {
           btnLabel="click me"
           btnColor={`black-light`}
           effect={`fadeInLeft`}
+          onBtnClick={() => {console.log("jhgd");}}
+          disabled
         >
        
         </RavenModal>
