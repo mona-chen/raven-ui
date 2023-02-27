@@ -15,6 +15,7 @@ const RavenButton = ({
   textColor,
   disabled,
   loading,
+  children
 }) => {
   if (type === "btn-extended") {
     return (
@@ -33,6 +34,7 @@ const RavenButton = ({
           <img src={plusIcon} alt="" className="img" />
         </figure>
         {label}
+        {children}
       </button>
     );
   }
@@ -50,6 +52,7 @@ const RavenButton = ({
         <figure className="img-box-two">
           <img src={plusIcon} alt="" className="img" />
         </figure>
+        {children}
       </button>
     );
   }
@@ -67,6 +70,7 @@ const RavenButton = ({
         <figure className="img-box-two img-cancel">
           <img src={timesIcon} alt="" className="img" />
         </figure>
+        {children}
       </button>
     );
   }
@@ -88,6 +92,7 @@ const RavenButton = ({
         <figure className="img-box">
           <img src={arrowRightImg} alt="" className="img" />
         </figure>
+        {children}
       </button>
     );
   }
@@ -103,6 +108,7 @@ const RavenButton = ({
         textColor || "white-light"
       } ${className} ${disabled && "btn_disabled"}`}
     >
+        {children}
       {!loading && label}{" "}{loading && "Loading..."}
       {loading && (
         <div
