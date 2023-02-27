@@ -70,6 +70,7 @@ const RavenInputField = ({
   onSizeError,
   maxSize,
   onRemoveFile,
+  enableTime,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -515,6 +516,7 @@ const RavenInputField = ({
           <Flatpicker
             theme="dark"
             id={id || `cal-${label}`}
+            options={{enableTime: enableTime ? true : false}}
             value={value}
             onChange={(date) => {
               onChange(date);
