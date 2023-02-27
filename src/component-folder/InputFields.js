@@ -68,6 +68,12 @@ const InputFields = () => {
         label={<>&nbsp;</>}
         color={"black-light"}
       />
+      <RavenInputField
+        type={`upload`}
+        label={`Upload an image of your address`}
+        color={`black-light`}
+        // labelColor={`orange-light`}
+      />
     </div>
   );
 };

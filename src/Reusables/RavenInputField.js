@@ -9,6 +9,7 @@ import ProgressBar from "./ProgressBar";
 import { ColorRing } from "react-loader-spinner";
 import ReactPinField from "react-pin-field";
 import Countdown from "react-countdown";
+import { FileUploader } from "react-drag-drop-files";
 require(`flatpickr/dist/themes/airbnb.css`);
 
 const reactSelectStyleTable = {
@@ -66,9 +67,13 @@ const RavenInputField = ({
   key,
   showCountDown,
   thousandFormat,
+  onSizeError,
+  maxSize,
+  onRemoveFile,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
+  const [file, setFile] = useState("");
   require(`flatpickr/dist/themes/${
     color?.split("-")[1] === "dark" ? "dark" : "airbnb"
   }.css`);
@@ -80,6 +85,7 @@ const RavenInputField = ({
     has8digit: 0,
     hasSpecial: 0,
   });
+  const fileTypes = ["JPG", "PNG", "GIF"];
 
   const validatePassword = (password) => {
     if (password.match(/\d+/g)) {
@@ -117,6 +123,92 @@ const RavenInputField = ({
     return sum;
   }
   const [timeOut, setTimeOut] = useState(false);
+
+  if (type === "upload") {
+    return (
+      <div className={`form-group form-group__${color} ${className}`}>
+        {label && (
+          <label htmlFor="" className="form-label">
+            {label}{" "}
+            {labelSpanText && (
+              <span
+                onClick={onActionClick}
+                className={`label-span text-${labelColor} ${labelClassName}`}
+              >
+                {labelSpanText}
+              </span>
+            )}
+          </label>
+        )}
+        {!file && (
+          <div
+            className={`input-group upload-group ${
+              file && "upload-group-show"
+            }`}
+          >
+            <FileUploader
+              handleChange={(e) => {
+                console.log(e);
+                setFile(e);
+                onChange && onChange(e);
+              }}
+              value={value || file}
+              name="file"
+              disabled={disabled}
+              hoverTitle={"drop here"}
+              onSizeError={onSizeError}
+              maxSize={maxSize}
+
+              // types={fileTypes}
+            >
+              <p className="upload-text">
+                <span
+                  className={
+                    labelColor ? `text-${labelColor}` : `text-purple-light`
+                  }
+                >
+                  Click to upload
+                </span>{" "}
+                or drag and <br /> drop image file here
+              </p>
+            </FileUploader>
+          </div>
+        )}
+        {/* {file && ( */}
+        <div className={`display-wrap ${file && "display-wrap-show"}`}>
+          <div className="display-box">
+            <figure className="img-box">
+              <img
+                src={file && URL.createObjectURL(file)}
+                alt=""
+                className="img"
+              />
+            </figure>
+            <div className="text-box">
+              <p className="name">{file?.name}</p>
+              <p className="size">{`${file?.size} kb`}</p>
+            </div>
+            <div
+              onClick={() => {
+                setFile("");
+                onRemoveFile && onRemoveFile();
+              }}
+              className="cancel-box"
+            >
+              <svg
+                className="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 352 512"
+              >
+                <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        {/* )} */}
+      </div>
+    );
+  }
 
   if (type === "submit") {
     return (
@@ -236,31 +328,35 @@ const RavenInputField = ({
             />
           </div>
           {/* count down start */}
-         {showCountDown && <div className="count-down-box">
-            <p className="text">{timeOut ? "Time out" : "Code expires in"}</p>
-            <Countdown
-            className="count"
-             key={key}
-              onComplete={() => {
-                setTimeOut(true);
-                onCountDownComplete && onCountDownComplete()
-              }}
-              date={
-                countDownTime
-                  ? Date.now() + 60 * countDownTime
-                  : Date.now() + 1000 * 60 * 5
-              }
-              renderer={(props) => (
-                <div>
-                  {timeOut
-                    ? "00:00"
-                    : `${
-                        props.minutes < 10 ? `0${props.minutes}` : props.minutes
-                      }:${props.seconds || "00"}`}
-                </div>
-              )}
-            />
-          </div>}
+          {showCountDown && (
+            <div className="count-down-box">
+              <p className="text">{timeOut ? "Time out" : "Code expires in"}</p>
+              <Countdown
+                className="count"
+                key={key}
+                onComplete={() => {
+                  setTimeOut(true);
+                  onCountDownComplete && onCountDownComplete();
+                }}
+                date={
+                  countDownTime
+                    ? Date.now() + 60 * countDownTime
+                    : Date.now() + 1000 * 60 * 5
+                }
+                renderer={(props) => (
+                  <div>
+                    {timeOut
+                      ? "00:00"
+                      : `${
+                          props.minutes < 10
+                            ? `0${props.minutes}`
+                            : props.minutes
+                        }:${props.seconds || "00"}`}
+                  </div>
+                )}
+              />
+            </div>
+          )}
 
           {/* count down end */}
         </div>
@@ -548,7 +644,7 @@ const RavenInputField = ({
             id={id}
             onChange={(e) => {
               validatePassword(e.target.value);
-              onChange(e);
+              onChange && onChange(e);
             }}
             value={value}
             name={name}
