@@ -611,8 +611,19 @@
 }
 
 @each $key, $val in $colors {
+
+
+
   .form-group__#{$key} {
     @include form-group;
+
+
+    .input-calendar-#{$key}{
+      .flatpickr-calendar{
+        display: none !important;
+      }
+    }
+   
 
     .pin_field:focus {
       border-color: $val;
@@ -665,6 +676,8 @@
           }
         }
       }
+
+     
     }
 
     .form-input {
@@ -728,6 +741,8 @@
     //       }
     //     }
     //   }
+
+  
 
     .form-input {
       padding: 1.2rem;
@@ -804,3 +819,7 @@
     color: $val !important;
   }
 }
+
+
+
+

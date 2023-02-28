@@ -51,8 +51,8 @@ const InputFields = () => {
       />
       <RavenInputField type={`phone`} label={"phone"} color={`purple-light`} />
       <RavenInputField type={`search`} label={"search"} color={`green-light`} />
-      <RavenInputField type={`date`} label={"date"} color={`green-light`} />
-      <RavenInputField type={`select`} label={"select"} color={`green-light`} />
+      <RavenInputField enableTime  type={`date`} label={"date"} color={`purple-light`}  />
+      <RavenInputField selectOption={[{label: "text", value: "noo"}]}  type={`select`} label={"select"} color={`green-light`} />
       <RavenInputField
         type={`textarea`}
         label={"textare"}
