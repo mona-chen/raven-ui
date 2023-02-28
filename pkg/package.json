@@ -1,7 +1,7 @@
 {
   "name": "raven-bank-ui",
-  "version": "0.5.23",
-  "description": "A utility first css framework by Raven bank.",
+  "version": "0.5.25",
+  "description": "A Batteries included React Component Library by Raven bank.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "react-countdown": "^2.3.5",
+    "react-drag-drop-files": "^2.3.9",
     "react-flatpickr": "^3.10.13",
     "react-live": "^3.1.1",
     "react-loader-spinner": "^5.3.4",

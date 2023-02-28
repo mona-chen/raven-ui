@@ -5545,6 +5545,14 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
 
+"react-drag-drop-files@^2.3.9":
+  "integrity" "sha512-4O61sC2sDJC+kAL8tQqHlOlinYBhovyZEzCPUVq9C0JTz98I4KgCSGnIpqDZsV2B5kznGByMK6u2AWjWrZH6iw=="
+  "resolved" "https://registry.npmjs.org/react-drag-drop-files/-/react-drag-drop-files-2.3.9.tgz"
+  "version" "2.3.9"
+  dependencies:
+    "prop-types" "^15.7.2"
+    "styled-components" "^5.3.0"
+
 "react-flatpickr@^3.10.13":
   "integrity" "sha512-4m+K1K8jhvRFI8J/AHmQfA5hLALzhebEtEK8mLevXjX24MV3u502crzBn+EGFIBOfNUtrL5PId9FsGwgtuz/og=="
   "resolved" "https://registry.npmjs.org/react-flatpickr/-/react-flatpickr-3.10.13.tgz"
@@ -6099,7 +6107,7 @@
   "resolved" "https://registry.npmjs.org/style-loader/-/style-loader-3.3.1.tgz"
   "version" "3.3.1"
 
-"styled-components@^5.3.5", "styled-components@>= 2":
+"styled-components@^5.3.0", "styled-components@^5.3.5", "styled-components@>= 2":
   "integrity" "sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.6.tgz"
   "version" "5.3.6"

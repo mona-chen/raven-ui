@@ -22,9 +22,22 @@ interface Props {
   textColor: any | undefined
   disabled: boolean | undefined
   loading: boolean | undefined
+  children?: any | undefined
 }
 
-const RavenButton = ({ className, label, onClick, style, type, color, size, textColor, disabled, loading }: Props) => {
+const RavenButton: React.FC<Props> = ({
+  className,
+  label,
+  onClick,
+  style,
+  type,
+  color,
+  size,
+  textColor,
+  disabled,
+  loading,
+  children,
+}) => {
   if (type === 'btn-extended') {
     return (
       <button
@@ -40,6 +53,7 @@ const RavenButton = ({ className, label, onClick, style, type, color, size, text
           <img src={plusIcon} alt='' className='img' />
         </figure>
         {label}
+        {children}
       </button>
     )
   }
@@ -57,6 +71,7 @@ const RavenButton = ({ className, label, onClick, style, type, color, size, text
         <figure className='img-box-two'>
           <img src={plusIcon} alt='' className='img' />
         </figure>
+        {children}
       </button>
     )
   }
@@ -74,6 +89,7 @@ const RavenButton = ({ className, label, onClick, style, type, color, size, text
         <figure className='img-box-two img-cancel'>
           <img src={timesIcon} alt='' className='img' />
         </figure>
+        {children}
       </button>
     )
   }
@@ -93,6 +109,7 @@ const RavenButton = ({ className, label, onClick, style, type, color, size, text
         <figure className='img-box'>
           <img src={arrowRightImg} alt='' className='img' />
         </figure>
+        {children}
       </button>
     )
   }
@@ -106,6 +123,7 @@ const RavenButton = ({ className, label, onClick, style, type, color, size, text
         color || 'green-light'
       } text-${textColor || 'white-light'} ${className} ${disabled && 'btn_disabled'}`}
     >
+      {children}
       {!loading && label} {loading && 'Loading...'}
       {loading && (
         <div
