@@ -280,7 +280,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    // position: relative;
+    position: relative;
     // background-color: red;
 
     .label-calendar {
@@ -288,6 +288,7 @@
       top: 50%;
       transform: translateY(-50%);
       right: 1.6rem;
+      z-index: 10;
 
       .img-box {
         width: 2rem;
