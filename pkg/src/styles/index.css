@@ -22667,6 +22667,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__error-light .input-calendar-error-light .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__error-light .pin_field:focus {
   border-color: #ff0f00;
   outline: none;
@@ -23273,6 +23276,9 @@ p {
 .form-group__info-light .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__info-light .input-calendar-info-light .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__info-light .pin_field:focus {
   border-color: #f6c31c;
@@ -23881,6 +23887,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__white-light .input-calendar-white-light .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__white-light .pin_field:focus {
   border-color: #ffffff;
   outline: none;
@@ -24487,6 +24496,9 @@ p {
 .form-group__blue-light .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__blue-light .input-calendar-blue-light .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__blue-light .pin_field:focus {
   border-color: #476885;
@@ -25095,6 +25107,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__green-light .input-calendar-green-light .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__green-light .pin_field:focus {
   border-color: #0b8376;
   outline: none;
@@ -25701,6 +25716,9 @@ p {
 .form-group__purple-light .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__purple-light .input-calendar-purple-light .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__purple-light .pin_field:focus {
   border-color: #755ae2;
@@ -26309,6 +26327,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__orange-light .input-calendar-orange-light .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__orange-light .pin_field:focus {
   border-color: #ea872d;
   outline: none;
@@ -26915,6 +26936,9 @@ p {
 .form-group__black-light .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__black-light .input-calendar-black-light .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__black-light .pin_field:focus {
   border-color: #020202;
@@ -27523,6 +27547,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__deep-green-light .input-calendar-deep-green-light .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__deep-green-light .pin_field:focus {
   border-color: #014345;
   outline: none;
@@ -28129,6 +28156,9 @@ p {
 .form-group__grey .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__grey .input-calendar-grey .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__grey .pin_field:focus {
   border-color: #cccccc;
@@ -28737,6 +28767,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__base-bg-black .input-calendar-base-bg-black .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__base-bg-black .pin_field:focus {
   border-color: #676767;
   outline: none;
@@ -29343,6 +29376,9 @@ p {
 .form-group__error-dark .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__error-dark .input-calendar-error-dark .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__error-dark .pin_field:focus {
   border-color: #ff0f00;
@@ -29951,6 +29987,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__info-dark .input-calendar-info-dark .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__info-dark .pin_field:focus {
   border-color: #f6c31c;
   outline: none;
@@ -30557,6 +30596,9 @@ p {
 .form-group__dark-dark .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__dark-dark .input-calendar-dark-dark .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__dark-dark .pin_field:focus {
   border-color: #ffffff;
@@ -31165,6 +31207,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__white-dark .input-calendar-white-dark .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__white-dark .pin_field:focus {
   border-color: #020202;
   outline: none;
@@ -31771,6 +31816,9 @@ p {
 .form-group__green-dark .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__green-dark .input-calendar-green-dark .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__green-dark .pin_field:focus {
   border-color: #0b8376;
@@ -32379,6 +32427,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__blue-dark .input-calendar-blue-dark .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__blue-dark .pin_field:focus {
   border-color: #a0d2fe;
   outline: none;
@@ -32985,6 +33036,9 @@ p {
 .form-group__purple-dark .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__purple-dark .input-calendar-purple-dark .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__purple-dark .pin_field:focus {
   border-color: #755ae2;
@@ -33593,6 +33647,9 @@ p {
   cursor: not-allowed;
   opacity: 0.5;
 }
+.form-group__orange-dark .input-calendar-orange-dark .flatpickr-calendar {
+  display: none !important;
+}
 .form-group__orange-dark .pin_field:focus {
   border-color: #ea872d;
   outline: none;
@@ -34199,6 +34256,9 @@ p {
 .form-group__deep-green-dark .pin-group .pin_field:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+.form-group__deep-green-dark .input-calendar-deep-green-dark .flatpickr-calendar {
+  display: none !important;
 }
 .form-group__deep-green-dark .pin_field:focus {
   border-color: #0b8376;
@@ -36537,6 +36597,28 @@ p {
 .modal-parent-wrap .raven-modal-content-wrap-fadeInRight {
   -webkit-animation: modalAnimationRight 0.25s ease-in-out;
           animation: modalAnimationRight 0.25s ease-in-out;
+}
+
+.raven_pin_modal_wrapper .title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.raven_pin_modal_wrapper .sub {
+  font-weight: 400;
+  margin-top: 1.6rem;
+  margin-bottom: 4.8rem;
+  font-size: 1.4rem;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  color: #676767;
+}
+.raven_pin_modal_wrapper .input {
+  margin-bottom: 4.8rem;
 }
 
 @-webkit-keyframes modalAnimationUp {

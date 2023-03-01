@@ -12,8 +12,8 @@ import { PatternFormat } from 'react-number-format'
 import ProgressBar from './ProgressBar'
 import { ColorRing } from 'react-loader-spinner'
 import ReactPinField from 'react-pin-field'
-import Countdown from 'react-countdown'
 import { FileUploader } from 'react-drag-drop-files'
+import Countdown from '../helper/coutdown'
 
 interface Props {
   color?: any
@@ -22,7 +22,7 @@ interface Props {
   id?: any
   className?: any
   style?: any
-  label?: string
+  label?: any
   type?: any
   onChange?: any
   placeholder?: string
@@ -57,6 +57,8 @@ interface Props {
   onSizeError?: any
   maxSize?: any
   onRemoveFile?: any
+  enableTime?: boolean
+  selectMenuOpen?: any
 }
 
 const reactSelectStyleTable = {
@@ -110,17 +112,17 @@ const RavenInputField: React.FC<Props> = ({
   onComplete,
   pinFieldNumber,
   countDownTime,
-  onCountDownComplete,
-  key,
   showCountDown,
   thousandFormat,
   onSizeError,
   maxSize,
   onRemoveFile,
+  enableTime,
+  selectMenuOpen,
 }) => {
   const [showPasword, setShowPassword] = useState(false)
   const [completePin, setCompletePin] = useState(false)
-  const [file, setFile] = useState<any>('')
+  const [file, setFile] = useState<any>()
   require(`flatpickr/dist/themes/${color?.split('-')[1] === 'dark' ? 'dark' : 'airbnb'}.css`)
 
   const [validate, setValidate] = useState({
@@ -168,7 +170,7 @@ const RavenInputField: React.FC<Props> = ({
     return sum
   }
   const [timeOut, setTimeOut] = useState(false)
-
+  onCountDownComplete(timeOut)
   if (type === 'upload') {
     return (
       <div className={`form-group form-group__${color} ${className}`}>
@@ -293,7 +295,7 @@ const RavenInputField: React.FC<Props> = ({
 
   if (type === 'pin') {
     return (
-      <div style={style} className={`form-group form-group__${color} ${className}`}>
+      <div style={style} className={`form-group form-group__${color ? color : 'black-light'} ${className}`}>
         {label && (
           <label htmlFor='' className='form-label'>
             {label}{' '}
@@ -330,22 +332,10 @@ const RavenInputField: React.FC<Props> = ({
           {showCountDown && (
             <div className='count-down-box'>
               <p className='text'>{timeOut ? 'Time out' : 'Code expires in'}</p>
-              <Countdown
-                className='count'
-                key={key}
-                onComplete={() => {
-                  setTimeOut(true)
-                  onCountDownComplete && onCountDownComplete()
-                }}
-                date={countDownTime ? Date.now() + 60 * countDownTime : Date.now() + 1000 * 60 * 5}
-                renderer={(props: any) => (
-                  <div>
-                    {timeOut
-                      ? '00:00'
-                      : `${props.minutes < 10 ? `0${props.minutes}` : props.minutes}:${props.seconds || '00'}`}
-                  </div>
-                )}
-              />
+
+              <p className='count'>
+                <Countdown count={(e: any) => setTimeOut(e === '00:00' ? true : false)} countDownTime={countDownTime} />
+              </p>
             </div>
           )}
 
@@ -479,12 +469,13 @@ const RavenInputField: React.FC<Props> = ({
         <div className={`wrap ${showError && 'border-error'}`}>
           <Flatpicker
             id={id || `cal-${label}`}
+            options={{ enableTime: enableTime ? true : false }}
             value={value}
             onChange={(date) => {
               onChange(date)
             }}
             name={name}
-            className={`form-input input-calender `}
+            className={`form-input input-calender input-calendar-${color}`}
             autoComplete='off'
             placeholder={placeholder || 'Placeholder Here'}
           />
@@ -514,13 +505,13 @@ const RavenInputField: React.FC<Props> = ({
         <Select
           placeholder={placeholder || 'Placeholder Here'}
           styles={selectStyles || reactSelectStyleTable}
-          //   noOptionsMessage="No Available Option"
+          menuIsOpen={selectMenuOpen}
           options={selectOption}
           value={value}
           onChange={(e) => onChange && onChange(e)}
-          className={`react-select-class ${selectValue && 'react-select-class-selected'} ${selectClassName} ${
-            showError && 'border-error'
-          }`}
+          className={`react-select-class ${selectValue && 'react-select-class-selected'}  ${
+            value && 'react-select-class-selected'
+          } ${selectClassName} ${showError && 'border-error'}`}
           isDisabled={disabled}
           isLoading={loading}
           isSearchable={searchable}
@@ -798,3 +789,6 @@ const RavenInputField: React.FC<Props> = ({
 }
 
 export default RavenInputField
+function onCountDownComplete(timeOut: boolean) {
+  return timeOut
+}

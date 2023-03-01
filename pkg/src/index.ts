@@ -15,6 +15,7 @@ import RavenRadioCheck from './components/RavenRadioCheck'
 import RavenTable from './components/RavenTable'
 import RavenTableMobile from './components/RavenTableMobile'
 import RavenTableRow from './components/RavenTableRow'
+import RavenPinModal from './components/RavenPinModal'
 
 export {
   RavenActionBar,
@@ -33,4 +34,5 @@ export {
   RavenTable,
   RavenTableMobile,
   RavenTableRow,
+  RavenPinModal,
 }
