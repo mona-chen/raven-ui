@@ -516,13 +516,13 @@ const RavenInputField = ({
           <Flatpicker
             theme="dark"
             id={id || `cal-${label}`}
-            options={{enableTime: enableTime ? true : false}}
+            options={{ enableTime: enableTime ? true : false }}
             value={value}
             onChange={(date) => {
               onChange(date);
             }}
             name={name}
-            className={`form-input input-calender `}
+            className={`form-input input-calender input-calendar-${color}`}
             autoComplete="off"
             placeholder={placeholder || "Placeholder Here"}
           />
@@ -564,7 +564,9 @@ const RavenInputField = ({
           onChange={(e) => onChange && onChange(e)}
           className={`react-select-class ${
             selectValue && "react-select-class-selected"
-          } ${selectClassName} ${showError && "border-error"}`}
+          }  ${value && "react-select-class-selected"} ${selectClassName} ${
+            showError && "border-error"
+          }`}
           isDisabled={disabled}
           isLoading={loading}
           isSearchable={searchable}
