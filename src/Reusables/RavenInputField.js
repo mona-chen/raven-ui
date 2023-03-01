@@ -71,6 +71,7 @@ const RavenInputField = ({
   maxSize,
   onRemoveFile,
   enableTime,
+  selectMenuOpen,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -558,7 +559,7 @@ const RavenInputField = ({
         <Select
           placeholder={placeholder || "Placeholder Here"}
           styles={selectStyles || reactSelectStyleTable}
-          //   noOptionsMessage="No Available Option"
+          menuIsOpen={selectMenuOpen}
           options={selectOption}
           value={value}
           onChange={(e) => onChange && onChange(e)}
