@@ -8,7 +8,7 @@ import { NumericFormat, PatternFormat } from "react-number-format";
 import ProgressBar from "./ProgressBar";
 import { ColorRing } from "react-loader-spinner";
 import ReactPinField from "react-pin-field";
-import Countdown from "react-countdown";
+import Countdown from "../helper/coutdown";
 import { FileUploader } from "react-drag-drop-files";
 require(`flatpickr/dist/themes/airbnb.css`);
 
@@ -124,7 +124,7 @@ const RavenInputField = ({
     return sum;
   }
   const [timeOut, setTimeOut] = useState(false);
-
+  onCountDownComplete = timeOut
   if (type === "upload") {
     return (
       <div className={`form-group form-group__${color} ${className}`}>
@@ -285,7 +285,7 @@ const RavenInputField = ({
     return (
       <div
         style={style}
-        className={`form-group form-group__${color} ${className}`}
+        className={`form-group form-group__${color ? color : "black-light"} ${className}`}
       >
         {label && (
           <label htmlFor="" className="form-label">
@@ -332,30 +332,14 @@ const RavenInputField = ({
           {showCountDown && (
             <div className="count-down-box">
               <p className="text">{timeOut ? "Time out" : "Code expires in"}</p>
-              <Countdown
-                className="count"
-                key={key}
-                onComplete={() => {
-                  setTimeOut(true);
-                  onCountDownComplete && onCountDownComplete();
-                }}
-                date={
-                  countDownTime
-                    ? Date.now() + 60 * countDownTime
-                    : Date.now() + 1000 * 60 * 5
-                }
-                renderer={(props) => (
-                  <div>
-                    {timeOut
-                      ? "00:00"
-                      : `${
-                          props.minutes < 10
-                            ? `0${props.minutes}`
-                            : props.minutes
-                        }:${props.seconds || "00"}`}
-                  </div>
-                )}
+             
+             <p className="count">
+             <Countdown
+                count={(e) => setTimeOut(e === "00:00" ? true : false)} 
+                countDownTime={countDownTime}
               />
+             </p>
+              
             </div>
           )}
 

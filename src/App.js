@@ -22,9 +22,11 @@ import Modal from "./component-folder/Modal";
 import { useState } from "react";
 import RavenButton from "./Reusables/RavenButton";
 import RavenModal from "./Reusables/RavenModal";
+import RavenPinModal from "./Reusables/RavenPinModal";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [showPinModal, setShowPinModal] = useState(false);
   return (
     <div>
       <nav className="navbar-primary text-white mb-40">
@@ -102,7 +104,11 @@ function App() {
         <hr className="mt-40 mb-40" />
 
         <h3 className="mb-20">Modal</h3>
+        <div className="flex gap-20">
         <p onClick={() => setShowModal(true)}>click me</p>
+        <p onClick={() => setShowPinModal(true)}>click me</p>
+
+        </div>
         <RavenModal
           onClose={() => setShowModal(false)}
           visble={showModal}
@@ -112,8 +118,18 @@ function App() {
           onBtnClick={() => {console.log("jhgd");}}
           disabled
         >
+        
        
         </RavenModal>
+        <RavenPinModal
+          onClose={() => setShowPinModal(false)}
+          visible={showPinModal}
+          btnColor={`black-light`}
+          effect={`fadeInLeft`}
+          onComplete={(e) => console.log(e)}
+          onBtnClick={() => {console.log("jhgd");}}
+        ></RavenPinModal>
+       
         {/* <Modal onClose={() => setShowModal(false)} btnText="Verify Account" showModal={showModal} >
         <div className="button-wrap">
           <RavenButton
