@@ -4,13 +4,10 @@ const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const purgecss = require('gulp-purgecss')
 const fs = require('fs');
-const rename = require('gulp-rename');
-const header = require('gulp-header');
 let config = require('rc')('raven', {
   custom_path: '../src/extend',
   css_path: '../src/styles'
 })
-console.log(config);
 
 const {css_path, custom_path, purge} = config;
 
@@ -45,7 +42,9 @@ async function init () {
 function build(){
     if(purge){
       return src(`${custom_path}/**/*.scss`)
-      .pipe(sass())
+      .pipe(sass({
+        outputStyle: 'compressed'
+      }).on('error', sass.logError))
       .pipe(purgecss({
           content:  [
             '.parent/**/*.jsx',
@@ -56,18 +55,14 @@ function build(){
           ] 
         }))
       .pipe(postcss([autoprefixer()]))
-      // .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
-      // .pipe(rename({ suffix: '.min' }))   
       .pipe(dest(css_path))
-      // .pipe(kss(kssConfig))
     } else {
       return src(`${custom_path}/**/*.scss`)
-      .pipe(sass())
+      .pipe(sass({
+        outputStyle: 'compressed'
+      }).on('error', sass.logError))
       .pipe(postcss([autoprefixer()]))
-      // .pipe(header(`@import "${__dirname}/raven.js";\n`)) // include raven.js at the top of the output file
-      // .pipe(rename({ suffix: '.min' })) 
       .pipe(dest(css_path))
-      // .pipe(kss(kssConfig))
     }
 }
 

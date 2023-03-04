@@ -41,9 +41,26 @@ function createRavenrc() {
         purge: true,
         custom_path: 'extend',
     };
+    // Get the absolute path of the current directory
+    const currentPath = path.resolve('./');
+    // Get the absolute path of the parent directory
+    const parentPath = path.resolve('../');
     const coreImport = `@import "../../raven-ui/core/"`;
-    const ravenrcPath = path.resolve(__dirname, '../../src/.ravenrc');
-    const extendPath = path.resolve(__dirname, '../../src/extend/index.scss');
+    // define paths 
+    let ravenrcPath;
+    let extendPath;
+    const parentDir = path.resolve(process.cwd(), '..');
+    // console.log(parentDir)
+    if (currentPath === parentPath) {
+        extendPath = path.join(parentDir, '/src/extend/index.scss');
+        ravenrcPath = path.join(parentDir, '/src/.ravenrc');
+    }
+    else {
+        extendPath = path.join(process.cwd(), '/src/extend/index.scss');
+        ravenrcPath = path.join(process.cwd(), '/src/.ravenrc');
+        console.log(extendPath);
+    }
+    // console.log(path.join(process.cwd(), '.ravenrc'))
     try {
         console.log(boxen(message, boxenOptions));
         // Check if gulp-cli is installed globally
