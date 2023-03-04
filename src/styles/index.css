@@ -36417,17 +36417,24 @@ p {
 }
 .table .table-head tr > *:first-child,
 .table thead tr > *:first-child {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .table .table-head tr > *:last-child,
 .table thead tr > *:last-child {
-  padding-right: 1rem;
+  text-align: center;
+  padding-right: 3rem;
 }
 .table .table-body > *:not(:last-child) td,
 .table .table-body > *:not(:last-child) .table-data,
 .table tbody > *:not(:last-child) td,
 .table tbody > *:not(:last-child) .table-data {
   border-bottom: 0.6px solid #e5e6e6;
+}
+.table .table-body tr,
+.table .table-body .table-row,
+.table tbody tr,
+.table tbody .table-row {
+  cursor: pointer;
 }
 .table .table-body tr td,
 .table .table-body tr .table-data,
@@ -36608,13 +36615,13 @@ p {
 .table .table-body .table-row > *:first-child,
 .table tbody tr > *:first-child,
 .table tbody .table-row > *:first-child {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .table .table-body tr > *:last-child,
 .table .table-body .table-row > *:last-child,
 .table tbody tr > *:last-child,
 .table tbody .table-row > *:last-child {
-  padding-right: 1rem;
+  padding-right: 3rem;
 }
 
 .table_strip {
@@ -36635,17 +36642,24 @@ p {
 }
 .table_strip .table-head tr > *:first-child,
 .table_strip thead tr > *:first-child {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .table_strip .table-head tr > *:last-child,
 .table_strip thead tr > *:last-child {
-  padding-right: 1rem;
+  text-align: center;
+  padding-right: 3rem;
 }
 .table_strip .table-body > *:not(:last-child) td,
 .table_strip .table-body > *:not(:last-child) .table-data,
 .table_strip tbody > *:not(:last-child) td,
 .table_strip tbody > *:not(:last-child) .table-data {
   border-bottom: 0.6px solid #e5e6e6;
+}
+.table_strip .table-body tr,
+.table_strip .table-body .table-row,
+.table_strip tbody tr,
+.table_strip tbody .table-row {
+  cursor: pointer;
 }
 .table_strip .table-body tr td,
 .table_strip .table-body tr .table-data,
@@ -36826,13 +36840,13 @@ p {
 .table_strip .table-body .table-row > *:first-child,
 .table_strip tbody tr > *:first-child,
 .table_strip tbody .table-row > *:first-child {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 .table_strip .table-body tr > *:last-child,
 .table_strip .table-body .table-row > *:last-child,
 .table_strip tbody tr > *:last-child,
 .table_strip tbody .table-row > *:last-child {
-  padding-right: 1rem;
+  padding-right: 3rem;
 }
 .table_strip .table-head tr th,
 .table_strip thead tr th {
