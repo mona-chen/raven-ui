@@ -43,6 +43,7 @@ const RavenTableRow = ({
   onClickActionThree,
   onClickActionFour,
   actionDropAuto,
+  className,
 }) => {
   const [showDropAction, setShowDropAction] = useState(false);
   const tableCtx = useContext(TableContext);
@@ -53,7 +54,7 @@ const RavenTableRow = ({
         zIndex:
           showDropAction && rowNo === tableCtx?.dropDownActive ? "3" : "1",
       }}
-      className="table-row"
+      className={`table-row ${className}`}
     >
       {one && (
         <td
