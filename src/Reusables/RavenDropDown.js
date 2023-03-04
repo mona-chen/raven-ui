@@ -15,7 +15,7 @@ const RavenDropDown = ({
   onDownload,
   onAction,
   textColor,
-  style
+  style,
 }) => {
   if (type === "edit-delete") {
     return (
