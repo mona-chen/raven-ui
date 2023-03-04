@@ -23,11 +23,17 @@
       }
 
       & > *:first-child {
-        padding-left: 1rem;
+        padding-left: 3rem;
       }
 
+      // &>*:nth-last-child(2){
+      //     text-align: center;
+      // }
+
       & > *:last-child {
-        padding-right: 1rem;
+        text-align: center;
+        padding-right: 3rem;
+        //   color: #1110101a;
       }
     }
   }
@@ -132,12 +138,15 @@
         }
       }
 
+      cursor: pointer;
       & > *:first-child {
-        padding-left: 1rem;
+        padding-left: 3rem;
+        // background-color: red;
       }
 
       & > *:last-child {
-        padding-right: 1rem;
+        //   text-align: center ;
+        padding-right: 3rem;
       }
     }
   }

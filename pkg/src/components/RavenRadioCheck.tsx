@@ -8,9 +8,10 @@ interface Props {
   id?: any
   value?: any
   checked?: boolean
+  onChange?: any
 }
 
-const RavenRadioCheck = ({ color, className, name, style, id, value, checked }: Props) => {
+const RavenRadioCheck: React.FC<Props> = ({ color, className, name, style, id, value, checked, onChange }) => {
   return (
     <div className={`radio-box-wrap ${className}`}>
       <input
@@ -20,6 +21,7 @@ const RavenRadioCheck = ({ color, className, name, style, id, value, checked }: 
         style={style}
         name={name}
         value={value}
+        onChange={onChange}
         checked={checked}
       />
       <label className={`label-radio label-radio__${color}`} htmlFor={`input-radio-${id}`}>

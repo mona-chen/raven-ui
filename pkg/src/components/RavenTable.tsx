@@ -9,7 +9,7 @@ interface Props {
   children?: any
 }
 
-const RavenTable = ({ headerList, tableStrip, className, action, children }: Props) => {
+const RavenTable: React.FC<Props> = ({ headerList, tableStrip, className, action, children }) => {
   const tableCtx = useContext(TableContext)
   return (
     <TableContextProvider>

@@ -34,6 +34,7 @@ interface Props {
   downloadText?: any
   onDelete?: any
   onDownload?: any
+  className?: any
 }
 
 const RavenTableRow: React.FC<Props> = ({
@@ -64,6 +65,7 @@ const RavenTableRow: React.FC<Props> = ({
   downloadText,
   onDelete,
   onDownload,
+  className,
 }) => {
   const [showDropAction, setShowDropAction] = useState(false)
   const tableCtx = useContext(TableContext)
@@ -73,7 +75,7 @@ const RavenTableRow: React.FC<Props> = ({
       style={{
         zIndex: showDropAction && rowNo === tableCtx?.dropDownActive ? '3' : '1',
       }}
-      className='table-row'
+      className={`table-row ${className}`}
     >
       {one && (
         <td

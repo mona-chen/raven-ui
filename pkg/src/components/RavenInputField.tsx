@@ -122,7 +122,7 @@ const RavenInputField: React.FC<Props> = ({
 }) => {
   const [showPasword, setShowPassword] = useState(false)
   const [completePin, setCompletePin] = useState(false)
-  const [file, setFile] = useState<any>()
+  const [file, setFile] = useState<any>('')
   require(`flatpickr/dist/themes/${color?.split('-')[1] === 'dark' ? 'dark' : 'airbnb'}.css`)
 
   const [validate, setValidate] = useState({
@@ -132,7 +132,6 @@ const RavenInputField: React.FC<Props> = ({
     has8digit: 0,
     hasSpecial: 0,
   })
-  // const fileTypes = ['JPG', 'PNG', 'GIF']
 
   const validatePassword = (password: any) => {
     if (password.match(/\d+/g)) {
@@ -170,7 +169,6 @@ const RavenInputField: React.FC<Props> = ({
     return sum
   }
   const [timeOut, setTimeOut] = useState(false)
-  onCountDownComplete(timeOut)
   if (type === 'upload') {
     return (
       <div className={`form-group form-group__${color} ${className}`}>
@@ -789,6 +787,3 @@ const RavenInputField: React.FC<Props> = ({
 }
 
 export default RavenInputField
-function onCountDownComplete(timeOut: boolean) {
-  return timeOut
-}
