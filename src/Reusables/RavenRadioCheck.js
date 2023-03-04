@@ -8,9 +8,10 @@ const RavenRadioCheck = ({
   id,
   value,
   checked,
+  onChange,
 }) => {
   return (
-    <div className="radio-box-wrap">
+    <div className={`radio-box-wrap ${className}`}>
       <input
         type="radio"
         id={`input-radio-${id}`}
@@ -18,6 +19,7 @@ const RavenRadioCheck = ({
         style={style}
         name={name}
         value={value}
+        onChange={onChange}
         checked={checked}
       />
       <label
