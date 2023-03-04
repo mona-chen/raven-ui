@@ -22,19 +22,19 @@
         border-bottom: 0.6px solid #e5e6e6;
       }
 
-      & > *:first-child {
-        padding-left: 3rem;
-      }
+        & > *:first-child {
+          padding-left: 3rem;
+        }
 
-      // &>*:nth-last-child(2){
-      //     text-align: center;
-      // }
+        // &>*:nth-last-child(2){
+        //     text-align: center;
+        // }
 
-      & > *:last-child {
-        text-align: center;
-        padding-right: 3rem;
-        //   color: #1110101a;
-      }
+        .action {
+          text-align: right;
+          padding-right: 3rem;
+          //   color: #1110101a;
+        }
     }
   }
 
@@ -60,6 +60,9 @@
           align-items: center;
           gap: 1.2rem;
           position: relative;
+          // background-color: red;
+          justify-content: flex-end;
+          padding-right: 3rem;
 
           .img-box {
             width: 3.2rem;
@@ -83,6 +86,7 @@
           .action-wrap {
             // background-color: red;
             position: relative;
+            // margin: 0rem auto;
             // z-index: 10;
 
             .drop-box {
@@ -144,10 +148,10 @@
         // background-color: red;
       }
 
-      & > *:last-child {
-        //   text-align: center ;
-        padding-right: 3rem;
-      }
+      // & > *:last-child {
+      //   //   text-align: center ;
+      //   padding-right: 3rem;
+      // }
     }
   }
 }

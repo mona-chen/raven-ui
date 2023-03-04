@@ -24,7 +24,7 @@ const RavenTable = ({
                 const { label } = chi;
                 return <th key={idx}>{label || chi}</th>;
               })}
-            {action && <th>ACTION(S)</th>}
+            {action && <th className="action">ACTION(S)</th>}
           </tr>
         </thead>
         {/* table head end */}
