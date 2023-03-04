@@ -1,5 +1,5 @@
 {
-  "name": "raven-cli",
+  "name": "@ravenpay/raven-cli",
   "version": "0.1.0",
   "description": "The CLI for raven-ui",
   "bin": {
