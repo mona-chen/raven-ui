@@ -72,6 +72,7 @@ const RavenInputField = ({
   onRemoveFile,
   enableTime,
   selectMenuOpen,
+  menuPlacement,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -572,6 +573,7 @@ const RavenInputField = ({
           isLoading={loading}
           isSearchable={searchable}
           isMulti={multi}
+          menuPlacement={menuPlacement || `bottom`}
         />
         {showError && <p className="error-text">{errorText}</p>}
       </div>
