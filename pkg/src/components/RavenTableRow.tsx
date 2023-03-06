@@ -35,6 +35,15 @@ interface Props {
   onDelete?: any
   onDownload?: any
   className?: any
+  imgActionOne?: any
+  imgActionTwo?: any
+  imgActionThree?: any
+  imgActionFour?: any
+  onClickActionOne?: any
+  onClickActionTwo?: any
+  onClickActionThree?: any
+  onClickActionFour?: any
+  actionDropAuto: any
 }
 
 const RavenTableRow: React.FC<Props> = ({
@@ -65,6 +74,15 @@ const RavenTableRow: React.FC<Props> = ({
   downloadText,
   onDelete,
   onDownload,
+  imgActionOne,
+  imgActionTwo,
+  imgActionThree,
+  imgActionFour,
+  onClickActionOne,
+  onClickActionTwo,
+  onClickActionThree,
+  onClickActionFour,
+  actionDropAuto,
   className,
 }) => {
   const [showDropAction, setShowDropAction] = useState(false)
@@ -296,6 +314,28 @@ const RavenTableRow: React.FC<Props> = ({
                 )}
               </>
             )}
+            {imgActionOne && (
+              <>
+                {loading ? (
+                  <Skeleton circle width={30} height={30} />
+                ) : (
+                  <figure onClick={onClickActionOne} className='img-box'>
+                    <img src={imgActionOne} alt='' className='img' />
+                  </figure>
+                )}
+              </>
+            )}
+            {imgActionTwo && (
+              <>
+                {loading ? (
+                  <Skeleton circle width={30} height={30} />
+                ) : (
+                  <figure onClick={onClickActionTwo} className='img-box'>
+                    <img src={imgActionTwo} alt='' className='img' />
+                  </figure>
+                )}
+              </>
+            )}
             {!dontShowAction && (
               <>
                 {loading ? (
@@ -334,6 +374,57 @@ const RavenTableRow: React.FC<Props> = ({
                     </div>
                     {/* action drop end */}
                   </div>
+                )}
+              </>
+            )}
+            {actionDropAuto && (
+              <>
+                {loading ? (
+                  <Skeleton circle width={30} height={30} />
+                ) : (
+                  <div className='action-wrap'>
+                    <figure
+                      onClick={() => {
+                        // setIndexNo();
+                        tableCtx?.setShowDropActive(rowNo)
+                        tableCtx?.dropDownActive === rowNo
+                          ? setShowDropAction(!showDropAction)
+                          : setShowDropAction(true)
+                      }}
+                      className='img-box '
+                    >
+                      <img src={imgActionThree} alt='' className='img' />
+                    </figure>
+                    {/* action drop start */}
+                    <div
+                      className={`drop-box ${showDropAction && tableCtx?.dropDownActive === rowNo && 'drop-box-show'}`}
+                    >
+                      {actionDropAuto}
+                    </div>
+                    {/* action drop end */}
+                  </div>
+                )}
+              </>
+            )}
+            {imgActionThree && (
+              <>
+                {loading ? (
+                  <Skeleton circle width={30} height={30} />
+                ) : (
+                  <figure onClick={onClickActionThree} className='img-box'>
+                    <img src={imgActionThree} alt='' className='img' />
+                  </figure>
+                )}
+              </>
+            )}
+            {imgActionFour && (
+              <>
+                {loading ? (
+                  <Skeleton circle width={30} height={30} />
+                ) : (
+                  <figure onClick={onClickActionFour} className='img-box'>
+                    <img src={imgActionFour} alt='' className='img' />
+                  </figure>
                 )}
               </>
             )}

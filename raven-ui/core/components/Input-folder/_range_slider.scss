@@ -1,0 +1,78 @@
+
+/*Range Reset*/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /***** Chrome, Safari, Opera and Edge Chromium styles *****/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: black;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -6px; /* Centers thumb on the track */
+    background: url("../../../icons/range.svg");
+
+    /*custom styles*/
+    width: 28.55px;
+    height: 16.65px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    // background: url("data:image/svg+xml,<svg width='19' height='6' viewBox='0 0 19 6' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.66095 3.7383C1.34376 3.55517 1.34376 3.09734 1.66095 2.91421L3.802 1.67807C4.1192 1.49494 4.51569 1.72385 4.51569 2.09012L4.51569 4.56239C4.51569 4.92865 4.1192 5.15757 3.802 4.97444L1.66095 3.7383Z' fill='#D9D9D9'/><path d='M18.0754 3.73818C18.3926 3.55504 18.3926 3.09722 18.0754 2.91409L15.9343 1.67795C15.6171 1.49482 15.2206 1.72373 15.2206 2.08999L15.2206 4.56227C15.2206 4.92853 15.6171 5.15745 15.9343 4.97431L18.0754 3.73818Z' fill='#D9D9D9'/></svg>");
+    border: 1.18947px solid #f7f8f7;
+    box-shadow: 0px 1.18947px 4.75789px rgba(0, 0, 0, 0.14);
+    border-radius: 66.6105px;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    // border: 1px solid #053a5f;
+    // outline: 1px solid #053a5f;
+    outline-offset: 0.125rem;
+  }
+  
+  /******** Firefox styles ********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: black;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+  
+    /*custom styles*/
+    background-color: #5cd5eb;
+    height: 2rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb {
+    // border: 1px solid #053a5f;
+    outline: 1px solid #053a5f;
+    outline-offset: 0.125rem;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-top: 1rem;
+  }
