@@ -523,6 +523,7 @@ const RavenInputField = ({
             onChange={(date) => {
               onChange(date);
             }}
+            // options={{inline: true}}
             name={name}
             className={`form-input input-calender input-calendar-${color}`}
             autoComplete="off"
