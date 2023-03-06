@@ -59,6 +59,8 @@ interface Props {
   onRemoveFile?: any
   enableTime?: boolean
   selectMenuOpen?: any
+  min?: number | undefined
+  max?: number | undefined
 }
 
 const reactSelectStyleTable = {
@@ -119,6 +121,8 @@ const RavenInputField: React.FC<Props> = ({
   onRemoveFile,
   enableTime,
   selectMenuOpen,
+  min,
+  max,
 }) => {
   const [showPasword, setShowPassword] = useState(false)
   const [completePin, setCompletePin] = useState(false)
@@ -757,6 +761,27 @@ const RavenInputField: React.FC<Props> = ({
       </div>
     )
   }
+
+  if (type === 'range') {
+    return (
+      <div>
+        <input
+          type='range'
+          name={name}
+          id={id}
+          min={min}
+          max={max}
+          value={value}
+          disabled={disabled}
+          onChange={(e) => {
+            onChange && onChange(e)
+          }}
+          placeholder={placeholder && placeholder}
+        />
+      </div>
+    )
+  }
+
   return (
     <div className={`form-group form-group__${color} ${className}`} style={style}>
       {label && (

@@ -72,6 +72,8 @@ const RavenInputField = ({
   onRemoveFile,
   enableTime,
   selectMenuOpen,
+  min,
+  max
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -815,6 +817,22 @@ const RavenInputField = ({
         {/* password strength box end */}
       </div>
     );
+  }
+
+  if (type === "range"){
+    <input
+  type="range"
+  name={name}
+  id={id}
+  min={min}
+  max={max}
+  value={value}
+  disabled={disabled}
+  onChange={(e) => {
+    onChange && onChange(e)
+  }}
+  placeholder={placeholder && placeholder}
+   />
   }
   return (
     <div
