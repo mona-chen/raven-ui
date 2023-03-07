@@ -85,6 +85,14 @@ const InputFields = () => {
         color={`black-light`}
         // labelColor={`orange-light`}
       />
+       <RavenInputField
+        type={`range`}
+        min="0"
+        max="100"
+        label={`Price range`}
+        color={`black-light`}
+        // labelColor={`orange-light`}
+      />
     </div>
   );
 };

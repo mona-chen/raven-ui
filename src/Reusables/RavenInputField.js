@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Select from "react-select";
 import Flatpicker from "react-flatpickr";
 import calendarIcon from "../img/calendarcalendar-icon.svg";
@@ -72,6 +72,7 @@ const RavenInputField = ({
   onRemoveFile,
   enableTime,
   selectMenuOpen,
+  showValue,
   min,
   max
 }) => {
@@ -81,6 +82,36 @@ const RavenInputField = ({
   require(`flatpickr/dist/themes/${
     color?.split("-")[1] === "dark" ? "dark" : "airbnb"
   }.css`);
+
+  const [range, setRange] = useState(0);
+  console.log(range);
+  const handleRangeChange = event => {
+    setRange(event.target.value);
+    onChange(event);
+  };
+
+  function rangeStyle() {
+    const styledRanges = document.getElementsByClassName('styled_range')
+    for (let i = 0; i < styledRanges.length; i++) {
+      let thumbRange = null,
+        trackRange = null
+      for (let j = 0; j < styledRanges[i].children.length; j++) {
+        const child = styledRanges[i].children[j]
+        if (child.className === 'thumb_range') thumbRange = child
+        else if (child.className === 'track_range') trackRange = child
+      }
+      thumbRange.oninput = (function (thumbRange, trackRange) {
+        return function () {
+          trackRange.value = thumbRange.value
+        }
+      })(thumbRange, trackRange)
+    }
+  }
+
+  useEffect(() => {
+    rangeStyle()
+  }, [range])
+
 
   const [validate, setValidate] = useState({
     hasLow: 0,
@@ -819,20 +850,45 @@ const RavenInputField = ({
     );
   }
 
-  if (type === "range"){
-    <input
-  type="range"
-  name={name}
-  id={id}
-  min={min}
-  max={max}
-  value={value}
-  disabled={disabled}
-  onChange={(e) => {
-    onChange && onChange(e)
-  }}
-  placeholder={placeholder && placeholder}
-   />
+  if (type === 'range') {
+    return (
+      <div className={`form-group form-group__${color} ${className}`} style={style}>
+        {label && (
+          <label htmlFor={id} className='form-label'>
+            {label}{' '}
+            {!showValue && (
+              <span style={{fontWeight: 700, fontSize: '1.4rem'}} onClick={onActionClick} className={`label-span text-${labelColor} ${labelClassName}`}>
+                {range}
+              </span>
+            )}
+          </label>
+        )}
+        {/* <div className="input-group"> */}
+
+        <div className='styled_range'>
+          <input
+            type='range'
+            disabled={disabled}
+            placeholder={placeholder || 'Placeholder Here'}
+            className={"track_range"}
+            min={min ? min : 0}
+            max={max ? max : 100}
+            id={id}
+            
+            value={range}
+          />
+          <input  type='range'
+            min={min ? min : 0}
+            max={max ? max : 100}
+            id={id}
+            value={range}
+            onChange={handleRangeChange}
+            className='thumb_range' />
+        </div>
+        {/* </div> */}
+        {showError && <p className='error-text'>{errorText}</p>}
+      </div>
+    )
   }
   return (
     <div

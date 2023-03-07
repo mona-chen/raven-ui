@@ -5,6 +5,6 @@
   ],
   "css_path": "../src/styles",
   "watch_dir": "../src",
-  "purge": true,
+  "purge": false,
   "custom_path": "extend"
 }
