@@ -63,6 +63,7 @@ const InputFields = () => {
         label={"select"}
         color={`green-light`}
         // selectMenuOpen={true}
+        // menuPlacement={`top`}
       />
       <RavenInputField
         type={`textarea`}
