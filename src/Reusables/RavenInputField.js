@@ -438,13 +438,13 @@ const RavenInputField = ({
         <textarea
           cols={textareaColumn || "30"}
           rows={textareaRow || "5"}
-          style={{ resize: "unset" }}
+          style={{ resize: "unset"}}
           id={id}
           onChange={onChange}
           value={value}
           name={name}
           placeholder={placeholder || "Placeholder Here"}
-          className={`form-input ${showError && "border-error"}`}
+          className={`form-input form-textarea ${showError && "border-error"}`}
         ></textarea>
         {/* </div> */}
         {showError && <p className="error-text">{errorText}</p>}
