@@ -63,7 +63,7 @@ interface Props {
   min?: number | undefined
   max?: number | undefined
   showValue?: boolean
-  menuPlacement?: string
+  menuPlacement?: any
 }
 
 const reactSelectStyleTable = {
