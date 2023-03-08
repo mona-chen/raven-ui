@@ -23598,6 +23598,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__error-light .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__error-light .input-submit:active {
   border: none;
   outline: none;
@@ -24221,6 +24226,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__info-light .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__info-light .input-submit:active {
   border: none;
@@ -24846,6 +24856,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__white-light .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__white-light .input-submit:active {
   border: none;
   outline: none;
@@ -25469,6 +25484,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__blue-light .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__blue-light .input-submit:active {
   border: none;
@@ -26094,6 +26114,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__green-light .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__green-light .input-submit:active {
   border: none;
   outline: none;
@@ -26717,6 +26742,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__purple-light .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__purple-light .input-submit:active {
   border: none;
@@ -27342,6 +27372,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__orange-light .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__orange-light .input-submit:active {
   border: none;
   outline: none;
@@ -27965,6 +28000,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__black-light .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__black-light .input-submit:active {
   border: none;
@@ -28590,6 +28630,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__black-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__black-dark .input-submit:active {
   border: none;
   outline: none;
@@ -29213,6 +29258,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__deep-green-light .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__deep-green-light .input-submit:active {
   border: none;
@@ -29838,6 +29888,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__grey .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__grey .input-submit:active {
   border: none;
   outline: none;
@@ -30461,6 +30516,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__base-bg-black .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__base-bg-black .input-submit:active {
   border: none;
@@ -31086,6 +31146,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__error-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__error-dark .input-submit:active {
   border: none;
   outline: none;
@@ -31709,6 +31774,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__info-dark .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__info-dark .input-submit:active {
   border: none;
@@ -32334,6 +32404,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__dark-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__dark-dark .input-submit:active {
   border: none;
   outline: none;
@@ -32957,6 +33032,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__white-dark .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__white-dark .input-submit:active {
   border: none;
@@ -33582,6 +33662,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__green-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__green-dark .input-submit:active {
   border: none;
   outline: none;
@@ -34205,6 +34290,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__blue-dark .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__blue-dark .input-submit:active {
   border: none;
@@ -34830,6 +34920,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__purple-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__purple-dark .input-submit:active {
   border: none;
   outline: none;
@@ -35454,6 +35549,11 @@ p {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 48em) {
+  .form-group__orange-dark .input-submit {
+    min-height: 4.5rem;
+  }
+}
 .form-group__orange-dark .input-submit:active {
   border: none;
   outline: none;
@@ -36077,6 +36177,11 @@ p {
   font-size: 1.4rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 48em) {
+  .form-group__deep-green-dark .input-submit {
+    min-height: 4.5rem;
+  }
 }
 .form-group__deep-green-dark .input-submit:active {
   border: none;
