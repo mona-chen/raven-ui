@@ -22608,6 +22608,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__error-light .form-label {
   align-self: flex-start;
@@ -22618,6 +22619,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__error-light .form-label .label-span {
   margin-left: auto;
@@ -22874,12 +22876,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__error-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__error-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__error-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__error-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__error-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__error-light .focus-border {
@@ -23210,6 +23224,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__info-light .form-label {
   align-self: flex-start;
@@ -23220,6 +23235,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__info-light .form-label .label-span {
   margin-left: auto;
@@ -23476,12 +23492,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__info-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__info-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__info-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__info-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__info-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__info-light .focus-border {
@@ -23812,6 +23840,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__white-light .form-label {
   align-self: flex-start;
@@ -23822,6 +23851,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__white-light .form-label .label-span {
   margin-left: auto;
@@ -24078,12 +24108,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__white-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__white-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__white-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__white-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__white-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__white-light .focus-border {
@@ -24414,6 +24456,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__blue-light .form-label {
   align-self: flex-start;
@@ -24424,6 +24467,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__blue-light .form-label .label-span {
   margin-left: auto;
@@ -24680,12 +24724,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__blue-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__blue-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__blue-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__blue-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__blue-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__blue-light .focus-border {
@@ -25016,6 +25072,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__green-light .form-label {
   align-self: flex-start;
@@ -25026,6 +25083,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__green-light .form-label .label-span {
   margin-left: auto;
@@ -25282,12 +25340,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__green-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__green-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__green-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__green-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__green-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__green-light .focus-border {
@@ -25618,6 +25688,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__purple-light .form-label {
   align-self: flex-start;
@@ -25628,6 +25699,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__purple-light .form-label .label-span {
   margin-left: auto;
@@ -25884,12 +25956,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__purple-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__purple-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__purple-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__purple-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__purple-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__purple-light .focus-border {
@@ -26220,6 +26304,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__orange-light .form-label {
   align-self: flex-start;
@@ -26230,6 +26315,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__orange-light .form-label .label-span {
   margin-left: auto;
@@ -26486,12 +26572,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__orange-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__orange-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__orange-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__orange-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__orange-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__orange-light .focus-border {
@@ -26822,6 +26920,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__black-light .form-label {
   align-self: flex-start;
@@ -26832,6 +26931,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__black-light .form-label .label-span {
   margin-left: auto;
@@ -27088,12 +27188,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__black-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__black-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__black-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__black-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__black-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__black-light .focus-border {
@@ -27424,6 +27536,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__black-dark .form-label {
   align-self: flex-start;
@@ -27434,6 +27547,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__black-dark .form-label .label-span {
   margin-left: auto;
@@ -27690,12 +27804,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__black-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__black-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__black-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__black-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__black-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__black-dark .focus-border {
@@ -28026,6 +28152,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__deep-green-light .form-label {
   align-self: flex-start;
@@ -28036,6 +28163,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__deep-green-light .form-label .label-span {
   margin-left: auto;
@@ -28292,12 +28420,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__deep-green-light .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__deep-green-light .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__deep-green-light .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__deep-green-light .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__deep-green-light .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__deep-green-light .focus-border {
@@ -28628,6 +28768,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__grey .form-label {
   align-self: flex-start;
@@ -28638,6 +28779,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__grey .form-label .label-span {
   margin-left: auto;
@@ -28894,12 +29036,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__grey .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__grey .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__grey .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__grey .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__grey .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__grey .focus-border {
@@ -29230,6 +29384,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__base-bg-black .form-label {
   align-self: flex-start;
@@ -29240,6 +29395,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__base-bg-black .form-label .label-span {
   margin-left: auto;
@@ -29496,12 +29652,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__base-bg-black .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__base-bg-black .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__base-bg-black .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__base-bg-black .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__base-bg-black .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__base-bg-black .focus-border {
@@ -29832,6 +30000,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__error-dark .form-label {
   align-self: flex-start;
@@ -29842,6 +30011,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__error-dark .form-label .label-span {
   margin-left: auto;
@@ -30098,12 +30268,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__error-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__error-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__error-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__error-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__error-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__error-dark .focus-border {
@@ -30434,6 +30616,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__info-dark .form-label {
   align-self: flex-start;
@@ -30444,6 +30627,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__info-dark .form-label .label-span {
   margin-left: auto;
@@ -30700,12 +30884,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__info-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__info-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__info-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__info-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__info-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__info-dark .focus-border {
@@ -31036,6 +31232,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__dark-dark .form-label {
   align-self: flex-start;
@@ -31046,6 +31243,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__dark-dark .form-label .label-span {
   margin-left: auto;
@@ -31302,12 +31500,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__dark-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__dark-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__dark-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__dark-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__dark-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__dark-dark .focus-border {
@@ -31638,6 +31848,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__white-dark .form-label {
   align-self: flex-start;
@@ -31648,6 +31859,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__white-dark .form-label .label-span {
   margin-left: auto;
@@ -31904,12 +32116,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__white-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__white-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__white-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__white-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__white-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__white-dark .focus-border {
@@ -32240,6 +32464,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__green-dark .form-label {
   align-self: flex-start;
@@ -32250,6 +32475,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__green-dark .form-label .label-span {
   margin-left: auto;
@@ -32506,12 +32732,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__green-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__green-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__green-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__green-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__green-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__green-dark .focus-border {
@@ -32842,6 +33080,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__blue-dark .form-label {
   align-self: flex-start;
@@ -32852,6 +33091,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__blue-dark .form-label .label-span {
   margin-left: auto;
@@ -33108,12 +33348,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__blue-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__blue-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__blue-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__blue-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__blue-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__blue-dark .focus-border {
@@ -33444,6 +33696,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__purple-dark .form-label {
   align-self: flex-start;
@@ -33454,6 +33707,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__purple-dark .form-label .label-span {
   margin-left: auto;
@@ -33710,12 +33964,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__purple-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__purple-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__purple-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__purple-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__purple-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__purple-dark .focus-border {
@@ -34046,6 +34312,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__orange-dark .form-label {
   align-self: flex-start;
@@ -34056,6 +34323,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__orange-dark .form-label .label-span {
   margin-left: auto;
@@ -34312,12 +34580,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__orange-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__orange-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__orange-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__orange-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__orange-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__orange-dark .focus-border {
@@ -34648,6 +34928,7 @@ p {
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__deep-green-dark .form-label {
   align-self: flex-start;
@@ -34658,6 +34939,7 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
+  font-family: "br_firma", sans-serif;
 }
 .form-group__deep-green-dark .form-label .label-span {
   margin-left: auto;
@@ -34914,12 +35196,24 @@ p {
   font-size: 1.4rem;
   color: #020202;
   position: relative;
+  font-family: "br_firma", sans-serif;
   z-index: 3;
 }
 .form-group__deep-green-dark .form-input::-moz-placeholder {
   color: #b3b3b3;
 }
 .form-group__deep-green-dark .form-input::placeholder {
+  color: #b3b3b3;
+}
+.form-group__deep-green-dark .form-textarea {
+  font-size: 1.4rem;
+  color: #020202;
+  font-family: "br_firma", sans-serif;
+}
+.form-group__deep-green-dark .form-textarea::-moz-placeholder {
+  color: #b3b3b3;
+}
+.form-group__deep-green-dark .form-textarea::placeholder {
   color: #b3b3b3;
 }
 .form-group__deep-green-dark .focus-border {

@@ -8,6 +8,7 @@
   flex-direction: column;
   font-size: 1.4rem;
   position: relative;
+  font-family: "br_firma", sans-serif;
 
   .form-label {
     align-self: flex-start;
@@ -18,6 +19,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    font-family: "br_firma", sans-serif;
 
     .label-span {
       margin-left: auto;
@@ -337,7 +339,19 @@
     font-size: 1.4rem;
     color: #020202;
     position: relative;
+    font-family: "br_firma", sans-serif;
     z-index: 3;
+
+    &::placeholder {
+      color: #b3b3b3;
+      // font-weight: 300;
+    }
+  }
+
+  .form-textarea{
+    font-size: 1.4rem;
+    color: #020202;
+    font-family: "br_firma", sans-serif;
 
     &::placeholder {
       color: #b3b3b3;

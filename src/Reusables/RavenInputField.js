@@ -74,7 +74,8 @@ const RavenInputField = ({
   selectMenuOpen,
   showValue,
   min,
-  max
+  max,
+  menuPlacement,
 }) => {
   const [showPasword, setShowPassword] = useState(false);
   const [completePin, setCompletePin] = useState(false);
@@ -454,13 +455,13 @@ const RavenInputField = ({
         <textarea
           cols={textareaColumn || "30"}
           rows={textareaRow || "5"}
-          style={{ resize: "unset" }}
+          style={{ resize: "unset"}}
           id={id}
           onChange={onChange}
           value={value}
           name={name}
           placeholder={placeholder || "Placeholder Here"}
-          className={`form-input ${showError && "border-error"}`}
+          className={`form-input form-textarea ${showError && "border-error"}`}
         ></textarea>
         {/* </div> */}
         {showError && <p className="error-text">{errorText}</p>}
@@ -539,6 +540,7 @@ const RavenInputField = ({
             onChange={(date) => {
               onChange(date);
             }}
+            // options={{inline: true}}
             name={name}
             className={`form-input input-calender input-calendar-${color}`}
             autoComplete="off"
@@ -589,6 +591,7 @@ const RavenInputField = ({
           isLoading={loading}
           isSearchable={searchable}
           isMulti={multi}
+          menuPlacement={menuPlacement || `bottom`}
         />
         {showError && <p className="error-text">{errorText}</p>}
       </div>
