@@ -191,6 +191,10 @@
     cursor: pointer;
     transition: all 0.3s;
 
+    @media only screen and (max-width: 48em){
+      min-height: 4.5rem;
+    }
+
     &:active {
       border: none;
       outline: none;
