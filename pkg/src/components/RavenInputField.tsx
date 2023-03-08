@@ -63,6 +63,7 @@ interface Props {
   min?: number | undefined
   max?: number | undefined
   showValue?: boolean
+  menuPlacement?: string
 }
 
 const reactSelectStyleTable = {
@@ -126,6 +127,7 @@ const RavenInputField: React.FC<Props> = ({
   showValue,
   min,
   max,
+  menuPlacement,
 }) => {
   const [showPasword, setShowPassword] = useState(false)
   const [completePin, setCompletePin] = useState(false)
@@ -550,6 +552,7 @@ const RavenInputField: React.FC<Props> = ({
           isLoading={loading}
           isSearchable={searchable}
           isMulti={multi}
+          menuPlacement={menuPlacement || `bottom`}
         />
         {showError && <p className='error-text'>{errorText}</p>}
       </div>
